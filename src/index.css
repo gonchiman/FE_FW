@@ -1,0 +1,33 @@
+:root {
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
+  color: #222;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --surface: #fff;
+  --surface-hover: #f3f3f3;
+  --border: #d6d6d6;
+  --text: #222;
+  --text-muted: #666;
+  --accent: #222;
+  --header-height: 72px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+}
+
+button {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid #245ea8;
+  outline-offset: 3px;
+}
