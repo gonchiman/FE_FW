@@ -29,6 +29,10 @@
   border-bottom: 1px solid var(--border);
 }
 
+.desktop-sidebar .sidebar-brand-row {
+  border-bottom-color: transparent;
+}
+
 .site-brand {
   display: flex;
   align-items: center;
