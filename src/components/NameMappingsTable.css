@@ -1,0 +1,49 @@
+.name-mappings-table { min-width: 560px; table-layout: fixed; }
+.name-mappings-name-column { width: 30%; }
+.name-mappings-status-column { width: 24%; }
+.name-mappings-source-column { width: 16%; }
+.name-mappings-table th,
+.name-mappings-table td { overflow-wrap: anywhere; text-align: left; }
+.name-mappings-table .table-sort-button { justify-content: space-between; padding-inline: 10px; }
+.name-mappings-heading { display: block; padding: 11px 10px; }
+.name-mapping-missing,
+.name-mapping-status { color: var(--text-muted); }
+.name-mapping-status { font-size: 12px; }
+.name-mapping-status.verified { color: var(--text); }
+.name-mapping-source-button {
+  min-height: 28px;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.name-mappings-table .name-mapping-source-row > td { padding: 20px; background: var(--surface-hover); }
+.name-mapping-evidence { position: sticky; left: 20px; max-width: 960px; }
+.name-mapping-evidence-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.name-mapping-evidence h2 { margin: 0; font-size: 14px; font-weight: 600; }
+.name-mapping-close {
+  flex-shrink: 0;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+.name-mapping-source-list { display: flex; flex-wrap: wrap; gap: 16px 32px; }
+.name-mapping-source-list > div { flex: 1 1 220px; min-width: 0; }
+.name-mapping-evidence a { color: inherit; text-underline-offset: 3px; }
+.name-mapping-evidence dl { display: grid; grid-template-columns: auto 1fr; gap: 5px 14px; margin: 12px 0 0; color: var(--text-muted); font-size: 12px; }
+.name-mapping-evidence dd { margin: 0; }
+.name-mapping-check { padding-top: 12px; border-top: 1px solid var(--border); }
+@media (max-width: 600px) {
+  .name-mapping-evidence { width: calc(100vw - 90px); }
+  .name-mapping-source-list { display: grid; }
+}
+@media (pointer: coarse) {
+  .name-mapping-source-button,
+  .name-mapping-close { min-height: 44px; min-width: 44px; }
+}

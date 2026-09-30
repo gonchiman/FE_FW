@@ -2,7 +2,7 @@
 
 『ファイアーエムブレム 万紫千紅』の攻略支援アプリ用リポジトリ。
 `arknights_2` を参考にした React・TypeScript・Vite アプリです。
-共通のサイドバー・ヘッダーと、個人成長率・キャラクター名対応の一覧、成長率の統計分析ページを用意しています。
+共通のサイドバー・ヘッダーと、個人成長率・キャラクターとクラスの名前対応の一覧、成長率の統計分析ページを用意しています。
 成長率ページには Fortunes-Weave-Helper の公開JSONから取り込んだ62名分の英語名・個人成長率を収録しています。
 Game8の攻略記事に由来する出典データで、ゲーム内の数値との照合は未実施です。兵種補正・育成予測は含みません。
 
@@ -41,9 +41,12 @@ npm run preview
 | `src/components/GrowthHistogram.tsx` | 人数・割合のヒストグラム、平均・中央値の基準線 |
 | `src/lib/growth-statistics.ts` | 記述統計、共通軸と階級の集計 |
 | `src/components/GrowthRatesTable.tsx` | 列の並べ替えと名前列を固定した成長率表 |
-| `src/pages/CharacterNamesPage.tsx` | 日本語・英語の名前の検索、確認状況の絞り込み |
-| `src/components/CharacterNamesTable.tsx` | 名前対応表と行ごとの出典表示 |
-| `src/data/character-names.json` | 日本語名の対応、出典、取得日・確認日 |
+| `src/pages/CharacterNamesPage.tsx` | キャラクター／クラスの切り替え、名前検索、確認状況の絞り込み |
+| `src/components/NameMappingsTable.tsx` | 共通の名前対応表と行ごとの出典表示 |
+| `src/lib/name-mappings.ts` | 名前対応の検証、名簿との関連付け、検索・並べ替え |
+| `src/data/character-names.json` | キャラクターの日本語名、出典、取得日・確認日 |
+| `src/data/class-names.json` | クラスの日本語名、出典、確認日・照合根拠 |
+| `data/sources/fortunes-weave-classes.json` | 固定版のクラス名簿・区分・取得情報 |
 | `src/components/DataTable.css` | 外枠・縦横罫線・数値配置などの共通テーブルスタイル |
 | `src/lib/navigation.ts` | サイドバーのナビゲーション定義 |
 | `src/lib/useHashRoute.ts` | ハッシュに応じたページ切り替え |
@@ -64,7 +67,8 @@ npm run preview
 
 成長率分析は `/FE_FW/#/analysis/growth-rates` で開きます。集計規約と操作は [成長率分析の仕様](docs/growth-analysis.md) を参照してください。
 
-名前対応ページは `/FE_FW/#/character-names` で開きます。成長率データの62名を基準に、日本語名と英語名の対応を表示します。
+名前対応ページは `/FE_FW/#/character-names` で開きます。キャラクター／クラスのタブで日本語名と英語名の対応を表示します。
+クラスは `/FE_FW/#/character-names?tab=classes` で直接開けます。固定版の英語JSONに収録された59クラスを対象とし、各名前の対応根拠を出典欄に保存しています。英語JSONにない貴族は追加していません。
 日本語名は62名分を収録しています。任天堂の人物紹介と開発者インタビューに加え、日英名を併記したファンサイトや人物紹介記事で対応を確認し、各行に出典と照合内容を記録しています。今後追加する対応未確認の名前は `null` として扱います。
 名前の確認状況は成長率の確認状況とは別に管理します。出典と更新方法は [名前対応ページの仕様](docs/character-names.md) を参照してください。
 

@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react'
-import { getPageFromHash } from './navigation'
+import { getNameTabFromHash, getPageFromHash } from './navigation'
 
 function subscribe(onChange: () => void) {
   window.addEventListener('hashchange', onChange)
@@ -8,5 +8,6 @@ function subscribe(onChange: () => void) {
 
 export function useHashRoute() {
   const hash = useSyncExternalStore(subscribe, () => window.location.hash, () => '#/')
-  return getPageFromHash(hash)
+  const page = getPageFromHash(hash)
+  return page ? { ...page, nameTab: getNameTabFromHash(hash) } : undefined
 }

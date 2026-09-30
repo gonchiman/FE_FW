@@ -1,0 +1,711 @@
+{
+  "sources": [
+    {
+      "id": "fortunes-weave-classes-en",
+      "language": "en",
+      "name": "Fortunes-Weave-Helper クラス一覧（固定版）（非公式）",
+      "url": "https://github.com/Rico0319/Fortunes-Weave-Helper/blob/29609cc76a0a79a86473ef1e0980771e94c97640/data/fwe.json",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": "29609cc76a0a79a86473ef1e0980771e94c97640",
+      "gameVersion": null
+    },
+    {
+      "id": "gamewith-class-list-ja",
+      "language": "ja",
+      "name": "GameWith 兵種一覧と成長率（非公式）",
+      "url": "https://gamewith.jp/fefw/573025",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "game8-class-list-en",
+      "language": "en",
+      "name": "Game8 Class List and Unlock Requirements（非公式）",
+      "url": "https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/620256",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "game8-class-list-ja",
+      "language": "ja",
+      "name": "Game8 兵種一覧と解放条件（非公式）",
+      "url": "https://game8.jp/fe-banshisenko/816408",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    }
+  ],
+  "mappings": [
+    {
+      "classId": "Commoner",
+      "japaneseName": "平民",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Base／基本職で照合。9能力の成長率補正が一致。平民と貴族は補正が同じため、Commonerという名称で平民を同定。英語JSONにNobleの項目はない。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Gladiator",
+      "japaneseName": "闘士",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Beginner／初級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Hunter",
+      "japaneseName": "猟兵",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Beginner／初級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Soldier",
+      "japaneseName": "兵士",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Beginner／初級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Ornius Rider",
+      "japaneseName": "飛駝兵",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Beginner／初級職で照合。名称の対応と区分に加え、8能力の成長率補正が一致。差異：技は英語JSON 5・日本語表 0。Game8英語一覧の斧・槍Dと乗り降り（Mount/Dismount）も一致。主要技能の馬術は英語E+・日本語Eと表記が異なる。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Diviner",
+      "japaneseName": "呪い師",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Beginner／初級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Myrmidon",
+      "japaneseName": "剣士",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Brigand",
+      "japaneseName": "ブリガンド",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Pugilist",
+      "japaneseName": "セスタス",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Archer",
+      "japaneseName": "アーチャー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：力は英語JSON 5・日本語表 0、技は英語JSON 10・日本語表 15。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Rogue",
+      "japaneseName": "ローグ",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Armored Knight",
+      "japaneseName": "重装歩兵",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。名称の対応と区分に加え、8能力の成長率補正が一致。差異：守備は英語JSON 25・日本語表 5。Game8英語一覧の斧・槍C、戦技装備+1（Combat Arts +1）、後攻守備+3（Strike-Last Def +3）も一致。主要技能の重装術は英語E+・日本語Eと表記が異なる。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Light Cavalry",
+      "japaneseName": "軽騎兵",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Charioteer",
+      "japaneseName": "戦車兵",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Armored Ornius Rider",
+      "japaneseName": "騎甲駝兵",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Wing Soldier",
+      "japaneseName": "天翼兵",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Priest",
+      "japaneseName": "プリースト",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Shaman",
+      "japaneseName": "シャーマン",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Specialty／中級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Warrior",
+      "japaneseName": "ウォーリアー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Shido",
+      "japaneseName": "シドー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Dancer",
+      "japaneseName": "踊り子",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Blacksmith",
+      "japaneseName": "鍛冶師",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Sniper",
+      "japaneseName": "スナイパー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Forest Knight",
+      "japaneseName": "フォレストナイト",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Ranger",
+      "japaneseName": "レンジャー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Cataphract",
+      "japaneseName": "カタフラクト",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Guardian",
+      "japaneseName": "ガーディアン",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。名称の対応と区分に加え、8能力の成長率補正が一致。差異：幸運は英語JSON 5・日本語表 15。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Elephant Rider",
+      "japaneseName": "戦象兵",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：速さは英語JSON 20・日本語表 -10、技は英語JSON -10・日本語表 20。Game8英語一覧の馬術C、戦象の装脚（War-Elephant Boots）、戦象兵の戦術（Elephant Tactics）、戦象兵の道（Elephant Rider’s Path）も一致。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Dreadnought",
+      "japaneseName": "ヘヴィアーマー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。名称の対応と区分に加え、8能力の成長率補正が一致。差異：幸運は英語JSON 0・日本語表 10。Game8英語一覧の重装術D、斧・槍B、戦技装備+2（Combat Arts +2）、後攻守備+5（Strike-Last Def +5）も一致。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Bardinger",
+      "japaneseName": "バーディンガー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Dragoon",
+      "japaneseName": "ドラグーン",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：速さは英語JSON 0・日本語表 5、技は英語JSON 5・日本語表 0。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Caladrius",
+      "japaneseName": "カラドリオス",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：速さは英語JSON 5・日本語表 10、技は英語JSON 10・日本語表 5。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Ovate",
+      "japaneseName": "ウァテス",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Bishop",
+      "japaneseName": "ビショップ",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。名称の対応と区分に加え、8能力の成長率補正が一致。差異：技は英語JSON 0・日本語表 5。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Troubadour",
+      "japaneseName": "トルバドール",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Advanced／上級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：速さは英語JSON 5・日本語表 0、技は英語JSON 0・日本語表 5。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Swordmaster",
+      "japaneseName": "ソードマスター",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "High Savant",
+      "japaneseName": "ハイエピタフ",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en",
+        "game8-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。日英Game8一覧でスミルノス神殿の復興、暗月（Dark Moon）、黒魔術・乗り降り・戦技装備+2の組み合わせも照合。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Battlemaster",
+      "japaneseName": "バトルマスター",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：速さは英語JSON -5・日本語表 5、技は英語JSON 5・日本語表 -5。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "War Monk",
+      "japaneseName": "バトルモンク",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en",
+        "game8-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。日英Game8一覧でアウロラの依頼、格闘回避+7の組み合わせも照合。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Bow Adept",
+      "japaneseName": "マスターアーチ",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Bow Knight",
+      "japaneseName": "ボウナイト",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Shadow Seeker",
+      "japaneseName": "シャドーシーカー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：速さは英語JSON 15・日本語表 25、技は英語JSON 25・日本語表 15。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Sentinel",
+      "japaneseName": "ホーリーランサー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en",
+        "game8-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。日英Game8一覧で不退の構え（Resolute）、魔法回復+10、戦技装備+3の組み合わせも照合。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Castle Knight",
+      "japaneseName": "フォートレス",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en",
+        "game8-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。日英Game8一覧で遮断（Intercept）、後攻守備+7の組み合わせも照合。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Orichaldia",
+      "japaneseName": "オリハルディア",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：速さは英語JSON 0・日本語表 5、技は英語JSON 5・日本語表 0。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Great Knight",
+      "japaneseName": "グレートナイト",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Celestial Trooper",
+      "japaneseName": "聖天翼兵",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Bau Lord",
+      "japaneseName": "ドラゴンマスター",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en",
+        "game8-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。日英Game8一覧で襲撃（Ambush）、飛行術C、斧術・槍術Aの組み合わせも照合。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Druid",
+      "japaneseName": "ドルイド",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：速さは英語JSON 15・日本語表 10、技は英語JSON 10・日本語表 15。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Wiseman",
+      "japaneseName": "ワイズマン",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。名称の対応と区分に加え、7能力の成長率補正が一致。差異：速さは英語JSON 0・日本語表 5、技は英語JSON 5・日本語表 0。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "Valkyrium",
+      "japaneseName": "ヴァルキュリウム",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en",
+        "game8-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Master／最上級職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。日英Game8一覧でジュラ神殿の復興、静心の呪歌（Song of Calm）の組み合わせも照合。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "The Blade",
+      "japaneseName": "ザ・ブレイド",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Divine／神将職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "The Apsara",
+      "japaneseName": "ジ・アプサラス",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Divine／神将職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "The Eternal",
+      "japaneseName": "ジ・エターナル",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en",
+        "game8-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Divine／神将職で照合。名称の対応と区分に加え、8能力の成長率補正が一致。差異：魅力は英語JSON 0・日本語表 10。日英Game8一覧で裁きの天秤、武神の組み合わせも照合。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "The Godhand",
+      "japaneseName": "ザ・ゴッドハンド",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Divine／神将職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "The Calamity",
+      "japaneseName": "ザ・カラミティ",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Divine／神将職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "The Trident",
+      "japaneseName": "ザ・トライデント",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Divine／神将職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "The Cavalier",
+      "japaneseName": "ザ・キャバリアー",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja",
+        "game8-class-list-en",
+        "game8-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Divine／神将職で照合。名称の対応と区分に加え、8能力の成長率補正が一致。差異：技は英語JSON 10・日本語表 5。日英Game8一覧で神鉄の鞍、神技の組み合わせも照合。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    },
+    {
+      "classId": "The Avatar",
+      "japaneseName": "ジ・アヴァタール",
+      "status": "verified",
+      "sourceIds": [
+        "fortunes-weave-classes-en",
+        "gamewith-class-list-ja"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Divine／神将職で照合。9能力の成長率補正が一致し、同区分内で一致する兵種はこの1件。確認済は名前の対応のみ。ゲーム内の数値は未照合。"
+    }
+  ]
+}

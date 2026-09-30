@@ -113,6 +113,14 @@ test('verified mappings accept one cited bilingual source while retaining requir
   assert.throws(() => validateAndMergeCharacterNames(noDate, roster), /verified names require/)
 })
 
+test('verified mappings retain a concrete evidence note', () => {
+  for (const note of ['', '   ']) {
+    const source = input()
+    source.mappings[0].note = note
+    assert.throws(() => validateAndMergeCharacterNames(source, roster), /non-empty evidence note/)
+  }
+})
+
 test('unverified mappings preserve unknown names and dates as null', () => {
   const source = input()
   source.mappings[0] = {
