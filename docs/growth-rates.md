@@ -47,7 +47,7 @@
 [DataTable.css](../src/components/DataTable.css) を共通の定義元とし、外枠・縦横罫線には `--border` を使う。
 ヘッダーは `--surface-hover`、数値は右揃え・等幅数字。並べ替えボタンには状態と次の操作を付ける。
 名前列の幅・固定位置・未確認値の色は [GrowthRatesTable.css](../src/components/GrowthRatesTable.css) に分離している。
-現在の適用先は [GrowthRatesTable.tsx](../src/components/GrowthRatesTable.tsx)、[CharacterNamesTable.tsx](../src/components/CharacterNamesTable.tsx)、[GrowthAnalysisPage.tsx](../src/pages/GrowthAnalysisPage.tsx) の表。
+現在の適用先は [GrowthRatesTable.tsx](../src/components/GrowthRatesTable.tsx)、[NameMappingsTable.tsx](../src/components/NameMappingsTable.tsx)、[GrowthAnalysisPage.tsx](../src/pages/GrowthAnalysisPage.tsx) の表。
 今後の表はこの共通スタイルを読み込み、可変のデータ・列・並べ替え状態を用途に応じて渡す。
 
 ## 確認と見本の更新

@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "id": "fortunes-weave-classes-en",
+    "language": "en",
+    "name": "Fortunes-Weave-Helper クラス一覧（固定版）（非公式）",
+    "url": "https://github.com/Rico0319/Fortunes-Weave-Helper/blob/29609cc76a0a79a86473ef1e0980771e94c97640/data/fwe.json",
+    "retrievedAt": "2026-09-30",
+    "sourceVersion": "29609cc76a0a79a86473ef1e0980771e94c97640",
+    "gameVersion": null
+  },
+  "classes": [
+    {
+      "id": "Commoner",
+      "name": "Commoner",
+      "tier": "Base"
+    },
+    {
+      "id": "Gladiator",
+      "name": "Gladiator",
+      "tier": "Beginner"
+    },
+    {
+      "id": "Hunter",
+      "name": "Hunter",
+      "tier": "Beginner"
+    },
+    {
+      "id": "Soldier",
+      "name": "Soldier",
+      "tier": "Beginner"
+    },
+    {
+      "id": "Ornius Rider",
+      "name": "Ornius Rider",
+      "tier": "Beginner"
+    },
+    {
+      "id": "Diviner",
+      "name": "Diviner",
+      "tier": "Beginner"
+    },
+    {
+      "id": "Myrmidon",
+      "name": "Myrmidon",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Brigand",
+      "name": "Brigand",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Pugilist",
+      "name": "Pugilist",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Archer",
+      "name": "Archer",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Rogue",
+      "name": "Rogue",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Armored Knight",
+      "name": "Armored Knight",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Light Cavalry",
+      "name": "Light Cavalry",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Charioteer",
+      "name": "Charioteer",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Armored Ornius Rider",
+      "name": "Armored Ornius Rider",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Wing Soldier",
+      "name": "Wing Soldier",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Priest",
+      "name": "Priest",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Shaman",
+      "name": "Shaman",
+      "tier": "Specialty"
+    },
+    {
+      "id": "Warrior",
+      "name": "Warrior",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Shido",
+      "name": "Shido",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Dancer",
+      "name": "Dancer",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Blacksmith",
+      "name": "Blacksmith",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Sniper",
+      "name": "Sniper",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Forest Knight",
+      "name": "Forest Knight",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Ranger",
+      "name": "Ranger",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Cataphract",
+      "name": "Cataphract",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Guardian",
+      "name": "Guardian",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Elephant Rider",
+      "name": "Elephant Rider",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Dreadnought",
+      "name": "Dreadnought",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Bardinger",
+      "name": "Bardinger",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Dragoon",
+      "name": "Dragoon",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Caladrius",
+      "name": "Caladrius",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Ovate",
+      "name": "Ovate",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Bishop",
+      "name": "Bishop",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Troubadour",
+      "name": "Troubadour",
+      "tier": "Advanced"
+    },
+    {
+      "id": "Swordmaster",
+      "name": "Swordmaster",
+      "tier": "Master"
+    },
+    {
+      "id": "High Savant",
+      "name": "High Savant",
+      "tier": "Master"
+    },
+    {
+      "id": "Battlemaster",
+      "name": "Battlemaster",
+      "tier": "Master"
+    },
+    {
+      "id": "War Monk",
+      "name": "War Monk",
+      "tier": "Master"
+    },
+    {
+      "id": "Bow Adept",
+      "name": "Bow Adept",
+      "tier": "Master"
+    },
+    {
+      "id": "Bow Knight",
+      "name": "Bow Knight",
+      "tier": "Master"
+    },
+    {
+      "id": "Shadow Seeker",
+      "name": "Shadow Seeker",
+      "tier": "Master"
+    },
+    {
+      "id": "Sentinel",
+      "name": "Sentinel",
+      "tier": "Master"
+    },
+    {
+      "id": "Castle Knight",
+      "name": "Castle Knight",
+      "tier": "Master"
+    },
+    {
+      "id": "Orichaldia",
+      "name": "Orichaldia",
+      "tier": "Master"
+    },
+    {
+      "id": "Great Knight",
+      "name": "Great Knight",
+      "tier": "Master"
+    },
+    {
+      "id": "Celestial Trooper",
+      "name": "Celestial Trooper",
+      "tier": "Master"
+    },
+    {
+      "id": "Bau Lord",
+      "name": "Bau Lord",
+      "tier": "Master"
+    },
+    {
+      "id": "Druid",
+      "name": "Druid",
+      "tier": "Master"
+    },
+    {
+      "id": "Wiseman",
+      "name": "Wiseman",
+      "tier": "Master"
+    },
+    {
+      "id": "Valkyrium",
+      "name": "Valkyrium",
+      "tier": "Master"
+    },
+    {
+      "id": "The Blade",
+      "name": "The Blade",
+      "tier": "Divine"
+    },
+    {
+      "id": "The Apsara",
+      "name": "The Apsara",
+      "tier": "Divine"
+    },
+    {
+      "id": "The Eternal",
+      "name": "The Eternal",
+      "tier": "Divine"
+    },
+    {
+      "id": "The Godhand",
+      "name": "The Godhand",
+      "tier": "Divine"
+    },
+    {
+      "id": "The Calamity",
+      "name": "The Calamity",
+      "tier": "Divine"
+    },
+    {
+      "id": "The Trident",
+      "name": "The Trident",
+      "tier": "Divine"
+    },
+    {
+      "id": "The Cavalier",
+      "name": "The Cavalier",
+      "tier": "Divine"
+    },
+    {
+      "id": "The Avatar",
+      "name": "The Avatar",
+      "tier": "Divine"
+    }
+  ]
+}

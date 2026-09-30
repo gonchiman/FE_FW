@@ -1,10 +1,12 @@
 import { Fragment } from 'react'
-import type { CharacterName, NameSort, NameSource } from '../types/character-names'
+import type { NameEntry, NameSort, NameSource } from '../types/name-mappings'
+import type { NameTab } from '../lib/navigation'
 import './DataTable.css'
-import './CharacterNamesTable.css'
+import './NameMappingsTable.css'
 
-type CharacterNamesTableProps = {
-  characters: CharacterName[]
+type NameMappingsTableProps = {
+  entity: NameTab
+  entries: NameEntry[]
   sources: NameSource[]
   sort: NameSort
   onSort: (key: NameSort['key']) => void
@@ -24,14 +26,15 @@ const sourceLanguageLabels: Record<NameSource['language'], string> = {
   'ja-en': '日英対照',
 }
 
-export function CharacterNamesTable({ characters, sources, sort, onSort, expandedId, onToggleSources, onCloseSources }: CharacterNamesTableProps) {
+export function NameMappingsTable({ entity, entries, sources, sort, onSort, expandedId, onToggleSources, onCloseSources }: NameMappingsTableProps) {
   const sourceById = new Map(sources.map((source) => [source.id, source]))
 
   return (
-    <div className="data-table-scroll" role="region" aria-label="キャラクター名の対応表。横にスクロールできます" tabIndex={0}>
-      <table className="data-table character-names-table">
+    <div className="data-table-scroll" role="region" aria-label={`${entity === 'characters' ? 'キャラクター' : 'クラス'}名の対応表。横にスクロールできます`} tabIndex={0}
+      onKeyDown={(event) => { if (event.key === 'Escape' && expandedId !== null) { event.preventDefault(); event.stopPropagation(); onCloseSources() } }}>
+      <table className="data-table name-mappings-table">
         <caption className="visually-hidden">日本語名と英語名の対応。—は対応未確認です。</caption>
-        <colgroup><col className="character-names-name-column" span={2} /><col className="character-names-status-column" /><col className="character-names-source-column" /></colgroup>
+        <colgroup><col className="name-mappings-name-column" span={2} /><col className="name-mappings-status-column" /><col className="name-mappings-source-column" /></colgroup>
         <thead>
           <tr>
             {nameColumns.map(({ key, label }) => {
@@ -46,40 +49,40 @@ export function CharacterNamesTable({ characters, sources, sort, onSort, expande
                 </th>
               )
             })}
-            <th scope="col"><span className="character-names-heading">確認状況</span></th>
-            <th scope="col"><span className="character-names-heading">出典</span></th>
+            <th scope="col"><span className="name-mappings-heading">確認状況</span></th>
+            <th scope="col"><span className="name-mappings-heading">出典</span></th>
           </tr>
         </thead>
         <tbody>
-          {characters.map((character) => {
-            const expanded = expandedId === character.id
-            const panelId = `name-sources-${character.id}`
+          {entries.map((entry) => {
+            const expanded = expandedId === entry.id
+            const panelId = `${entity}-name-sources-${encodeURIComponent(entry.id)}`
             return (
-              <Fragment key={character.id}>
-                <tr className="character-name-row">
+              <Fragment key={entry.id}>
+                <tr className="name-mapping-row">
                   <th scope="row">
-                    {character.japaneseName ?? <span className="character-name-missing" aria-label={`${character.englishName}の日本語名は未確認`}>—</span>}
+                    {entry.japaneseName ?? <span className="name-mapping-missing" aria-label={`${entry.englishName}の日本語名は未確認`}>—</span>}
                   </th>
-                  <td lang="en">{character.englishName}</td>
-                  <td><span className={`character-name-status ${character.status}`}>{character.status === 'verified' ? '確認済' : '未確認'}</span></td>
+                  <td lang="en">{entry.englishName}</td>
+                  <td><span className={`name-mapping-status ${entry.status}`}>{entry.status === 'verified' ? '確認済' : '未確認'}</span></td>
                   <td>
-                    {character.status === 'verified' ? (
-                      <button type="button" className="character-name-source-button" aria-label={`${character.japaneseName}の出典`} aria-expanded={expanded} aria-controls={expanded ? panelId : undefined} onClick={(event) => onToggleSources(character.id, event.currentTarget)}>
+                    {entry.status === 'verified' ? (
+                      <button type="button" className="name-mapping-source-button" aria-label={`${entry.japaneseName}の出典`} aria-expanded={expanded} aria-controls={expanded ? panelId : undefined} onClick={(event) => onToggleSources(entry.id, event.currentTarget)}>
                         出典
                       </button>
-                    ) : <span className="character-name-missing">—</span>}
+                    ) : <span className="name-mapping-missing">—</span>}
                   </td>
                 </tr>
                 {expanded && (
-                  <tr className="character-name-source-row">
+                  <tr className="name-mapping-source-row">
                     <td colSpan={4}>
-                      <section id={panelId} aria-label={`${character.japaneseName}の名前の出典`} className="character-name-evidence">
-                        <div className="character-name-evidence-header">
-                          <h2>{character.japaneseName} / <span lang="en">{character.englishName}</span></h2>
-                          <button type="button" className="character-name-close" onClick={onCloseSources}>閉じる</button>
+                      <section id={panelId} aria-label={`${entry.japaneseName}の名前の出典`} className="name-mapping-evidence">
+                        <div className="name-mapping-evidence-header">
+                          <h2>{entry.japaneseName} / <span lang="en">{entry.englishName}</span></h2>
+                          <button type="button" className="name-mapping-close" onClick={onCloseSources}>閉じる</button>
                         </div>
-                        <div className="character-name-source-list">
-                          {character.sourceIds.map((sourceId) => {
+                        <div className="name-mapping-source-list">
+                          {entry.sourceIds.map((sourceId) => {
                             const source = sourceById.get(sourceId)!
                             return (
                               <div key={source.id}>
@@ -93,9 +96,9 @@ export function CharacterNamesTable({ characters, sources, sort, onSort, expande
                             )
                           })}
                         </div>
-                        <dl className="character-name-check">
-                          <dt>確認日</dt><dd>{character.checkedAt}</dd>
-                          <dt>照合内容</dt><dd>{character.note}</dd>
+                        <dl className="name-mapping-check">
+                          <dt>確認日</dt><dd>{entry.checkedAt}</dd>
+                          <dt>照合内容</dt><dd>{entry.note}</dd>
                         </dl>
                       </section>
                     </td>

@@ -1,3 +1,19 @@
+.name-mappings-page { min-width: 0; }
+.name-mappings-tabs { display: flex; gap: 24px; margin-bottom: 20px; border-bottom: 1px solid var(--border); }
+.name-mappings-tabs button {
+  min-height: 44px;
+  padding: 7px 2px 12px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.name-mappings-tabs button[aria-selected="true"] { border-bottom-color: var(--text); color: var(--text); font-weight: 500; }
+.name-mappings-tabs button:focus-visible { outline-offset: -2px; }
+.name-mappings-page > [hidden] { display: none; }
 .character-names-toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; margin-bottom: 18px; }
 .character-names-toolbar label { display: grid; gap: 7px; color: var(--text-muted); font-size: 12px; min-width: 0; }
 .character-names-search { width: min(100%, 320px); }
@@ -17,6 +33,7 @@
 .character-names-toolbar input::placeholder { color: var(--text-muted); }
 .character-names-count { margin-left: auto; padding-bottom: 9px; color: var(--text-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
 .character-names-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 12px; color: var(--text-muted); font-size: 12px; }
+.character-names-verification { display: inline-flex; align-items: center; gap: 4px; }
 .character-names-empty { margin: 0; padding: 32px 16px; border: 1px solid var(--border); color: var(--text-muted); text-align: center; }
 @media (max-width: 520px) {
   .character-names-toolbar { gap: 12px; }
