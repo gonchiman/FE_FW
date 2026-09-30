@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { GrowthHistogram } from '../components/GrowthHistogram'
+import { characterNameData } from '../data/character-names-data'
 import { growthData } from '../data/growth-data'
 import {
   buildGrowthHistogram,
@@ -16,6 +17,11 @@ import './GrowthAnalysisPage.css'
 const numberFormat = new Intl.NumberFormat('ja-JP', { maximumFractionDigits: 1 })
 const differenceFormat = new Intl.NumberFormat('ja-JP', { maximumFractionDigits: 1, signDisplay: 'exceptZero' })
 const format = (value: number | null) => value === null ? '—' : numberFormat.format(value)
+const japaneseNames = new Map(
+  (characterNameData.data?.characters ?? [])
+    .filter(character => character.status === 'verified' && character.japaneseName !== null)
+    .map(character => [character.id, character.japaneseName]),
+)
 
 function StatOptions() {
   return GROWTH_STATS.map(({ key, label }) => <option key={key} value={key}>{label}</option>)
@@ -129,7 +135,7 @@ export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
             {characters.length === 0 ? <p className="analysis-empty">該当するキャラクターがいません。</p> : <div className="data-table-scroll" role="region" aria-label="集計対象のキャラクター" tabIndex={0}><table className="data-table analysis-table analysis-characters-table">
               <caption className="visually-hidden">選択範囲のキャラクター。成長率の降順です。</caption>
               <thead><tr><th scope="col">キャラクター</th><th scope="col" className="table-number">{metricLabel}（%）</th><th scope="col" className="table-number">平均との差（pt）</th></tr></thead>
-              <tbody>{visibleCharacters.map(character => <tr key={character.id}><th scope="row">{character.name}{unverifiedCount < eligible.length && character.status === 'unverified' && <span className="analysis-row-status">未照合</span>}</th><td className="table-number">{format(character.rates[metric])}</td><td className="table-number">{stats.mean === null ? '—' : differenceFormat.format(character.rates[metric]! - stats.mean)}</td></tr>)}</tbody>
+              <tbody>{visibleCharacters.map(character => <tr key={character.id}><th scope="row">{japaneseNames.get(character.id) ?? character.name}{unverifiedCount < eligible.length && character.status === 'unverified' && <span className="analysis-row-status">未照合</span>}</th><td className="table-number">{format(character.rates[metric])}</td><td className="table-number">{stats.mean === null ? '—' : differenceFormat.format(character.rates[metric]! - stats.mean)}</td></tr>)}</tbody>
             </table></div>}
             {characters.length > 10 && <button className="analysis-button analysis-show-all" type="button" onClick={() => setShowAll(!showAll)}>{showAll ? '10人に戻す' : `残り${characters.length - 10}人を表示`}</button>}
           </div>
