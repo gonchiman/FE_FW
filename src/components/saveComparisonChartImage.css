@@ -1,0 +1,23 @@
+.comparison-chart-image-host {
+  position: fixed;
+  top: 0;
+  left: -100000px;
+  pointer-events: none;
+}
+
+.comparison-chart-image-surface {
+  box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  color: #222;
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
+  --surface: #fff;
+  --surface-soft: #f7f7f7;
+  --border: #d6d6d6;
+  --border-strong: #aaa;
+  --text: #222;
+  --text-soft: #444;
+  --text-muted: #666;
+}
+
+.comparison-chart-image-surface figure { margin: 0; }

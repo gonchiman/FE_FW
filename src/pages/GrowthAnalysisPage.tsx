@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { GrowthHistogram } from '../components/GrowthHistogram'
 import { growthData } from '../data/growth-data'
+import { ChartImageSaveDialog, type ChartImageAspectSettings } from '../components/ChartImageSaveDialog'
+import { GrowthHistogramImage, GrowthHistogramImagePreview, type GrowthHistogramImageData } from '../components/GrowthHistogramImage'
+import { saveComparisonChartImage } from '../components/saveComparisonChartImage'
+import { getChartImageSavePicker, selectChartImageDestination } from '../lib/chartImageDestination'
+import { getChartImageLayout } from '../lib/chartImageLayout'
+import { createChartImageFilename, withChartImageAspect } from '../lib/chartImageFilename'
 import {
   buildGrowthHistogram,
   filterGrowthAnalysisCharacters,
@@ -27,12 +33,20 @@ export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
   const [measure, setMeasure] = useState<'count' | 'percent'>('count')
   const [showMean, setShowMean] = useState(true)
   const [showMedian, setShowMedian] = useState(true)
+  const [showPercentages, setShowPercentages] = useState(false)
+  const [showBinRanges, setShowBinRanges] = useState(false)
   const [filterEnabled, setFilterEnabled] = useState(false)
   const [filterMetric, setFilterMetric] = useState<StatKey>('str')
   const [operator, setOperator] = useState<GrowthCondition['operator']>('gte')
   const [threshold, setThreshold] = useState('45')
   const [selectedBin, setSelectedBin] = useState<number | null>(null)
   const [showAll, setShowAll] = useState(false)
+  const [savingImage, setSavingImage] = useState(false)
+  const [imageMessage, setImageMessage] = useState('')
+  const [imageError, setImageError] = useState(false)
+  const [imageData, setImageData] = useState<GrowthHistogramImageData | null>(null)
+  const [imageAspect, setImageAspect] = useState<ChartImageAspectSettings>({ preset: 'auto', width: '16', height: '9' })
+  const savingImageRef = useRef(false)
   const metricRef = useRef<HTMLSelectElement>(null)
   const conditionButtonRef = useRef<HTMLButtonElement>(null)
   const conditionMetricRef = useRef<HTMLSelectElement>(null)
@@ -72,6 +86,55 @@ export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
     setShowAll(false)
   }
 
+  const previewAspect = imageAspect.preset === 'auto' ? undefined : Number(imageAspect.width) / Number(imageAspect.height)
+
+  function openImageSaveDialog() {
+    if (stats.count === 0 || savingImageRef.current) return
+    setImageMessage('')
+    setImageError(false)
+    const filterLabel = filterEnabled
+      ? `${GROWTH_STATS.find(stat => stat.key === filterMetric)!.label} ${parsedThreshold}%${operator === 'gte' ? '以上' : '以下'}`
+      : '全キャラクター'
+    const sourceIds = new Set(filtered.filter(character => character.rates[metric] !== null).map(character => character.sourceId))
+    const sources = data.sources.filter(source => sourceIds.has(source.id))
+    const unverifiedImageCount = filtered.filter(character => character.rates[metric] !== null && character.status === 'unverified').length
+    setImageData({
+      bins, metricLabel, count: stats.count, measure, mean: stats.mean, median: stats.median, showMean, showMedian, showPercentages, showBinRanges, selectedBin,
+      filename: createChartImageFilename('成長率', [metricLabel, 'ヒストグラム', measure === 'count' ? '人数' : '割合', filterLabel, `幅${binWidth}`, showMean && '平均', showMedian && '中央値', showPercentages && '割合表示', showBinRanges && '階級範囲', selected && `選択${selected.lower}-${selected.upper}%`]),
+      conditions: [filterLabel, `${stats.count}人`, `階級幅 ${binWidth}pt`,
+        ...(stats.missingCount > 0 ? [`値なし ${stats.missingCount}人を除外`] : []),
+        ...(selected ? [`選択 ${selected.lower}%以上${selected.upper}%未満`] : []),
+      ].join(' · '),
+      statusLabel: unverifiedImageCount === stats.count ? 'ゲーム内未照合' : unverifiedImageCount > 0 ? '未照合データを含む' : '',
+      sourceLabel: sources.map(source => source.name).join(' / '),
+    })
+  }
+
+  async function saveImage(filename: string, aspectRatio?: number) {
+    if (!imageData || savingImageRef.current) return
+    savingImageRef.current = true
+    setSavingImage(true)
+    setImageError(false)
+    try {
+      const destination = await selectChartImageDestination(filename, getChartImageSavePicker())
+      if (destination.type === 'cancelled') return
+      const layout = getChartImageLayout({ naturalChartHeight: 334, aspectRatio })
+      await saveComparisonChartImage({
+        chart: <GrowthHistogramImage data={imageData} aspectRatio={aspectRatio} />,
+        width: layout.width,
+        filename,
+        writeBlob: destination.type === 'file' ? destination.write : undefined,
+      })
+      setImageMessage(destination.type === 'file' ? 'PNG画像を保存しました。' : 'PNG画像のダウンロードを開始しました。')
+      setImageData(null)
+    } catch {
+      setImageError(true)
+    } finally {
+      savingImageRef.current = false
+      setSavingImage(false)
+    }
+  }
+
   return (
     <section className="growth-analysis" aria-label="成長率の統計分析">
       <div className="analysis-toolbar">
@@ -108,10 +171,15 @@ export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
             <div className="analysis-chart-controls">
               <label className="analysis-field">階級幅<select value={binWidth} onChange={event => { setBinWidth(Number(event.target.value) as 5 | 10); clearSelection() }}><option value="5">5ポイント</option><option value="10">10ポイント</option></select></label>
               <label className="analysis-field">縦軸<select value={measure} onChange={event => setMeasure(event.target.value as 'count' | 'percent')}><option value="count">人数</option><option value="percent">割合</option></select></label>
+              <label className="analysis-check"><input type="checkbox" checked={showPercentages} onChange={event => setShowPercentages(event.target.checked)} />割合を表示</label>
+              <label className="analysis-check" title="文字が収まらない場合は通常の目盛りを表示します"><input type="checkbox" checked={showBinRanges} onChange={event => setShowBinRanges(event.target.checked)} />階級の範囲を表示</label>
               <label className="analysis-check"><input type="checkbox" checked={showMean} onChange={event => setShowMean(event.target.checked)} />平均</label>
               <label className="analysis-check"><input type="checkbox" checked={showMedian} onChange={event => setShowMedian(event.target.checked)} />中央値</label>
+              <button className="analysis-button analysis-image-save-button" type="button" disabled={stats.count === 0 || savingImage} onClick={openImageSaveDialog}>画像を保存</button>
             </div>
-            <GrowthHistogram bins={bins} metricLabel={metricLabel} count={stats.count} measure={measure} mean={stats.mean} median={stats.median} showMean={showMean} showMedian={showMedian} selectedBin={selectedBin} onSelectBin={index => { setSelectedBin(index); setShowAll(false) }} />
+            {showPercentages && stats.count > 0 && <p className="analysis-percentage-base">割合の基準：{stats.count}人（有効データ）</p>}
+            <GrowthHistogram bins={bins} metricLabel={metricLabel} count={stats.count} measure={measure} mean={stats.mean} median={stats.median} showMean={showMean} showMedian={showMedian} showPercentages={showPercentages} showBinRanges={showBinRanges} selectedBin={selectedBin} onSelectBin={index => { setSelectedBin(index); setShowAll(false) }} />
+            <p className="visually-hidden" role="status">{imageMessage}</p>
             {stats.count > 0 && <details className="analysis-frequency"><summary>度数分布表</summary>
               <div className="data-table-scroll"><table className="data-table analysis-table">
                 <caption className="visually-hidden">{metricLabel}の度数分布表。階級を選ぶと該当するキャラクターを表示します。</caption>
@@ -141,6 +209,7 @@ export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
         <p>四分位数は昇順の位置 (n−1)p を線形補間します。標準偏差は表示中の集団を対象に分母 n で計算します。pt はパーセントポイントです。表示は小数第1位に丸め、計算には丸める前の値を使います。</p>
         <p>階級は下端を含み、上端を含みません。軸の上限は全能力・全対象の最大値より大きい階級境界に揃えます。能力・数値条件を変えても、同じ階級幅では軸の範囲を維持します。</p>
         <p>数値条件は統計全体に、階級の選択はキャラクター一覧だけに反映します。平均との差は数値条件を適用した集団との比較です。</p>
+        <p>「割合を表示」は各階級の人数を有効データの人数で割った割合を棒の上に表示します。「階級の範囲を表示」は各棒の下に下端〜上端を表示し、文字が収まらない幅では通常の目盛りに戻します。</p>
       </details>
       <details className="growth-sources analysis-sources"><summary>データの出典</summary>
         {data.sources.map(source => <div className="growth-source" key={source.id}>
@@ -149,6 +218,13 @@ export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
           <dl><dt>取得日</dt><dd>{source.retrievedAt ?? '未取得'}</dd><dt>元データの版</dt><dd>{source.sourceVersion ?? '不明'}</dd><dt>ゲームの版</dt><dd>{source.gameVersion ?? '不明'}</dd></dl>
         </div>)}
       </details>
+      {imageData && <ChartImageSaveDialog initialFilename={imageData.filename}
+        getDefaultFilename={ratio => withChartImageAspect(imageData.filename, ratio)}
+        aspect={imageAspect} onAspectChange={setImageAspect} canChooseLocation={Boolean(getChartImageSavePicker())}
+        saving={savingImage} error={imageError} helpMode="popover"
+        preview={<GrowthHistogramImagePreview key={`${imageData.filename}-${previewAspect}`} data={imageData} aspectRatio={previewAspect} />}
+        onClose={() => { if (!savingImageRef.current) { setImageData(null); setImageError(false) } }}
+        onSave={(filename, ratio) => { void saveImage(filename, ratio) }} />}
     </section>
   )
 }
