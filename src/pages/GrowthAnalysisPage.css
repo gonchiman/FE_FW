@@ -11,14 +11,7 @@
 .analysis-data-status { display: flex; flex-wrap: wrap; gap: 8px; }
 .growth-analysis .analysis-panel-body { padding: 0; }
 .analysis-summary-body { min-width: 0; padding: 12px 14px; container: growth-summary / inline-size; }
-.analysis-summary-setting { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 12px; color: var(--text-muted); font-size: 11px; }
-.analysis-summary-setting select { min-height: 34px; max-width: 100%; border: 1px solid var(--border); border-radius: 0; background: var(--surface); color: var(--text); padding: 5px 28px 5px 8px; font: inherit; font-size: 12px; }
-.analysis-summary { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--border-strong); border-left: 1px solid var(--border-strong); }
-.analysis-summary > div { min-width: 0; padding: 10px; border-right: 1px solid var(--border-strong); border-bottom: 1px solid var(--border-strong); }
-.analysis-summary dt { margin: 0 0 5px; color: var(--text-soft); font-size: 11px; font-weight: 500; line-height: 1.5; overflow-wrap: anywhere; }
-.analysis-summary dd { margin: 0; font-size: 17px; font-weight: 500; font-variant-numeric: tabular-nums; line-height: 1.5; overflow-wrap: anywhere; }
-.analysis-summary small { font-size: 11px; font-weight: 400; }
-.analysis-summary .analysis-summary-note { display: block; margin-top: 3px; color: var(--text-muted); line-height: 1.5; }
+.analysis-summary-scope { display: none; margin: 0 0 10px; color: var(--text-muted); font-size: 11px; overflow-wrap: anywhere; }
 .analysis-summary-help { margin-top: 3px; }
 .analysis-summary-help summary { min-height: 32px; padding: 7px 0; color: var(--text-muted); font-size: 11px; cursor: pointer; }
 .analysis-summary-help dl { margin: 0; font-size: 11px; line-height: 1.6; }
@@ -87,13 +80,14 @@
 .analysis-help p { margin: 8px 0; line-height: 1.7; }
 .growth-analysis .analysis-sources { margin-top: -8px; }
 @container growth-summary (max-width: 590px) {
-  .analysis-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .analysis-summary > div { padding-inline: 8px; }
   .analysis-summary-help dl > div { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .analysis-summary-scope { display: block; }
 }
 @media (max-width: 760px), (pointer: coarse) {
   .analysis-button, .analysis-segmented button, .analysis-metric-selector button, .analysis-check, .analysis-frequency summary, .analysis-summary-help summary, .analysis-bin-button, .analysis-help summary { min-height: 44px; }
-  .analysis-field select, .analysis-summary-setting select { min-height: 44px; font-size: 16px; }
+  .analysis-field select { min-height: 44px; font-size: 16px; }
 }
 @media (max-width: 520px) {
   .analysis-summary-body, .analysis-panel-content { padding: 10px; }

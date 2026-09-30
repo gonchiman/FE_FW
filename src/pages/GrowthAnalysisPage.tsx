@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { CollapsibleAnalysisPanel } from '../components/CollapsibleAnalysisPanel'
 import { GrowthNumericFilter } from '../components/GrowthNumericFilter'
+import { GrowthSummaryTable } from '../components/GrowthSummaryTable'
 import { PanelStateScope } from '../lib/PanelStateScope'
 import { usePanelOpen } from '../lib/usePanelOpen'
 import { filterGrowthCharactersByConditions, formatGrowthNumericCondition, type GrowthNumericCondition } from '../lib/growth-numeric-filters'
@@ -13,10 +14,10 @@ import { saveComparisonChartImage } from '../components/saveComparisonChartImage
 import { getChartImageSavePicker, selectChartImageDestination } from '../lib/chartImageDestination'
 import { getChartImageLayout } from '../lib/chartImageLayout'
 import { createChartImageFilename, withChartImageAspect } from '../lib/chartImageFilename'
+import { getGrowthSummaryRows } from '../lib/growth-summary'
 import {
   buildGrowthHistogram,
   filterGrowthAnalysisCharacters,
-  getGrowthStatistics,
   getHistogramUpperBound,
 } from '../lib/growth-statistics'
 import { GROWTH_STATS, type GrowthDataset, type StatKey } from '../types/growth'
@@ -32,10 +33,6 @@ const japaneseNames = new Map(
     .filter(character => character.status === 'verified' && character.japaneseName !== null)
     .map(character => [character.id, character.japaneseName]),
 )
-
-function StatOptions() {
-  return GROWTH_STATS.map(({ key, label }) => <option key={key} value={key}>{label}</option>)
-}
 
 export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
   const [metric, setMetric] = useState<StatKey>('spd')
@@ -60,7 +57,8 @@ export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
   const filtered = filterGrowthCharactersByConditions(eligible, conditions)
   const conditionLabels = conditions.map(formatGrowthNumericCondition).filter((label): label is string => label !== null)
   const scopeLabel = conditionLabels.length > 0 ? conditionLabels.join('・') : '全キャラクター'
-  const stats = getGrowthStatistics(filtered, metric)
+  const summaryRows = getGrowthSummaryRows(filtered)
+  const stats = summaryRows.find(row => row.key === metric)!.statistics
   const upperBound = getHistogramUpperBound(eligible, binWidth)
   const bins = buildGrowthHistogram(filtered, metric, binWidth, upperBound)
   const selected = selectedBin === null ? null : bins[selectedBin] ?? null
@@ -71,13 +69,6 @@ export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
   const metricLabel = GROWTH_STATS.find(stat => stat.key === metric)!.label
   const unverifiedCount = eligible.filter(character => character.status === 'unverified').length
   const sampleCount = data.characters.length - eligible.length
-  const summary: [string, number | null, string, string?][] = [
-    ['最小', stats.min, '%'], ['第1四分位', stats.q1, '%'], ['中央値', stats.median, '%'],
-    ['第3四分位', stats.q3, '%'], ['最大', stats.max, '%'], ['有効データ', stats.count, '人'],
-    ['平均', stats.mean, '%'], ['標準偏差', stats.standardDeviation, 'pt'],
-    ['変動係数（CV）', stats.coefficientOfVariation === null ? null : stats.coefficientOfVariation * 100, '%'],
-    ['正規化IQR', stats.normalizedIqr === null ? null : stats.normalizedIqr * 100, '%', `IQR ${format(stats.iqr)}${stats.iqr === null ? '' : 'pt'}`],
-  ]
   let cumulativeCount = 0
   const frequencyRows = bins.map(bin => {
     cumulativeCount += bin.count
@@ -146,12 +137,10 @@ export function GrowthAnalysisContent({ data }: { data: GrowthDataset }) {
         <a href="#/growth-rates">成長率一覧へ →</a>
       </div>
 
-      <CollapsibleAnalysisPanel id="growth-summary" number="01" title="統計サマリー" summary={`${metricLabel} · ${scopeLabel} · 値なし ${stats.missingCount}人`} collapsedLabel="展開" bodyClassName="analysis-panel-body">
+      <CollapsibleAnalysisPanel id="growth-summary" number="01" title="統計サマリー" summary={`${scopeLabel} · 対象 ${filtered.length}人`} collapsedLabel="展開" bodyClassName="analysis-panel-body">
         <div className="analysis-summary-body">
-          <label className="analysis-summary-setting">統計を見るステータス
-            <select value={metric} onChange={event => { setMetric(event.target.value as StatKey); clearSelection() }}><StatOptions /></select>
-          </label>
-          <dl className="analysis-summary" aria-label={`${metricLabel}の統計量`}>{summary.map(([name, value, unit, detail]) => <div key={name}><dt>{name}</dt><dd>{format(value)}{value !== null && <small> {unit}</small>}{detail && <small className="analysis-summary-note">{detail}</small>}</dd></div>)}</dl>
+          <p className="analysis-summary-scope">{scopeLabel} · 対象 {filtered.length}人</p>
+          <GrowthSummaryTable rows={summaryRows} metric={metric} onSelectMetric={key => { setMetric(key); clearSelection() }} />
           <details className="analysis-summary-help"><summary>統計量の見方</summary>
             <dl>
               <div><dt>有効データ・値なし</dt><dd>数値のないデータは能力ごとに除外します。0%は有効データに含めます。</dd></div>

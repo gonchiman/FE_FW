@@ -1,0 +1,29 @@
+.growth-summary-table-section { min-width: 0; }
+.growth-summary-table-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; margin-bottom: 8px; color: var(--text-muted); font-size: 11px; }
+.growth-summary-table-scroll { min-width: 0; }
+.growth-summary-table { min-width: 1040px; table-layout: fixed; }
+.growth-summary-stat-column { width: 104px; }
+.growth-summary-iqr-column { width: 100px; }
+.growth-summary-table tr > :first-child { position: sticky; left: 0; z-index: 1; background: var(--surface); }
+.growth-summary-table thead tr > :first-child { z-index: 2; background: var(--surface-hover); }
+.growth-summary-table tbody tr.is-selected > *,
+.growth-summary-table tbody tr:hover > :first-child { background: var(--surface-hover); }
+.growth-summary-table .table-sort-button { justify-content: space-between; min-height: 58px; padding: 8px 6px; font-size: 11px; line-height: 1.4; }
+.growth-summary-table .table-sort-button > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.growth-summary-table .table-sort-indicator { flex-shrink: 0; }
+.growth-summary-table tr > :first-child .table-sort-button { padding-left: 12px; }
+.growth-summary-table tbody th,
+.growth-summary-table tbody td { height: 40px; line-height: 1.35; }
+.growth-summary-table tbody th { padding: 0; }
+.growth-summary-table tbody td { padding: 4px 10px; }
+.growth-summary-unit { display: block; color: var(--text-muted); font-size: 10px; font-weight: 400; }
+.growth-summary-stat-button { display: flex; align-items: center; gap: 7px; width: 100%; min-height: 36px; padding: 4px 9px; border: 0; background: transparent; color: var(--text); font: inherit; text-align: left; cursor: pointer; }
+.growth-summary-stat-button[aria-pressed='true'] { font-weight: 700; }
+.growth-summary-stat-button:focus-visible { outline-offset: -4px; }
+.growth-summary-selection-mark { flex: 0 0 7px; font-size: 16px; }
+.growth-summary-missing { color: var(--text-muted); }
+.growth-summary-iqr-note { display: block; margin-top: 1px; color: var(--text-muted); font-size: 10px; line-height: 1.2; white-space: nowrap; }
+@media (max-width: 760px), (pointer: coarse) {
+  .growth-summary-stat-button,
+  .growth-summary-table .table-sort-button { min-height: 44px; }
+}
