@@ -1,0 +1,53 @@
+.growth-numeric-filter {
+  container: growth-numeric-filter / inline-size;
+  min-width: 0;
+  margin: 0 0 12px;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  padding: 0 0 12px;
+}
+.growth-numeric-filter legend { padding: 0; margin-bottom: 8px; font-size: 11px; }
+.growth-numeric-filter legend span { margin-left: 6px; color: var(--text-muted); font-size: 10px; }
+.growth-numeric-conditions { display: grid; gap: 8px; }
+.growth-numeric-condition {
+  display: grid;
+  grid-template-columns: minmax(100px, 1.3fr) minmax(100px, 1fr) minmax(70px, 1fr) auto;
+  gap: 6px;
+  align-items: end;
+}
+.growth-numeric-condition label { display: grid; gap: 3px; min-width: 0; color: var(--text-muted); font-size: 10px; }
+.growth-numeric-filter select,
+.growth-numeric-filter input,
+.growth-numeric-filter button {
+  min-width: 0;
+  min-height: 36px;
+  border: 1px solid var(--border-strong, var(--border));
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--text);
+  padding: 4px 8px;
+  font: inherit;
+  font-size: 11px;
+}
+.growth-numeric-filter select,
+.growth-numeric-filter input { width: 100%; }
+.growth-numeric-filter button { cursor: pointer; }
+.growth-numeric-filter button:hover:not(:disabled) { background: var(--surface-hover); }
+.growth-numeric-filter button:disabled { cursor: default; opacity: .55; }
+.growth-numeric-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.growth-numeric-filter .growth-numeric-add { border-style: dashed; }
+.growth-numeric-error { grid-column: 1 / -1; color: var(--danger, #b42318); font-size: 11px; }
+.growth-numeric-condition input[aria-invalid="true"] { border-color: var(--danger, #b42318); }
+
+@container growth-numeric-filter (max-width: 480px) {
+  .growth-numeric-condition { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; }
+  .growth-numeric-condition label:first-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 760px), (pointer: coarse) {
+  .growth-numeric-filter input,
+  .growth-numeric-filter select,
+  .growth-numeric-filter button { min-height: 44px; }
+  .growth-numeric-filter input,
+  .growth-numeric-filter select { font-size: 16px; }
+}

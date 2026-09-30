@@ -1,30 +1,33 @@
 .growth-histogram { width: 100%; min-width: 0; color: var(--text); }
 .growth-histogram-svg { display: block; width: 100%; height: auto; overflow: visible; font: inherit; }
 .growth-histogram-tick,
-.growth-histogram-axis-title { fill: var(--text-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
-.growth-histogram-axis-title { font-size: 12px; }
+.growth-histogram-axis-title,
+.growth-histogram-reference-label { fill: var(--text-muted); font-family: inherit; font-size: 10px; font-variant-numeric: tabular-nums; }
+.growth-histogram-axis-title { fill: var(--text-soft, #444); font-weight: 700; }
 .growth-histogram-grid,
 .growth-histogram-frame,
 .growth-histogram-tick-mark { fill: none; stroke: var(--border); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.growth-histogram-frame,
+.growth-histogram-tick-mark { stroke: var(--border-strong, #aaa); }
 .growth-histogram-bin { cursor: pointer; outline: none; }
 .growth-histogram-hit-area { fill: transparent; }
-.growth-histogram-bar { fill: #637c89; }
-.growth-histogram-bin:hover .growth-histogram-bar { fill: #4d6572; }
-.growth-histogram-bin.is-selected .growth-histogram-bar { fill: #354b58; stroke: var(--text); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.growth-histogram-bar { fill: var(--text-soft, #444); fill-opacity: .72; shape-rendering: crispEdges; }
+.growth-histogram-bin:hover .growth-histogram-bar { fill-opacity: .95; }
+.growth-histogram-bin.is-selected .growth-histogram-bar { fill: var(--text); fill-opacity: .95; stroke: var(--text); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
 .growth-histogram-focus { fill: none; stroke: transparent; stroke-width: 2; pointer-events: none; vector-effect: non-scaling-stroke; }
 .growth-histogram-bin:focus-visible .growth-histogram-focus { stroke: #245ea8; }
 .growth-histogram-selection { fill: var(--text); }
 .growth-histogram-reference-lines { pointer-events: none; }
-.growth-histogram-reference { stroke: var(--text); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
-.growth-histogram-reference.is-dashed { stroke-dasharray: 5 4; }
-.growth-histogram-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; margin-top: 4px; color: var(--text-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
-.growth-histogram-legend > span { display: inline-flex; align-items: center; gap: 6px; }
-.growth-histogram-legend-line { display: inline-block; width: 18px; border-top: 1.5px solid var(--text); }
-.growth-histogram-legend-line.is-dashed { border-top-style: dashed; }
+.growth-histogram-reference { stroke-width: 2; vector-effect: non-scaling-stroke; }
+.growth-histogram-reference.mean { stroke: var(--link, #245ea8); }
+.growth-histogram-reference.median { stroke: var(--warning, #765400); stroke-dasharray: 5 3; }
+.growth-histogram-reference-label { font-size: 9px; font-weight: 700; }
+.growth-histogram-reference-label.mean { fill: var(--link, #245ea8); }
+.growth-histogram-reference-label.median { fill: var(--warning, #765400); }
 .growth-histogram-detail { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 4px 12px; min-height: 40px; padding-top: 12px; font-size: 12px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .growth-histogram-selected-label { color: var(--text-muted); font-size: 11px; }
 .growth-histogram-empty { margin: 0; padding: 40px 16px; border: 1px solid var(--border); color: var(--text-muted); text-align: center; }
 .growth-histogram-range-label { font-size: 11px; }
 .growth-histogram-percentages { pointer-events: none; }
-.growth-histogram-percentage-connector { stroke: var(--text-muted); stroke-width: 1; }
+.growth-histogram-percentage-connector { stroke: var(--border-strong, #aaa); stroke-width: 1; }
 .growth-histogram-percentage-label { fill: var(--text); font-family: inherit; font-size: 12px; font-weight: 400; font-variant-numeric: tabular-nums; }

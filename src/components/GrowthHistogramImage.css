@@ -1,7 +1,7 @@
 .growth-histogram-image-source { font-size: 10px; line-height: 18px; color: var(--text-muted); }
-.growth-histogram-image-plot .growth-histogram-tick { fill: #555; font-size: 11px; }
-.growth-histogram-image-plot .growth-histogram-axis-title { fill: #444; font-size: 12px; font-weight: 700; }
-.growth-histogram-reference-label { fill: var(--text); font-size: 11px; font-weight: 700; }
+.growth-histogram-image-plot .growth-histogram-tick,
+.growth-histogram-image-plot .growth-histogram-axis-title,
+.growth-histogram-image-plot .growth-histogram-reference-label { font-size: 11px; }
 .growth-histogram-image-plot .growth-histogram-bin { cursor: default; pointer-events: none; }
 .growth-image-preview { display: grid; gap: 8px; min-width: 0; }
 .growth-image-preview-heading { display: flex; justify-content: space-between; gap: 12px; color: var(--text-muted); font-size: 12px; }

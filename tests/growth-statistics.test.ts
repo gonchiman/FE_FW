@@ -29,6 +29,7 @@ test('empty or entirely missing statistics have no fabricated numeric values', (
   const empty = {
     count: 0, missingCount: 0, min: null, max: null, mean: null, median: null,
     q1: null, q3: null, standardDeviation: null, iqr: null,
+    coefficientOfVariation: null, normalizedIqr: null,
   }
   assert.deepEqual(getGrowthStatistics([], 'hp'), empty)
   assert.deepEqual(getGrowthStatistics(roster([null, null]), 'hp'), { ...empty, missingCount: 2 })
@@ -39,10 +40,12 @@ test('zero, one observation, and ties have the expected population statistics', 
   assert.deepEqual(getGrowthStatistics(roster([0, null]), 'hp'), {
     count: 1, missingCount: 1, min: 0, max: 0, mean: 0, median: 0,
     q1: 0, q3: 0, standardDeviation: 0, iqr: 0,
+    coefficientOfVariation: null, normalizedIqr: null,
   })
   assert.deepEqual(getGrowthStatistics(roster([25, 25, 25]), 'hp'), {
     count: 3, missingCount: 0, min: 25, max: 25, mean: 25, median: 25,
     q1: 25, q3: 25, standardDeviation: 0, iqr: 0,
+    coefficientOfVariation: 0, normalizedIqr: 0,
   })
 })
 
@@ -50,12 +53,40 @@ test('quartiles interpolate at (n - 1)p and deviation divides by population n', 
   assert.deepEqual(getGrowthStatistics(roster([30, 0, 20, 10]), 'hp'), {
     count: 4, missingCount: 0, min: 0, max: 30, mean: 15, median: 15,
     q1: 7.5, q3: 22.5, standardDeviation: Math.sqrt(125), iqr: 15,
+    coefficientOfVariation: Math.sqrt(125) / 15, normalizedIqr: 1,
   })
   const odd = getGrowthStatistics(roster([0, 5, 10, 15, 100]), 'hp')
   assert.equal(odd.median, 10)
   assert.equal(odd.q1, 5)
   assert.equal(odd.q3, 15)
   assert.equal(odd.iqr, 10)
+})
+
+test('relative dispersion distinguishes zero denominators from positive constant observations', () => {
+  const zeros = getGrowthStatistics(roster([0, 0, 0]), 'hp')
+  assert.equal(zeros.coefficientOfVariation, null)
+  assert.equal(zeros.normalizedIqr, null)
+  for (const values of [[25], [25, 25, 25]]) {
+    const constant = getGrowthStatistics(roster(values), 'hp')
+    assert.equal(constant.coefficientOfVariation, 0)
+    assert.equal(constant.normalizedIqr, 0)
+  }
+  const zeroMedian = getGrowthStatistics(roster([0, 0, 0, 20]), 'hp')
+  assert.equal(zeroMedian.mean, 5)
+  assert.equal(zeroMedian.median, 0)
+  assert.equal(zeroMedian.iqr, 5)
+  assert.equal(zeroMedian.coefficientOfVariation, Math.sqrt(75) / 5)
+  assert.equal(zeroMedian.normalizedIqr, null)
+})
+
+test('nonconstant relative dispersion is dimensionless and ignores missing observations', () => {
+  for (const values of [[10, 20, 30, 40, null], [20, 40, 60, 80, null]]) {
+    const statistics = getGrowthStatistics(roster(values), 'hp')
+    assert.equal(statistics.count, 4)
+    assert.equal(statistics.missingCount, 1)
+    assert.ok(Math.abs(statistics.coefficientOfVariation! - Math.sqrt(125) / 25) < 1e-12)
+    assert.equal(statistics.normalizedIqr, 0.6)
+  }
 })
 
 test('sample fixtures are excluded and invalid rates are missing, never zero', () => {

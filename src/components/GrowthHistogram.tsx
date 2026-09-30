@@ -3,6 +3,7 @@ import type { GrowthHistogramBin } from '../lib/growth-statistics'
 import { getHistogramAxisTicks } from '../lib/histogram-axis'
 import { formatHistogramPercentage } from '../lib/histogramPercentageLabels'
 import { formatHistogramBinRangeLines } from '../lib/histogramBinRangeLabels'
+import { layoutHistogramReferenceLabels } from '../lib/histogramReferenceLabels'
 import { useHistogramBinRangeLayout, useHistogramPercentageLayout, type HistogramBarGeometry } from './useHistogramLabels'
 import './GrowthHistogram.css'
 
@@ -37,6 +38,42 @@ function niceStep(value: number) {
 
 function rangeLabel(bin: GrowthHistogramBin) {
   return `${numberFormatter.format(bin.lower)}%以上 ${numberFormatter.format(bin.upper)}%未満`
+}
+
+interface HistogramReference {
+  key: 'mean' | 'median'
+  label: string
+  value: number
+}
+
+function useReferenceLabels(references: HistogramReference[], position: (value: number) => number,
+  plotLeft: number, plotRight: number, compact: boolean) {
+  const elements = useRef<Partial<Record<HistogramReference['key'], SVGTextElement | null>>>({})
+  const [widths, setWidths] = useState<Partial<Record<HistogramReference['key'], number>>>({})
+  const textKey = JSON.stringify(references.map(({ key, label, value }) => [key, label, value]))
+  useLayoutEffect(() => {
+    let active = true
+    const measure = () => {
+      if (!active) return
+      const next = {
+        mean: elements.current.mean?.getComputedTextLength() ?? 0,
+        median: elements.current.median?.getComputedTextLength() ?? 0,
+      }
+      setWidths(current => current.mean === next.mean && current.median === next.median ? current : next)
+    }
+    measure()
+    const observer = new ResizeObserver(measure)
+    Object.values(elements.current).forEach(element => { if (element) observer.observe(element) })
+    void document.fonts.ready.then(measure)
+    document.fonts.addEventListener('loadingdone', measure)
+    return () => { active = false; observer.disconnect(); document.fonts.removeEventListener('loadingdone', measure) }
+  }, [compact, textKey, plotLeft, plotRight])
+
+  const layout = layoutHistogramReferenceLabels(references.map(reference => {
+    const text = `${reference.label} ${numberFormatter.format(reference.value)}%`
+    return { ...reference, text, x: position(reference.value), width: widths[reference.key] || text.length * 11 }
+  }), plotLeft, plotRight, compact)
+  return { elements, ...layout }
 }
 
 export function GrowthHistogram({
@@ -75,13 +112,11 @@ export function GrowthHistogram({
   const yTicks = Array.from({ length: Math.round(yMax / step) + 1 }, (_, index) => index * step)
   const lower = bins[0]?.lower ?? 0
   const upper = bins[bins.length - 1]?.upper ?? 1
-  const left = image ? 58 : 45
-  const right = 14
-  const top = image ? 48 : 29
-  const requestedHeight = fixedHeight ?? 263
+  const left = Math.max(52, 30 + tickFormatter.format(yMax).length * 7)
+  const right = 18
+  const requestedHeight = fixedHeight ?? 310
   const baseHeight = requestedHeight - reservedLabelHeight
-  const baseBottom = baseHeight - (image ? 24 : 54)
-  const plotHeight = Math.max(1, baseBottom - top)
+  const baseBottom = baseHeight - (image ? 18 : 52)
   const plotWidth = Math.max(1, width - left - right)
   const x = (growth: number) => left + (growth - lower) / (upper - lower || 1) * plotWidth
   const boundaries = [...bins.map((bin) => bin.lower), upper]
@@ -89,21 +124,24 @@ export function GrowthHistogram({
   const majorTickValues = new Set(xTicks)
   const detailIndex = hoveredBin ?? focusedBin ?? selectedBin
   const detailBin = bins.find((bin) => bin.index === detailIndex)
-  const references: { key: string; label: string; value: number; dashed: boolean }[] = []
+  const references: HistogramReference[] = []
   if (showMean && mean !== null && Number.isFinite(mean)) {
-    references.push({ key: 'mean', label: '平均', value: mean, dashed: true })
+    references.push({ key: 'mean', label: '平均', value: mean })
   }
   if (showMedian && median !== null && Number.isFinite(median)) {
-    references.push({ key: 'median', label: '中央値', value: median, dashed: false })
+    references.push({ key: 'median', label: '中央値', value: median })
   }
   const visibleReferences = references.filter((reference) => reference.value >= lower && reference.value <= upper)
+  const referenceLabels = useReferenceLabels(visibleReferences, x, left, width - right, image || showPercentages)
+  const top = image ? referenceLabels.top : 44
+  const plotHeight = Math.max(1, baseBottom - top)
+  const barGap = Math.min(3, Math.max(1, plotWidth / Math.max(1, bins.length) * 0.08))
   const bars = bins.map((bin): HistogramBarGeometry => {
     const binWidth = x(bin.upper) - x(bin.lower)
-    const gap = Math.min(3, binWidth * 0.12)
     const barHeight = value(bin) / yMax * plotHeight
     return {
-      x: x(bin.lower) - left + gap / 2, y: plotHeight - barHeight,
-      width: Math.max(0, binWidth - gap), height: Math.max(0, barHeight),
+      x: x(bin.lower) - left + barGap / 2, y: plotHeight - barHeight,
+      width: Math.max(0, binWidth - barGap), height: Math.max(0, barHeight),
       percentage: formatHistogramPercentage(bin.count, count),
     }
   })
@@ -128,14 +166,14 @@ export function GrowthHistogram({
         <>
           <svg className="growth-histogram-svg" data-histogram-axis={binRangeLayout.visible ? 'ranges' : 'ticks'} viewBox={`0 0 ${width} ${height}`} width={image ? width : undefined} height={image ? height : undefined} role={image ? 'img' : 'group'} aria-labelledby={titleId} aria-describedby={descriptionId}>
             <title id={titleId}>{metricLabel}のヒストグラム</title>
-            <desc id={descriptionId}>横軸は{metricLabel}（%）、縦軸は{measure === 'count' ? '人数（人）' : '構成比（%）'}。{!image && '各階級を選択すると対象のキャラクターを確認できます。'}{showPercentages && ` 棒上に有効データ${count}人に対する割合を表示します。`}{showBinRanges && (binRangeLayout.visible ? ' 各棒の下に階級の範囲を表示します。下限以上、上限未満です。' : ' 階級の範囲が収まらないため、通常の横軸目盛りを表示します。')}</desc>
+            <desc id={descriptionId}>横軸は{metricLabel}（%）、縦軸は{measure === 'count' ? '人数（人）' : '構成比（%）'}。{!image && '各階級を選択すると対象のキャラクターを確認できます。'}{visibleReferences.map(reference => ` ${reference.label} ${numberFormatter.format(reference.value)}%。`).join('')}{showPercentages && ` 棒上に有効データ${count}人に対する割合を表示します。`}{showBinRanges && (binRangeLayout.visible ? ' 各棒の下に階級の範囲を表示します。下限以上、上限未満です。' : ' 階級の範囲が収まらないため、通常の横軸目盛りを表示します。')}</desc>
             {showBinRanges && <text ref={binRangeLayout.measureRef} className="growth-histogram-tick growth-histogram-range-label" visibility="hidden" aria-hidden="true">0</text>}
             <g aria-hidden="true">
-              {image ? <text className="growth-histogram-axis-title" transform={`translate(14 ${(top + bottom) / 2}) rotate(-90)`} textAnchor="middle">{measure === 'count' ? '人数（人）' : '構成比（%）'}</text> : <text className="growth-histogram-axis-title" x={left} y={14}>{measure === 'count' ? '人数（人）' : '構成比（%）'}</text>}
+              <text className="growth-histogram-axis-title" transform={`translate(14 ${(top + bottom) / 2}) rotate(-90)`} textAnchor="middle">{measure === 'count' ? '人数（人）' : '構成比（%）'}</text>
               {yTicks.map((tick) => (
                 <g key={tick}>
                   <line className="growth-histogram-grid" x1={left} x2={left + plotWidth} y1={y(tick)} y2={y(tick)} />
-                  <text className="growth-histogram-tick" x={left - 8} y={y(tick)} textAnchor="end" dominantBaseline="middle">{tickFormatter.format(tick)}</text>
+                  <text className="growth-histogram-tick" x={left - 8} y={y(tick) + 4} textAnchor="end">{tickFormatter.format(tick)}</text>
                 </g>
               ))}
               <rect className="growth-histogram-frame" x={left} y={top} width={plotWidth} height={plotHeight + extraTop} />
@@ -144,8 +182,8 @@ export function GrowthHistogram({
               ))}
               {!binRangeLayout.visible && xTicks.map(tick => (
                 <g key={tick} className="growth-histogram-x-tick">
-                  <line className="growth-histogram-tick-mark" x1={x(tick)} x2={x(tick)} y1={bottom} y2={bottom + 4} />
-                  <text className="growth-histogram-tick" x={x(tick)} y={bottom + 20} textAnchor={tick === lower ? 'start' : tick === upper ? 'end' : 'middle'}>{tickFormatter.format(tick)}</text>
+                  <line className="growth-histogram-tick-mark" x1={x(tick)} x2={x(tick)} y1={bottom} y2={bottom + 5} />
+                  <text className="growth-histogram-tick" x={x(tick)} y={bottom + 19} textAnchor={tick === lower ? 'start' : tick === upper ? 'end' : 'middle'}>{tickFormatter.format(tick)}</text>
                 </g>
               ))}
               {binRangeLayout.centers && <g className="growth-histogram-range-axis">
@@ -157,12 +195,11 @@ export function GrowthHistogram({
                   </text>
                 </g>)}
               </g>}
-              {!image && <text className="growth-histogram-axis-title" x={left + plotWidth / 2} y={height - 6} textAnchor="middle">{metricLabel}（%）</text>}
+              {!image && <text className="growth-histogram-axis-title" x={left + plotWidth / 2} y={height - 8} textAnchor="middle">{metricLabel}（%）</text>}
             </g>
             {bins.map((bin) => {
               const selected = selectedBin === bin.index
               const binWidth = x(bin.upper) - x(bin.lower)
-              const gap = Math.min(3, binWidth * 0.12)
               const barHeight = Math.max(0, bottom - y(value(bin)))
               const label = `${rangeLabel(bin)}、${bin.count}人、${numberFormatter.format(percentage(bin))}%`
               return (
@@ -190,17 +227,17 @@ export function GrowthHistogram({
                 >
                   <title>{label}</title>
                   <rect className="growth-histogram-hit-area" x={x(bin.lower)} y={top} width={binWidth} height={plotHeight + extraTop} />
-                  <rect className="growth-histogram-bar" x={x(bin.lower) + gap / 2} y={bottom - barHeight} width={Math.max(0, binWidth - gap)} height={barHeight} />
+                  <rect className="growth-histogram-bar" x={x(bin.lower) + barGap / 2} y={bottom - barHeight} width={Math.max(0, binWidth - barGap)} height={barHeight} />
                   <rect className="growth-histogram-focus" x={x(bin.lower) + 1} y={top + 1} width={Math.max(0, binWidth - 2)} height={Math.max(0, plotHeight + extraTop - 2)} />
                   {selected && <path className="growth-histogram-selection" d={`M ${x(bin.lower) + binWidth / 2 - 3} ${bottom + 3} l 6 0 l -3 4 z`} />}
                 </g>
               )
             })}
             <g className="growth-histogram-reference-lines" aria-hidden="true">
-              {visibleReferences.map((reference, index) => (
+              {referenceLabels.labels.map((reference) => (
                 <g key={reference.key}>
-                  <line className={`growth-histogram-reference${reference.dashed ? ' is-dashed' : ''}`} x1={x(reference.value)} x2={x(reference.value)} y1={top} y2={bottom} />
-                  {image && <text className="growth-histogram-reference-label" x={Math.max(left + 55, Math.min(left + plotWidth - 55, x(reference.value)))} y={14 + index * 17} textAnchor="middle">{reference.label} {numberFormatter.format(reference.value)}%</text>}
+                  <line className={`growth-histogram-reference ${reference.key}`} x1={x(reference.value)} x2={x(reference.value)} y1={top} y2={bottom} />
+                  <text ref={element => { referenceLabels.elements.current[reference.key] = element }} className={`growth-histogram-reference-label ${reference.key}`} x={reference.x} y={reference.y}>{reference.text}</text>
                 </g>
               ))}
             </g>
@@ -213,13 +250,6 @@ export function GrowthHistogram({
                 x={label.x + label.width / 2} y={label.y + label.height / 2} dominantBaseline="central" textAnchor="middle">{bars[Number(label.id)].percentage}</text>)}
             </g>
           </svg>
-          {!image && references.length > 0 && (
-            <div className="growth-histogram-legend">
-              {references.map((reference) => (
-                <span key={reference.key}><span className={`growth-histogram-legend-line${reference.dashed ? ' is-dashed' : ''}`} aria-hidden="true" />{reference.label} {numberFormatter.format(reference.value)}%</span>
-              ))}
-            </div>
-          )}
           {!image && <div className="growth-histogram-detail" aria-live="polite" aria-atomic="true">
             {detailBin && <><span>{rangeLabel(detailBin)}</span><span>{detailBin.count}人（{numberFormatter.format(percentage(detailBin))}%）</span>{selectedBin === detailBin.index && <span className="growth-histogram-selected-label">選択中</span>}</>}
           </div>}

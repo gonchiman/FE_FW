@@ -17,6 +17,8 @@ export interface GrowthStatistics {
   q3: number | null
   standardDeviation: number | null
   iqr: number | null
+  coefficientOfVariation: number | null
+  normalizedIqr: number | null
 }
 
 export interface GrowthHistogramBin {
@@ -71,6 +73,12 @@ function quantile(values: readonly number[], probability: number): number {
   return lowerValue + (values[Math.ceil(position)] - lowerValue) * (position - lowerIndex)
 }
 
+function relativeDispersion(numerator: number, denominator: number): number | null {
+  if (!Number.isFinite(numerator) || !Number.isFinite(denominator) || denominator <= 0) return null
+  const ratio = numerator / denominator
+  return Number.isFinite(ratio) ? ratio : null
+}
+
 /** Missing rates stay separate from confirmed zero; deviation uses the population n. */
 export function getGrowthStatistics(
   characters: readonly CharacterGrowth[],
@@ -90,6 +98,7 @@ export function getGrowthStatistics(
     return {
       count, missingCount, min: null, max: null, mean: null, median: null,
       q1: null, q3: null, standardDeviation: null, iqr: null,
+      coefficientOfVariation: null, normalizedIqr: null,
     }
   }
 
@@ -97,18 +106,23 @@ export function getGrowthStatistics(
   const mean = values.reduce((sum, value) => sum + value, 0) / count
   const q1 = quantile(values, 0.25)
   const q3 = quantile(values, 0.75)
+  const median = quantile(values, 0.5)
   const variance = values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / count
+  const standardDeviation = Math.sqrt(variance)
+  const iqr = q3 - q1
   return {
     count,
     missingCount,
     min: values[0],
     max: values[count - 1],
     mean,
-    median: quantile(values, 0.5),
+    median,
     q1,
     q3,
-    standardDeviation: Math.sqrt(variance),
-    iqr: q3 - q1,
+    standardDeviation,
+    iqr,
+    coefficientOfVariation: relativeDispersion(standardDeviation, mean),
+    normalizedIqr: relativeDispersion(iqr, median),
   }
 }
 

@@ -1,0 +1,46 @@
+.collapsible-analysis-panel {
+  min-width: 0;
+  border: 1px solid var(--border-strong, #aaa);
+  border-radius: 0;
+  background: #fff;
+  padding: 0;
+}
+.collapsible-analysis-title { margin: 0; font-size: inherit; }
+.collapsible-analysis-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--surface-soft, #f7f7f7);
+  color: #222;
+  padding: 7px 10px;
+  cursor: pointer;
+  text-align: left;
+}
+.collapsible-analysis-heading:hover { background: var(--surface-hover, #f3f3f3); }
+.collapsible-analysis-heading:focus-visible { outline: 2px solid var(--text, #222); outline-offset: 2px; }
+.collapsible-analysis-panel.open > .collapsible-analysis-title > .collapsible-analysis-heading { border-bottom: 1px solid var(--border, #d6d6d6); }
+.collapsible-analysis-heading-title { min-width: 0; display: flex; align-items: center; gap: 8px; }
+.collapsible-analysis-heading-title > span:first-child { flex: 0 0 auto; color: #888; font-size: 9px; font-weight: 800; }
+.collapsible-analysis-heading-label { color: #222; font-size: 14px; font-weight: 700; }
+.collapsible-analysis-heading-summary { min-width: 0; display: flex; align-items: center; gap: 14px; color: var(--text-muted, #666); font-size: 9px; text-align: right; }
+.collapsible-analysis-heading-summary > span { min-width: 0; overflow: hidden; color: var(--text-muted, #666); font-weight: 400; text-overflow: ellipsis; white-space: nowrap; }
+.collapsible-analysis-heading-summary em { flex: 0 0 auto; color: #333; font-style: normal; font-weight: 700; white-space: nowrap; }
+.collapsible-analysis-body { min-width: 0; padding: 12px 14px; }
+.collapsible-analysis-body[hidden] { display: none; }
+
+@media (max-width: 760px) {
+  .collapsible-analysis-heading-summary > span { display: none; }
+}
+@media (max-width: 520px) {
+  .collapsible-analysis-heading { min-height: 48px; padding-inline: 8px; }
+  .collapsible-analysis-heading-label { font-size: 13px; }
+  .collapsible-analysis-heading-summary { font-size: 8px; }
+  .collapsible-analysis-body { padding: 10px; }
+}
