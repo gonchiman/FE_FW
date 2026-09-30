@@ -149,6 +149,7 @@
   min-width: 0;
   margin: 0 auto;
   padding: 28px;
+  scroll-margin-top: var(--header-height);
 }
 
 .icon-button {
@@ -217,7 +218,7 @@
   transform: translateY(0);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1140px) {
   .app-shell {
     grid-template-columns: minmax(0, 1fr);
   }

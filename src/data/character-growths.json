@@ -1,0 +1,1069 @@
+{
+  "sources": [
+    {
+      "id": "fortunes-weave-helper",
+      "name": "Fortunes-Weave-Helper / Game8",
+      "url": "https://github.com/Rico0319/Fortunes-Weave-Helper/blob/29609cc76a0a79a86473ef1e0980771e94c97640/data/fwe.json",
+      "retrievedAt": "2026-09-30T05:36:34Z",
+      "sourceVersion": "29609cc76a0a79a86473ef1e0980771e94c97640",
+      "gameVersion": null,
+      "note": "Game8の攻略記事から収集された個人成長率です。ゲーム内の数値との照合は未実施です。元記事: https://game8.co/games/Fire-Emblem-Fortunes-Weave/archives/618974"
+    }
+  ],
+  "characters": [
+    {
+      "id": "fwe-alexandra",
+      "name": "Alexandra",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 30,
+        "str": 35,
+        "mag": 35,
+        "dex": 45,
+        "spd": 55,
+        "lck": 50,
+        "def": 30,
+        "res": 40,
+        "cha": 50
+      }
+    },
+    {
+      "id": "fwe-anatolia",
+      "name": "Anatolia",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 35,
+        "mag": 50,
+        "dex": 45,
+        "spd": 50,
+        "lck": 40,
+        "def": 35,
+        "res": 40,
+        "cha": 50
+      }
+    },
+    {
+      "id": "fwe-aswan",
+      "name": "Aswan",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 35,
+        "mag": 10,
+        "dex": 50,
+        "spd": 40,
+        "lck": 30,
+        "def": 30,
+        "res": 15,
+        "cha": 20
+      }
+    },
+    {
+      "id": "fwe-benditz",
+      "name": "Benditz",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 35,
+        "mag": 20,
+        "dex": 50,
+        "spd": 35,
+        "lck": 30,
+        "def": 35,
+        "res": 25,
+        "cha": 35
+      }
+    },
+    {
+      "id": "fwe-bertrand",
+      "name": "Bertrand",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 55,
+        "mag": 15,
+        "dex": 50,
+        "spd": 45,
+        "lck": 30,
+        "def": 45,
+        "res": 20,
+        "cha": 50
+      }
+    },
+    {
+      "id": "fwe-bonaventure",
+      "name": "Bonaventure",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 35,
+        "str": 35,
+        "mag": 45,
+        "dex": 50,
+        "spd": 40,
+        "lck": 35,
+        "def": 30,
+        "res": 40,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-buccar",
+      "name": "Buccar",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 50,
+        "mag": 20,
+        "dex": 40,
+        "spd": 25,
+        "lck": 30,
+        "def": 45,
+        "res": 20,
+        "cha": 35
+      }
+    },
+    {
+      "id": "fwe-cai",
+      "name": "Cai",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 45,
+        "mag": 40,
+        "dex": 45,
+        "spd": 45,
+        "lck": 40,
+        "def": 35,
+        "res": 35,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-catania",
+      "name": "Catania",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 35,
+        "str": 35,
+        "mag": 35,
+        "dex": 50,
+        "spd": 55,
+        "lck": 40,
+        "def": 30,
+        "res": 35,
+        "cha": 45
+      }
+    },
+    {
+      "id": "fwe-centurio",
+      "name": "Centurio",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 45,
+        "mag": 25,
+        "dex": 50,
+        "spd": 40,
+        "lck": 30,
+        "def": 50,
+        "res": 30,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-creek",
+      "name": "Creek",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 50,
+        "mag": 15,
+        "dex": 50,
+        "spd": 60,
+        "lck": 30,
+        "def": 35,
+        "res": 20,
+        "cha": 35
+      }
+    },
+    {
+      "id": "fwe-dadao",
+      "name": "Dadao",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 55,
+        "mag": 20,
+        "dex": 35,
+        "spd": 30,
+        "lck": 25,
+        "def": 45,
+        "res": 20,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-dante",
+      "name": "Dante",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 30,
+        "str": 30,
+        "mag": 45,
+        "dex": 40,
+        "spd": 40,
+        "lck": 45,
+        "def": 20,
+        "res": 40,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-diego",
+      "name": "Diego",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 40,
+        "mag": 20,
+        "dex": 60,
+        "spd": 45,
+        "lck": 35,
+        "def": 35,
+        "res": 20,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-dietrich",
+      "name": "Dietrich",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 45,
+        "mag": 30,
+        "dex": 60,
+        "spd": 50,
+        "lck": 50,
+        "def": 40,
+        "res": 30,
+        "cha": 60
+      }
+    },
+    {
+      "id": "fwe-eshmel",
+      "name": "Eshmel",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 45,
+        "mag": 45,
+        "dex": 45,
+        "spd": 45,
+        "lck": 40,
+        "def": 35,
+        "res": 35,
+        "cha": 50
+      }
+    },
+    {
+      "id": "fwe-esmeralda",
+      "name": "Esmeralda",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 55,
+        "str": 55,
+        "mag": 20,
+        "dex": 35,
+        "spd": 35,
+        "lck": 35,
+        "def": 45,
+        "res": 25,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-fabio",
+      "name": "Fabio",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 25,
+        "mag": 50,
+        "dex": 40,
+        "spd": 35,
+        "lck": 35,
+        "def": 30,
+        "res": 45,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-fianna",
+      "name": "Fianna",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 30,
+        "str": 35,
+        "mag": 55,
+        "dex": 40,
+        "spd": 30,
+        "lck": 25,
+        "def": 20,
+        "res": 45,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-gaitz",
+      "name": "Gaitz",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 50,
+        "mag": 20,
+        "dex": 45,
+        "spd": 40,
+        "lck": 40,
+        "def": 45,
+        "res": 25,
+        "cha": 45
+      }
+    },
+    {
+      "id": "fwe-goliath",
+      "name": "Goliath",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 55,
+        "str": 60,
+        "mag": 5,
+        "dex": 30,
+        "spd": 15,
+        "lck": 35,
+        "def": 50,
+        "res": 20,
+        "cha": 20
+      }
+    },
+    {
+      "id": "fwe-guzran",
+      "name": "Guzran",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 45,
+        "mag": 20,
+        "dex": 45,
+        "spd": 50,
+        "lck": 45,
+        "def": 35,
+        "res": 20,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-halvin",
+      "name": "Halvin",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 35,
+        "str": 35,
+        "mag": 30,
+        "dex": 60,
+        "spd": 45,
+        "lck": 40,
+        "def": 30,
+        "res": 25,
+        "cha": 35
+      }
+    },
+    {
+      "id": "fwe-hong-hua",
+      "name": "Hong Hua",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 30,
+        "mag": 45,
+        "dex": 45,
+        "spd": 45,
+        "lck": 30,
+        "def": 30,
+        "res": 45,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-inyoni",
+      "name": "Inyoni",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 50,
+        "mag": 20,
+        "dex": 40,
+        "spd": 35,
+        "lck": 40,
+        "def": 40,
+        "res": 30,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-io",
+      "name": "Io",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 40,
+        "mag": 25,
+        "dex": 45,
+        "spd": 35,
+        "lck": 35,
+        "def": 40,
+        "res": 25,
+        "cha": 35
+      }
+    },
+    {
+      "id": "fwe-jasmine",
+      "name": "Jasmine",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 40,
+        "mag": 20,
+        "dex": 45,
+        "spd": 30,
+        "lck": 40,
+        "def": 45,
+        "res": 25,
+        "cha": 45
+      }
+    },
+    {
+      "id": "fwe-jester",
+      "name": "Jester",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 35,
+        "mag": 15,
+        "dex": 45,
+        "spd": 60,
+        "lck": 40,
+        "def": 35,
+        "res": 25,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-kiroc",
+      "name": "Kiroc",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 55,
+        "str": 40,
+        "mag": 15,
+        "dex": 50,
+        "spd": 55,
+        "lck": 30,
+        "def": 30,
+        "res": 15,
+        "cha": 25
+      }
+    },
+    {
+      "id": "fwe-leda",
+      "name": "Leda",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 35,
+        "mag": 35,
+        "dex": 50,
+        "spd": 65,
+        "lck": 25,
+        "def": 30,
+        "res": 35,
+        "cha": 55
+      }
+    },
+    {
+      "id": "fwe-lilian",
+      "name": "Lilian",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 35,
+        "str": 35,
+        "mag": 30,
+        "dex": 55,
+        "spd": 40,
+        "lck": 50,
+        "def": 30,
+        "res": 35,
+        "cha": 25
+      }
+    },
+    {
+      "id": "fwe-loretta",
+      "name": "Loretta",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 35,
+        "str": 35,
+        "mag": 35,
+        "dex": 40,
+        "spd": 55,
+        "lck": 30,
+        "def": 30,
+        "res": 40,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-ludia",
+      "name": "Ludia",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 35,
+        "mag": 20,
+        "dex": 45,
+        "spd": 55,
+        "lck": 30,
+        "def": 30,
+        "res": 20,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-lysander",
+      "name": "Lysander",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 40,
+        "mag": 25,
+        "dex": 35,
+        "spd": 50,
+        "lck": 30,
+        "def": 40,
+        "res": 25,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-majide",
+      "name": "Majide",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 65,
+        "str": 50,
+        "mag": 15,
+        "dex": 30,
+        "spd": 20,
+        "lck": 25,
+        "def": 40,
+        "res": 10,
+        "cha": 5
+      }
+    },
+    {
+      "id": "fwe-mikaela",
+      "name": "Mikaela",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 45,
+        "mag": 30,
+        "dex": 35,
+        "spd": 40,
+        "lck": 30,
+        "def": 40,
+        "res": 25,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-mu",
+      "name": "Mu",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 30,
+        "str": 30,
+        "mag": 5,
+        "dex": 30,
+        "spd": 30,
+        "lck": 10,
+        "def": 20,
+        "res": 10,
+        "cha": 20
+      }
+    },
+    {
+      "id": "fwe-nathan",
+      "name": "Nathan",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 55,
+        "str": 60,
+        "mag": 15,
+        "dex": 60,
+        "spd": 25,
+        "lck": 25,
+        "def": 45,
+        "res": 15,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-nezha",
+      "name": "Nezha",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 55,
+        "mag": 25,
+        "dex": 50,
+        "spd": 45,
+        "lck": 30,
+        "def": 35,
+        "res": 25,
+        "cha": 25
+      }
+    },
+    {
+      "id": "fwe-ninae",
+      "name": "Ninae",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 45,
+        "mag": 35,
+        "dex": 45,
+        "spd": 35,
+        "lck": 50,
+        "def": 35,
+        "res": 45,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-noctula",
+      "name": "Noctula",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 45,
+        "mag": 20,
+        "dex": 40,
+        "spd": 45,
+        "lck": 35,
+        "def": 40,
+        "res": 20,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-nuzzuo",
+      "name": "Nuzzuo",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 50,
+        "mag": 15,
+        "dex": 45,
+        "spd": 55,
+        "lck": 25,
+        "def": 20,
+        "res": 15,
+        "cha": 35
+      }
+    },
+    {
+      "id": "fwe-nydine",
+      "name": "Nydine",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 40,
+        "mag": 30,
+        "dex": 40,
+        "spd": 45,
+        "lck": 35,
+        "def": 30,
+        "res": 25,
+        "cha": 35
+      }
+    },
+    {
+      "id": "fwe-olympia",
+      "name": "Olympia",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 35,
+        "str": 35,
+        "mag": 50,
+        "dex": 35,
+        "spd": 35,
+        "lck": 40,
+        "def": 30,
+        "res": 40,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-orchel",
+      "name": "Orchel",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 30,
+        "str": 60,
+        "mag": 45,
+        "dex": 20,
+        "spd": 10,
+        "lck": 20,
+        "def": 60,
+        "res": 60,
+        "cha": 60
+      }
+    },
+    {
+      "id": "fwe-peppe",
+      "name": "Peppe",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 30,
+        "str": 30,
+        "mag": 25,
+        "dex": 45,
+        "spd": 60,
+        "lck": 45,
+        "def": 30,
+        "res": 30,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-peter",
+      "name": "Peter",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 35,
+        "mag": 20,
+        "dex": 60,
+        "spd": 45,
+        "lck": 35,
+        "def": 30,
+        "res": 25,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-seteth",
+      "name": "Seteth",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 45,
+        "mag": 30,
+        "dex": 45,
+        "spd": 40,
+        "lck": 30,
+        "def": 40,
+        "res": 35,
+        "cha": 50
+      }
+    },
+    {
+      "id": "fwe-sha-lan",
+      "name": "Sha Lan",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 35,
+        "str": 30,
+        "mag": 45,
+        "dex": 50,
+        "spd": 35,
+        "lck": 35,
+        "def": 30,
+        "res": 45,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-simon",
+      "name": "Simon",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 50,
+        "mag": 20,
+        "dex": 40,
+        "spd": 35,
+        "lck": 50,
+        "def": 40,
+        "res": 25,
+        "cha": 35
+      }
+    },
+    {
+      "id": "fwe-sirocco",
+      "name": "Sirocco",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 40,
+        "mag": 40,
+        "dex": 50,
+        "spd": 45,
+        "lck": 50,
+        "def": 35,
+        "res": 35,
+        "cha": 45
+      }
+    },
+    {
+      "id": "fwe-sofia",
+      "name": "Sofia",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 35,
+        "str": 30,
+        "mag": 45,
+        "dex": 30,
+        "spd": 40,
+        "lck": 30,
+        "def": 25,
+        "res": 40,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-tahonia",
+      "name": "Tahonia",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 65,
+        "str": 50,
+        "mag": 5,
+        "dex": 40,
+        "spd": 20,
+        "lck": 20,
+        "def": 45,
+        "res": 35,
+        "cha": 40
+      }
+    },
+    {
+      "id": "fwe-talimun",
+      "name": "Talimun",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 40,
+        "mag": 45,
+        "dex": 45,
+        "spd": 40,
+        "lck": 60,
+        "def": 35,
+        "res": 40,
+        "cha": 50
+      }
+    },
+    {
+      "id": "fwe-theodora",
+      "name": "Theodora",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 70,
+        "str": 50,
+        "mag": 30,
+        "dex": 40,
+        "spd": 40,
+        "lck": 30,
+        "def": 40,
+        "res": 30,
+        "cha": 50
+      }
+    },
+    {
+      "id": "fwe-tialla",
+      "name": "Tialla",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 30,
+        "str": 25,
+        "mag": 45,
+        "dex": 40,
+        "spd": 35,
+        "lck": 50,
+        "def": 20,
+        "res": 40,
+        "cha": 45
+      }
+    },
+    {
+      "id": "fwe-tobias",
+      "name": "Tobias",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 55,
+        "str": 60,
+        "mag": 15,
+        "dex": 30,
+        "spd": 25,
+        "lck": 40,
+        "def": 45,
+        "res": 20,
+        "cha": 35
+      }
+    },
+    {
+      "id": "fwe-troy",
+      "name": "Troy",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 45,
+        "mag": 45,
+        "dex": 40,
+        "spd": 50,
+        "lck": 30,
+        "def": 30,
+        "res": 30,
+        "cha": 30
+      }
+    },
+    {
+      "id": "fwe-ultand",
+      "name": "Ultand",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 45,
+        "str": 40,
+        "mag": 40,
+        "dex": 40,
+        "spd": 35,
+        "lck": 55,
+        "def": 35,
+        "res": 45,
+        "cha": 50
+      }
+    },
+    {
+      "id": "fwe-ursula",
+      "name": "Ursula",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 35,
+        "mag": 35,
+        "dex": 50,
+        "spd": 50,
+        "lck": 40,
+        "def": 35,
+        "res": 30,
+        "cha": 45
+      }
+    },
+    {
+      "id": "fwe-yang-jie",
+      "name": "Yang Jie",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 50,
+        "str": 35,
+        "mag": 40,
+        "dex": 35,
+        "spd": 35,
+        "lck": 40,
+        "def": 30,
+        "res": 40,
+        "cha": 25
+      }
+    },
+    {
+      "id": "fwe-zarcone",
+      "name": "Zarcone",
+      "sourceId": "fortunes-weave-helper",
+      "status": "unverified",
+      "rates": {
+        "hp": 40,
+        "str": 30,
+        "mag": 20,
+        "dex": 60,
+        "spd": 35,
+        "lck": 30,
+        "def": 30,
+        "res": 25,
+        "cha": 15
+      }
+    }
+  ]
+}

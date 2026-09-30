@@ -1,0 +1,1273 @@
+{
+  "sources": [
+    {
+      "id": "nintendo-characters-ja",
+      "language": "ja",
+      "name": "任天堂 キャラクター紹介",
+      "url": "https://www.nintendo.com/jp/games/switch2/aacsa/character/index.html",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "nintendo-game-en",
+      "language": "en",
+      "name": "Nintendo Fire Emblem: Fortune’s Weave",
+      "url": "https://www.nintendo.com/us/store/products/fire-emblem-fortunes-weave-125688/?slug=fire-emblem-fortunes-weave-125688",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1597-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト アレキサンドラの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1597",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1623-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト アナトリアの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1623",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1694-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト アスワンの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1694",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1677-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ベンディッツの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1677",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1631-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ベルトランの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1631",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1614-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ボナパルテの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1614",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1612-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト バッカニアの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1612",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1638-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト カターニャの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1638",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1634-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト セントリオンの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1634",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1626-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト キリークの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1626",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1640-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ダイトウの詳細情報（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1640",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "ndw-character-file-ja",
+      "language": "ja",
+      "name": "Nintendo DREAM WEB 登場キャラクターファイル（非公式）",
+      "url": "https://www.ndw.jp/weave-game-260715/",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "serenes-character-part-7-en",
+      "language": "en",
+      "name": "Serenes Forest キャラクター紹介（非公式）",
+      "url": "https://serenesforest.net/2026/08/24/fortunes-weave-combined-social-media-info-part-7/",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "nintendo-developer-interview-ja",
+      "language": "ja",
+      "name": "任天堂 開発者に訊きました（日本語）",
+      "url": "https://www.nintendo.com/jp/interview/aacsa/index.html",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "nintendo-developer-interview-en",
+      "language": "en",
+      "name": "Nintendo Ask the Developer Vol. 23",
+      "url": "https://www.nintendo.com/en-gb/News/2026/September/Ask-the-Developer-Vol-23-Chapter-1-3195811.html",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1617-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト エスメラルダの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1617",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1618-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ファビオの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1618",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1654-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト フィアナの詳細情報（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1654",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1669-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ゴライアスの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1669",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1620-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト グザランの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1620",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1699-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ハルヴィンの詳細情報（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1699",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1637-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト コウカの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1637",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "serenes-character-part-10-en",
+      "language": "en",
+      "name": "Serenes Forest キャラクター紹介（非公式）",
+      "url": "https://serenesforest.net/2026/09/14/fortunes-weave-combined-social-media-info-part-10/",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "serenes-character-part-8-en",
+      "language": "en",
+      "name": "Serenes Forest キャラクター紹介（非公式）",
+      "url": "https://serenesforest.net/2026/08/31/fortunes-weave-combined-social-media-info-part-8/",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1702-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ジェスターの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1702",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "serenes-character-part-4-en",
+      "language": "en",
+      "name": "Serenes Forest キャラクター紹介（非公式）",
+      "url": "https://serenesforest.net/2026/07/21/fortunes-weave-japanese-twitter-information-part-4/",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1701-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ロレッタの詳細情報（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1701",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1653-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ルルディヤーの詳細情報（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1653",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1619-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ライサンダーの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1619",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "serenes-character-part-9-en",
+      "language": "en",
+      "name": "Serenes Forest キャラクター紹介（非公式）",
+      "url": "https://serenesforest.net/2026/09/07/fortunes-weave-combined-social-media-info-part-9/",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1622-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト ミカエラの詳細情報（非公式）",
+      "url": "https://www.fire-emblem.fun/?fechar=1622",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "serenes-character-part-5-en",
+      "language": "en",
+      "name": "Serenes Forest キャラクター紹介（非公式）",
+      "url": "https://serenesforest.net/2026/07/30/fortunes-weave-japanese-twitter-information-part-5/",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1625-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ネイサンの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1625",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1673-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ナジャの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1673",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1594-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ニネの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1594",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1651-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ノクチュラの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1651",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1655-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ヌッツォの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1655",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1663-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ヌディーヌの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1663",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "game8-816430-ja",
+      "language": "ja",
+      "name": "Game8「オリンピア」（非公式）",
+      "url": "https://game8.jp/fe-banshisenko/816430",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "gamersky-character-18-ja-en",
+      "language": "ja-en",
+      "name": "GamerSky「全角色礼物喜好一览」18ページ（日英名併記）（非公式）",
+      "url": "https://www.gamersky.com/handbook/202609/2217606_18.shtml",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "nintendo-insider-character-profiles-en",
+      "language": "en",
+      "name": "Nintendo Insider「Characters, Gifts, Likes and Interests」（非公式）",
+      "url": "https://www.nintendo-insider.com/fire-emblem-fortunes-weave-characters-gifts-likes-and-interests/",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1630-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「オルヘルの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1630",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "game8-816449-ja",
+      "language": "ja",
+      "name": "Game8「ペペ」（非公式）",
+      "url": "https://game8.jp/fe-banshisenko/816449",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "gamersky-character-60-ja-en",
+      "language": "ja-en",
+      "name": "GamerSky「全角色礼物喜好一览」60ページ（日英名併記）（非公式）",
+      "url": "https://www.gamersky.com/handbook/202609/2217606_60.shtml",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "game8-816419-ja",
+      "language": "ja",
+      "name": "Game8「ピーテル」（非公式）",
+      "url": "https://game8.jp/fe-banshisenko/816419",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "gamersky-character-7-ja-en",
+      "language": "ja-en",
+      "name": "GamerSky「全角色礼物喜好一览」7ページ（日英名併記）（非公式）",
+      "url": "https://www.gamersky.com/handbook/202609/2217606_7.shtml",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1672-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「セテスの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1672",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1621-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「サランの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1621",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "game8-816435-ja",
+      "language": "ja",
+      "name": "Game8「シモン」（非公式）",
+      "url": "https://game8.jp/fe-banshisenko/816435",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "gamersky-character-32-ja-en",
+      "language": "ja-en",
+      "name": "GamerSky「全角色礼物喜好一览」32ページ（日英名併記）（非公式）",
+      "url": "https://www.gamersky.com/handbook/202609/2217606_32.shtml",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1598-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「シロッコの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1598",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1639-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ソフィアの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1639",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "game8-816903-ja",
+      "language": "ja",
+      "name": "Game8「タホウニア」（非公式）",
+      "url": "https://game8.jp/fe-banshisenko/816903",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "gamersky-character-62-ja-en",
+      "language": "ja-en",
+      "name": "GamerSky「全角色礼物喜好一览」62ページ（日英名併記）（非公式）",
+      "url": "https://www.gamersky.com/handbook/202609/2217606_62.shtml",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1624-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「タリムーンの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1624",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1604-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ティアラの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1604",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "game8-816425-ja",
+      "language": "ja",
+      "name": "Game8「トビヤス」（非公式）",
+      "url": "https://game8.jp/fe-banshisenko/816425",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "gamersky-character-13-ja-en",
+      "language": "ja-en",
+      "name": "GamerSky「全角色礼物喜好一览」13ページ（日英名併記）（非公式）",
+      "url": "https://www.gamersky.com/handbook/202609/2217606_13.shtml",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1683-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「トロイアの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1683",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1595-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ウルタンドの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1595",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1596-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ウーシュラの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1596",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1627-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ヨーカイの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1627",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    },
+    {
+      "id": "fe-fun-1697-ja-en",
+      "language": "ja-en",
+      "name": "FEファンサイト「ザーコネの詳細情報」（非公式）",
+      "url": "https://fire-emblem.fun/?fechar=1697",
+      "retrievedAt": "2026-09-30",
+      "sourceVersion": null,
+      "gameVersion": null
+    }
+  ],
+  "mappings": [
+    {
+      "characterId": "fwe-alexandra",
+      "japaneseName": "アレキサンドラ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1597-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-anatolia",
+      "japaneseName": "アナトリア",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1623-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-aswan",
+      "japaneseName": "アスワン",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1694-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。"
+    },
+    {
+      "characterId": "fwe-benditz",
+      "japaneseName": "ベンディッツ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1677-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-bertrand",
+      "japaneseName": "ベルトラン",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1631-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-bonaventure",
+      "japaneseName": "ボナパルテ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1614-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-buccar",
+      "japaneseName": "バッカニア",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1612-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-cai",
+      "japaneseName": "カイ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "nintendo-game-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "投獄された父を救うために参加する少年。"
+    },
+    {
+      "characterId": "fwe-catania",
+      "japaneseName": "カターニャ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1638-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-centurio",
+      "japaneseName": "セントリオン",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1634-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。"
+    },
+    {
+      "characterId": "fwe-creek",
+      "japaneseName": "キリーク",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1626-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-dadao",
+      "japaneseName": "ダイトウ",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1640-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。"
+    },
+    {
+      "characterId": "fwe-dante",
+      "japaneseName": "ダンテ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "ndw-character-file-ja",
+        "serenes-character-part-7-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の鷲見友美ジェナ／Sumi Tomomi Jiena、およびダグシオンの劇作家という紹介が一致。二次資料による照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-diego",
+      "japaneseName": "ディエゴ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "ndw-character-file-ja",
+        "serenes-character-part-7-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の高梨謙吾／Kengo Takanashi、およびハル・ハリ族出身でオルヘルに仕える人物という紹介が一致。二次資料による照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-dietrich",
+      "japaneseName": "ディートリヒ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "nintendo-game-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "さらなる強者との戦いを求める剣士。"
+    },
+    {
+      "characterId": "fwe-eshmel",
+      "japaneseName": "イシュマール",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-developer-interview-ja",
+        "nintendo-developer-interview-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "任天堂の同一開発者インタビューの日英版で、闘技大会を取り仕切る人物の名前を照合。性別によらない既定名を登録。"
+    },
+    {
+      "characterId": "fwe-esmeralda",
+      "japaneseName": "エスメラルダ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1617-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-fabio",
+      "japaneseName": "ファビオ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1618-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-fianna",
+      "japaneseName": "フィアナ",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1654-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。"
+    },
+    {
+      "characterId": "fwe-gaitz",
+      "japaneseName": "ゲイツ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "ndw-character-file-ja",
+        "serenes-character-part-7-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の小柳良寛／Ryokan Koyanagi、および東方のサイで修行した剣闘士という紹介が一致。二次資料による照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-goliath",
+      "japaneseName": "ゴライアス",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1669-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。"
+    },
+    {
+      "characterId": "fwe-guzran",
+      "japaneseName": "グザラン",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1620-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-halvin",
+      "japaneseName": "ハルヴィン",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1699-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。"
+    },
+    {
+      "characterId": "fwe-hong-hua",
+      "japaneseName": "コウカ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1637-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-inyoni",
+      "japaneseName": "イニオニ",
+      "status": "verified",
+      "sourceIds": [
+        "ndw-character-file-ja",
+        "serenes-character-part-10-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の三輪夏紀／Natsuki Miwa、および魔弓の異名を持つ弓の達人という紹介が一致。二次資料による照合。"
+    },
+    {
+      "characterId": "fwe-io",
+      "japaneseName": "イオ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "ndw-character-file-ja",
+        "serenes-character-part-8-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の小林秀行／Hideyuki Kobayashi、およびアラゴ王国を去った騎士で現在傭兵という紹介が一致。二次資料による照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-jasmine",
+      "japaneseName": "ジャスミン",
+      "status": "verified",
+      "sourceIds": [
+        "ndw-character-file-ja",
+        "serenes-character-part-10-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の大久保藍子／Aiko Okubo、およびパルマの雨／Rain of Palmaの傭兵団長という紹介が一致。二次資料による照合。"
+    },
+    {
+      "characterId": "fwe-jester",
+      "japaneseName": "ジェスター",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1702-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。"
+    },
+    {
+      "characterId": "fwe-kiroc",
+      "japaneseName": "キロイカ",
+      "status": "verified",
+      "sourceIds": [
+        "ndw-character-file-ja",
+        "serenes-character-part-10-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の藤堂駿介／Shunsuke Todo、および黒鳥海賊団／Black Bird Piratesの元首領という紹介が一致。二次資料による照合。"
+    },
+    {
+      "characterId": "fwe-leda",
+      "japaneseName": "レダ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "nintendo-game-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "父の敵討ちを目指す奏者。"
+    },
+    {
+      "characterId": "fwe-lilian",
+      "japaneseName": "リリアン",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "ndw-character-file-ja",
+        "serenes-character-part-4-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の斉藤朱夏／Shuka Saito、および金銭にこだわるサラミスの若い弓兵という紹介が一致。二次資料による照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-loretta",
+      "japaneseName": "ロレッタ",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1701-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。"
+    },
+    {
+      "characterId": "fwe-ludia",
+      "japaneseName": "ルルディヤー",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1653-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。"
+    },
+    {
+      "characterId": "fwe-lysander",
+      "japaneseName": "ライサンダー",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1619-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-majide",
+      "japaneseName": "マジーデ",
+      "status": "verified",
+      "sourceIds": [
+        "ndw-character-file-ja",
+        "serenes-character-part-9-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の小野寺悠貴／Yuki Onodera、およびダグシオンで暴力沙汰を起こし街の支配者を目指す人物という紹介が一致。二次資料による照合。"
+    },
+    {
+      "characterId": "fwe-mikaela",
+      "japaneseName": "ミカエラ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1622-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一の人物ページの「名前」「英語名」欄で対応を確認。二次資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-mu",
+      "japaneseName": "ムウ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "ndw-character-file-ja",
+        "serenes-character-part-5-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "Nintendo DREAM WEBに掲載された公式Xの日本語紹介と、Serenes Forestの英語紹介を照合。声優の山口茜／Akane Yamaguchi、および母を探す旅でレダに出会った男装の少女という紹介が一致。二次資料による照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-nathan",
+      "japaneseName": "ネイサン",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1625-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-nezha",
+      "japaneseName": "ナジャ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1673-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-ninae",
+      "japaneseName": "ニネ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1594-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-noctula",
+      "japaneseName": "ノクチュラ",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1651-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。"
+    },
+    {
+      "characterId": "fwe-nuzzuo",
+      "japaneseName": "ヌッツォ",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1655-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。"
+    },
+    {
+      "characterId": "fwe-nydine",
+      "japaneseName": "ヌディーヌ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1663-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-olympia",
+      "japaneseName": "オリンピア",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "game8-816430-ja",
+        "gamersky-character-18-ja-en",
+        "nintendo-insider-character-profiles-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "GamerSkyの見出しに日英名を併記。歌・踊り・楽器演奏・詩作り・注目を集めることの好みが日英の人物紹介で一致。非公式資料の照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-orchel",
+      "japaneseName": "オルヘル",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1630-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-peppe",
+      "japaneseName": "ペペ",
+      "status": "verified",
+      "sourceIds": [
+        "game8-816449-ja",
+        "gamersky-character-60-ja-en",
+        "nintendo-insider-character-profiles-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "GamerSkyの見出しに日英名を併記。精霊・太陽・故郷を好む狩人という人物紹介が日英で一致。非公式資料の照合。"
+    },
+    {
+      "characterId": "fwe-peter",
+      "japaneseName": "ピーテル",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "game8-816419-ja",
+        "gamersky-character-7-ja-en",
+        "nintendo-insider-character-profiles-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "GamerSkyの見出しに日英名を併記。母親の手料理・ギンジの実を好む弓使いという人物紹介が日英で一致。非公式資料の照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-seteth",
+      "japaneseName": "セテス",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1672-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。"
+    },
+    {
+      "characterId": "fwe-sha-lan",
+      "japaneseName": "サラン",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1621-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-simon",
+      "japaneseName": "シモン",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "game8-816435-ja",
+        "gamersky-character-32-ja-en",
+        "nintendo-insider-character-profiles-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "GamerSkyの見出しに日英名を併記。命懸けの戦い・故郷の料理・女遊びの好みが日英の人物紹介で一致。非公式資料の照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-sirocco",
+      "japaneseName": "シロッコ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1598-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-sofia",
+      "japaneseName": "ソフィア",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1639-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。"
+    },
+    {
+      "characterId": "fwe-tahonia",
+      "japaneseName": "タホウニア",
+      "status": "verified",
+      "sourceIds": [
+        "game8-816903-ja",
+        "gamersky-character-62-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "GamerSkyが日英名を明記し、Game8の日本語名および読書・裁縫・鍛錬の好みとも一致。非公式資料の照合。"
+    },
+    {
+      "characterId": "fwe-talimun",
+      "japaneseName": "タリムーン",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1624-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-theodora",
+      "japaneseName": "セオドラ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "nintendo-game-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "祖国の悲願を果たそうとするサラミスの女王。"
+    },
+    {
+      "characterId": "fwe-tialla",
+      "japaneseName": "ティアラ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1604-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-tobias",
+      "japaneseName": "トビヤス",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "game8-816425-ja",
+        "gamersky-character-13-ja-en",
+        "nintendo-insider-character-profiles-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "GamerSkyの見出しに日英名を併記。歌・人付き合いを好むサラミスの戦士という人物紹介が日英で一致。非公式資料の照合。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-troy",
+      "japaneseName": "トロイア",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1683-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-ultand",
+      "japaneseName": "ウルタンド",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1595-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-ursula",
+      "japaneseName": "ウーシュラ",
+      "status": "verified",
+      "sourceIds": [
+        "nintendo-characters-ja",
+        "fe-fun-1596-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。日本語表記は任天堂のキャラクター紹介でも確認。"
+    },
+    {
+      "characterId": "fwe-yang-jie",
+      "japaneseName": "ヨーカイ",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1627-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。"
+    },
+    {
+      "characterId": "fwe-zarcone",
+      "japaneseName": "ザーコネ",
+      "status": "verified",
+      "sourceIds": [
+        "fe-fun-1697-ja-en"
+      ],
+      "checkedAt": "2026-09-30",
+      "note": "同一ページの「名前」と「英語名」欄に日英表記が明記されていることを確認。非公式資料。"
+    }
+  ]
+}

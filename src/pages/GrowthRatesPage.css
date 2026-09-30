@@ -1,0 +1,35 @@
+.growth-toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; margin-bottom: 18px; }
+.growth-search { display: grid; gap: 7px; width: min(100%, 284px); color: var(--text-muted); font-size: 12px; }
+.growth-search-field { position: relative; }
+.growth-search-field svg { position: absolute; top: 13px; left: 11px; width: 18px; height: 18px; pointer-events: none; }
+.growth-search input {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 12px 9px 36px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+}
+.growth-search input::placeholder { color: var(--text-muted); }
+.growth-result-info { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-left: auto; padding-bottom: 9px; }
+.growth-data-status { padding: 3px 7px; border: 1px solid var(--border); border-radius: 4px; color: var(--text-muted); font-size: 11px; }
+.growth-result-count { color: var(--text-muted); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.growth-table-meta { display: flex; justify-content: space-between; gap: 10px; margin-top: 12px; color: var(--text-muted); font-size: 12px; }
+.growth-empty { margin: 0; padding: 32px 16px; border: 1px solid var(--border); color: var(--text-muted); text-align: center; }
+.growth-sources { margin-top: 24px; color: var(--text-muted); font-size: 12px; }
+.growth-sources summary { width: fit-content; padding: 12px 0; cursor: pointer; }
+.growth-source { padding: 4px 0 12px; max-width: 680px; overflow-wrap: anywhere; }
+.growth-source p { margin: 6px 0; }
+.growth-source-name { color: var(--text); font-weight: 600; }
+.growth-source a { color: inherit; text-underline-offset: 3px; }
+.growth-source dl { display: grid; grid-template-columns: auto 1fr; gap: 5px 16px; margin: 12px 0 0; }
+.growth-source dd { margin: 0; }
+@media (max-width: 480px) {
+  .growth-search { width: 100%; }
+  .growth-search input { font-size: 16px; }
+  .growth-result-info { padding-bottom: 0; }
+  .growth-toolbar { gap: 10px; }
+}

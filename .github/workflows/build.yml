@@ -28,3 +28,7 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Test
+        run: npm test
+      - name: Check generated data
+        run: npm run data:check

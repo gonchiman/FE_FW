@@ -1,0 +1,15 @@
+.growth-table { min-width: 704px; table-layout: fixed; }
+.growth-name-column { width: 155px; }
+.growth-table tr > :first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface);
+  overflow-wrap: anywhere;
+}
+.growth-table thead tr > :first-child { z-index: 2; background: var(--surface-hover); }
+.growth-table tbody tr:hover > :first-child { background: var(--surface-hover); }
+.growth-table tr > :first-child .table-sort-button { justify-content: flex-start; padding-left: 14px; }
+.growth-table tbody th { padding-left: 14px; }
+.growth-missing { color: var(--text-muted); }
+.growth-row-status { display: block; color: var(--text-muted); font-size: 11px; }

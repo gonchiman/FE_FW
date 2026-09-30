@@ -8,6 +8,9 @@
   },
   "scripts": {
     "dev": "vite",
+    "test": "node --test tests/*.test.ts",
+    "data:import": "node scripts/import-growths.ts",
+    "data:check": "node scripts/import-growths.ts --check",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
