@@ -15,3 +15,9 @@ function loadCharacterNames(): { data: CharacterNameDataset; error: null } | { d
 }
 
 export const characterNameData = loadCharacterNames()
+
+export const japaneseCharacterNames: ReadonlyMap<string, string> = new Map(
+  (characterNameData.data?.characters ?? [])
+    .filter(character => character.status === 'verified' && character.japaneseName !== null)
+    .map(character => [character.id, character.japaneseName!]),
+)

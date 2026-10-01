@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { filterAndSortGrowthCharacters, normalizeGrowthSearch, validateGrowthDataset } from '../src/lib/growth.ts'
+import { filterAndSortGrowthCharacters, getGrowthCharacterName, normalizeGrowthSearch, validateGrowthDataset } from '../src/lib/growth.ts'
 import { GROWTH_STATS, type CharacterGrowth, type GrowthDataset, type StatKey } from '../src/types/growth.ts'
 
 function character(id: string, name: string, hp: number | null): CharacterGrowth {
@@ -128,4 +128,65 @@ test('filtering and sorting never mutate input arrays or rates', () => {
   assert.deepEqual(characters, before)
   assert.notEqual(result, characters)
   assert.deepEqual(result.map(({ id }) => id), ['a', 'b'])
+})
+
+test('display names are resolved by character id and fall back to the original name', () => {
+  const displayNames = new Map([['mapped', 'アリス']])
+  assert.equal(getGrowthCharacterName(character('mapped', 'Alice', 20), displayNames), 'アリス')
+  assert.equal(getGrowthCharacterName(character('missing', 'Alice', 20), displayNames), 'Alice')
+  assert.equal(getGrowthCharacterName(character('mapped', 'Alice', 20)), 'Alice')
+})
+
+test('localized growth searches accept Japanese variants and retain English name searches', () => {
+  const characters = [character('alice', 'Alice', 20), character('bob', 'Bob', 30)]
+  const displayNames = new Map([['alice', 'アリス']])
+  for (const query of ['アリス', 'ありす', 'ｱﾘｽ', '  アリ  ', 'ALICE', 'ａｌｉｃｅ', 'ice']) {
+    assert.deepEqual(filterAndSortGrowthCharacters(characters, query, undefined, displayNames).map(({ id }) => id), ['alice'])
+  }
+  assert.deepEqual(filterAndSortGrowthCharacters(characters, 'BOB', undefined, displayNames).map(({ id }) => id), ['bob'])
+  assert.deepEqual(filterAndSortGrowthCharacters(characters, 'missing', undefined, displayNames), [])
+})
+
+test('name sorting follows Japanese display names in both directions with stable id ties', () => {
+  const characters = [
+    character('i2', 'Alpha', 20), character('a', 'Zulu', 30), character('i1', 'Beta', 40),
+  ]
+  const displayNames = new Map([['a', 'アリス'], ['i1', 'イリス'], ['i2', 'イリス']])
+  assert.deepEqual(filterAndSortGrowthCharacters(characters, '', { key: 'name', direction: 'asc' }, displayNames).map(({ id }) => id),
+    ['a', 'i1', 'i2'])
+  assert.deepEqual(filterAndSortGrowthCharacters(characters, '', { key: 'name', direction: 'desc' }, displayNames).map(({ id }) => id),
+    ['i1', 'i2', 'a'])
+})
+
+test('numeric sorts use display names for ties and keep unknown rates last', () => {
+  const characters = [
+    character('u-i', 'Alpha', null), character('i2', 'Beta', 40), character('high', 'Gamma', 80),
+    character('u-a', 'Zulu', null), character('a', 'Zulu', 40), character('i1', 'Delta', 40),
+    character('zero', 'Zero', 0),
+  ]
+  const displayNames = new Map([
+    ['u-a', 'アリス'], ['u-i', 'イリス'], ['a', 'アリス'], ['i1', 'イリス'], ['i2', 'イリス'],
+  ])
+  assert.deepEqual(filterAndSortGrowthCharacters(characters, '', { key: 'hp', direction: 'asc' }, displayNames).map(({ id }) => id),
+    ['zero', 'a', 'i1', 'i2', 'high', 'u-a', 'u-i'])
+  assert.deepEqual(filterAndSortGrowthCharacters(characters, '', { key: 'hp', direction: 'desc' }, displayNames).map(({ id }) => id),
+    ['high', 'a', 'i1', 'i2', 'zero', 'u-a', 'u-i'])
+})
+
+test('localized filtering and sorting preserve original records and the supplied name mappings', () => {
+  const characters = [character('b', 'Beta', 20), character('a', 'Alpha', 10)]
+  const displayNames = new Map([['a', 'イリス'], ['b', 'アリス']])
+  const before = structuredClone(characters)
+  const namesBefore = [...displayNames]
+  for (const entry of characters) {
+    Object.freeze(entry.rates)
+    Object.freeze(entry)
+  }
+  Object.freeze(characters)
+  const result = filterAndSortGrowthCharacters(characters, 'りす', undefined, displayNames)
+  assert.deepEqual(result.map(({ id }) => id), ['b', 'a'])
+  assert.equal(result[0], characters[0])
+  assert.deepEqual(characters, before)
+  assert.deepEqual([...displayNames], namesBefore)
+  assert.notEqual(result, characters)
 })

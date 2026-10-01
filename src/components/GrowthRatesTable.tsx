@@ -1,9 +1,11 @@
 import { GROWTH_STATS, type CharacterGrowth, type GrowthSort, type GrowthSortKey } from '../types/growth'
+import { getGrowthCharacterName } from '../lib/growth'
 import './DataTable.css'
 import './GrowthRatesTable.css'
 
 type GrowthRatesTableProps = {
   characters: CharacterGrowth[]
+  displayNames?: ReadonlyMap<string, string>
   sort: GrowthSort
   onSort: (key: GrowthSortKey) => void
   showSampleLabels: boolean
@@ -12,7 +14,7 @@ type GrowthRatesTableProps = {
 
 const columns = [{ key: 'name' as const, label: 'キャラクター' }, ...GROWTH_STATS]
 
-export function GrowthRatesTable({ characters, sort, onSort, showSampleLabels, showUnverifiedLabels }: GrowthRatesTableProps) {
+export function GrowthRatesTable({ characters, displayNames, sort, onSort, showSampleLabels, showUnverifiedLabels }: GrowthRatesTableProps) {
   return (
     <div className="data-table-scroll" role="region" aria-label="個人成長率の表。横にスクロールできます" tabIndex={0}>
       <table className="data-table growth-table">
@@ -38,7 +40,7 @@ export function GrowthRatesTable({ characters, sort, onSort, showSampleLabels, s
           {characters.map((character) => (
             <tr key={character.id}>
               <th scope="row">
-                {character.name}
+                {getGrowthCharacterName(character, displayNames)}
                 {showUnverifiedLabels && character.status === 'unverified' && <span className="growth-row-status">未照合</span>}
                 {showSampleLabels && character.status === 'sample' && <span className="growth-row-status">仮データ</span>}
               </th>

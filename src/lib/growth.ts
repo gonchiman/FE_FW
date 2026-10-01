@@ -113,8 +113,13 @@ function compareIds(first: string, second: string): number {
   return first < second ? -1 : first > second ? 1 : 0
 }
 
-function compareNames(first: CharacterGrowth, second: CharacterGrowth): number {
-  return nameCollator.compare(first.name, second.name) || compareIds(first.id, second.id)
+export function getGrowthCharacterName(character: CharacterGrowth, displayNames?: ReadonlyMap<string, string>): string {
+  return displayNames?.get(character.id) ?? character.name
+}
+
+function compareNames(first: CharacterGrowth, second: CharacterGrowth, displayNames?: ReadonlyMap<string, string>): number {
+  return nameCollator.compare(getGrowthCharacterName(first, displayNames), getGrowthCharacterName(second, displayNames))
+    || compareIds(first.id, second.id)
 }
 
 /** Unknown values stay last in either direction; equal rates use name and id. */
@@ -122,21 +127,24 @@ export function filterAndSortGrowthCharacters(
   characters: readonly CharacterGrowth[],
   query = '',
   sort: GrowthSort = { key: 'name', direction: 'asc' },
+  displayNames?: ReadonlyMap<string, string>,
 ): CharacterGrowth[] {
   const normalizedQuery = normalizeGrowthSearch(query)
   const direction = sort.direction === 'asc' ? 1 : -1
   return characters
-    .filter((character) => normalizeGrowthSearch(character.name).includes(normalizedQuery))
+    .filter((character) => normalizeGrowthSearch(character.name).includes(normalizedQuery)
+      || normalizeGrowthSearch(getGrowthCharacterName(character, displayNames)).includes(normalizedQuery))
     .sort((first, second) => {
       if (sort.key === 'name') {
-        return direction * nameCollator.compare(first.name, second.name) || compareIds(first.id, second.id)
+        return direction * nameCollator.compare(getGrowthCharacterName(first, displayNames), getGrowthCharacterName(second, displayNames))
+          || compareIds(first.id, second.id)
       }
 
       const firstRate = first.rates[sort.key]
       const secondRate = second.rates[sort.key]
-      if (firstRate === null && secondRate === null) return compareNames(first, second)
+      if (firstRate === null && secondRate === null) return compareNames(first, second, displayNames)
       if (firstRate === null) return 1
       if (secondRate === null) return -1
-      return direction * (firstRate - secondRate) || compareNames(first, second)
+      return direction * (firstRate - secondRate) || compareNames(first, second, displayNames)
     })
 }

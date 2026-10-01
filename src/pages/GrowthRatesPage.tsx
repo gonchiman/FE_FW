@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { GrowthRatesTable } from '../components/GrowthRatesTable'
 import { growthData } from '../data/growth-data'
+import { japaneseCharacterNames } from '../data/character-names-data'
 import { filterAndSortGrowthCharacters } from '../lib/growth'
 import type { GrowthDataset, GrowthSort, GrowthSortKey } from '../types/growth'
 import './GrowthRatesPage.css'
@@ -8,7 +9,7 @@ import './GrowthRatesPage.css'
 function GrowthRatesContent({ data }: { data: GrowthDataset }) {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<GrowthSort>({ key: 'name', direction: 'asc' })
-  const characters = filterAndSortGrowthCharacters(data.characters, query, sort)
+  const characters = filterAndSortGrowthCharacters(data.characters, query, sort, japaneseCharacterNames)
   const sampleCount = data.characters.filter((character) => character.status === 'sample').length
   const allSamples = sampleCount > 0 && sampleCount === data.characters.length
   const unverifiedCount = data.characters.filter((character) => character.status === 'unverified').length
@@ -41,7 +42,7 @@ function GrowthRatesContent({ data }: { data: GrowthDataset }) {
       </div>
 
       {characters.length > 0 ? (
-        <GrowthRatesTable characters={characters} sort={sort} onSort={changeSort} showSampleLabels={!allSamples} showUnverifiedLabels={!allUnverified} />
+        <GrowthRatesTable characters={characters} displayNames={japaneseCharacterNames} sort={sort} onSort={changeSort} showSampleLabels={!allSamples} showUnverifiedLabels={!allUnverified} />
       ) : (
         <p className="growth-empty">{data.characters.length === 0 ? '成長率データはまだありません。' : '該当するキャラクターがいません。'}</p>
       )}
