@@ -2,7 +2,7 @@
 
 『ファイアーエムブレム 万紫千紅』の攻略支援アプリ用リポジトリ。
 `arknights_2` を参考にした React・TypeScript・Vite アプリです。
-共通のサイドバー・ヘッダーと、個人成長率・キャラクターとクラスの名前対応の一覧、成長率の統計分析ページを用意しています。
+共通のサイドバー・ヘッダーと、個人成長率・クラス情報・キャラクターとクラスの名前対応の一覧、成長率の統計分析ページを用意しています。
 成長率ページには Fortunes-Weave-Helper の公開JSONから取り込んだ62名分の英語名・個人成長率を収録しています。
 Game8の攻略記事に由来する出典データで、ゲーム内の数値との照合は未実施です。兵種補正・育成予測は含みません。
 
@@ -26,7 +26,7 @@ npm run preview
 ```
 
 `test` は Node.js 標準のテストランナーで、データ検証・検索・並べ替え・ルート解決を確認します。
-`data:check` は取得したスナップショットとアプリ用JSONの一致を確認します。
+`data:check` は取得した個人成長率・クラス情報のスナップショットとアプリ用JSONの一致を確認します。
 `build` は TypeScript の型チェックと本番用ビルドを実行します。
 `preview` は生成した `dist/` をローカルで確認するためのコマンドです。
 
@@ -37,6 +37,9 @@ npm run preview
 | `src/App.tsx` | アプリの入口。共通レイアウトにページを配置する |
 | `src/components/AppShell.tsx` | サイドバー・ヘッダー・本文領域。狭い画面ではメニューを開閉する |
 | `src/pages/GrowthRatesPage.tsx` | 個人成長率の検索・一覧・出典表示 |
+| `src/pages/ClassInformationPage.tsx` | クラスの基本情報・能力補正・成長率補正の比較と詳細表示 |
+| `src/data/class-details.json` | 固定版から変換したクラス情報 |
+| `scripts/import-classes.ts` | クラス情報の再生成・一致確認 |
 | `src/pages/GrowthAnalysisPage.tsx` | 成長率の統計サマリー、条件抽出、ヒストグラムと一覧の連動 |
 | `src/components/GrowthHistogram.tsx` | 人数・割合のヒストグラム、平均・中央値の基準線 |
 | `src/lib/growth-statistics.ts` | 記述統計、共通軸と階級の集計 |
@@ -66,6 +69,9 @@ npm run preview
 取得したデータから表示用JSONを再生成するには `npm run data:import` を実行します。再生成と画面表示に外部通信は不要です。
 
 成長率分析は `/FE_FW/#/analysis/growth-rates` で開きます。集計規約と操作は [成長率分析の仕様](docs/growth-analysis.md) を参照してください。
+
+クラス情報は `/FE_FW/#/classes` で開きます。59クラスを検索・比較し、クラス名から能力補正・成長率補正・スキルの詳細を開けます。数値とスキルはゲーム内未照合です。平民の詳細など未収録の項目は「—」で表示します。
+クラス用JSONの再生成は `npm run data:import:classes`、一致確認は `npm run data:check:classes` です。データの範囲と取り込み規約は [クラス情報ページの仕様](docs/classes.md) を参照してください。
 
 名前対応ページは `/FE_FW/#/character-names` で開きます。キャラクター／クラスのタブで日本語名と英語名の対応を表示します。
 クラスは `/FE_FW/#/character-names?tab=classes` で直接開けます。固定版の英語JSONに収録された59クラスを対象とし、各名前の対応根拠を出典欄に保存しています。英語JSONにない貴族は追加していません。
