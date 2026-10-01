@@ -80,6 +80,7 @@ function SidebarContent({ activePage, onNavigate, onClose }: SidebarContentProps
               >
                 {item.id === 'home' && <HomeIcon />}
                 {item.id === 'growth-rates' && <GrowthTableIcon />}
+                {item.id === 'classes' && <GrowthTableIcon />}
                 {item.id === 'growth-analysis' && <GrowthAnalysisIcon />}
                 {item.id === 'character-names' && <CharacterNamesIcon />}
                 <span>{item.label}</span>

@@ -10,7 +10,9 @@
     "dev": "vite",
     "test": "node --test tests/*.test.ts",
     "data:import": "node scripts/import-growths.ts",
-    "data:check": "node scripts/import-growths.ts --check",
+    "data:import:classes": "node scripts/import-classes.ts",
+    "data:check:classes": "node scripts/import-classes.ts --check",
+    "data:check": "node scripts/import-growths.ts --check && node scripts/import-classes.ts --check",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
