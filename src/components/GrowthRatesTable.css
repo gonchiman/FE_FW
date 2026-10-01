@@ -1,5 +1,7 @@
-.growth-table { min-width: 704px; table-layout: fixed; }
+.growth-table { min-width: 1134px; table-layout: fixed; }
 .growth-name-column { width: 155px; }
+.growth-personal-skill-column { width: 200px; }
+.growth-unique-skill-column { width: 230px; }
 .growth-table tr > :first-child {
   position: sticky;
   left: 0;
@@ -13,3 +15,27 @@
 .growth-table tbody th { padding-left: 14px; }
 .growth-missing { color: var(--text-muted); }
 .growth-row-status { display: block; color: var(--text-muted); font-size: 11px; }
+.growth-skill-heading { display: flex; align-items: center; min-height: 48px; padding: 0 10px; text-align: left; }
+.growth-table td.growth-skill-cell { padding: 0; }
+.growth-skill-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.growth-skill-button:hover { background: var(--surface-hover); }
+.growth-skill-button:focus-visible { outline-offset: -3px; }
+.growth-skill-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: underline; text-decoration-color: var(--border-strong, #aaa); text-underline-offset: 3px; }
+.growth-skill-level { color: var(--text-muted); }
+.growth-skill-count { flex-shrink: 0; color: var(--text-muted); font-size: 11px; white-space: nowrap; }
+.growth-skill-open { margin-left: auto; color: var(--text-muted); font-size: 18px; }
+.growth-skill-missing { display: block; padding: 0 10px; }

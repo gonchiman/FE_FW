@@ -1,0 +1,14 @@
+.character-skills-dialog { width: min(640px, calc(100vw - 32px)); }
+.character-skill-detail + .character-skill-detail { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border); }
+.character-skill-detail-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 5px 12px; }
+.character-skill-detail h3 { margin: 0; font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; }
+.character-skill-status { color: var(--text-muted); font-size: 11px; }
+.character-skill-english-name { margin: 3px 0 0; color: var(--text-muted); font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+.character-skill-acquisition { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 12px 0 0; font-size: 12px; line-height: 1.6; }
+.character-skill-acquisition dt { color: var(--text-muted); }
+.character-skill-acquisition dd { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.character-skill-description { margin: 12px 0 0; font-size: 13px; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; }
+.character-skill-description-missing { color: var(--text-muted); }
+@media (max-width: 640px) {
+  .character-skills-dialog { width: calc(100vw - 16px); }
+}

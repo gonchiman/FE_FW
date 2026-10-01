@@ -1,15 +1,22 @@
 import { useState } from 'react'
 import { GrowthRatesTable } from '../components/GrowthRatesTable'
+import { CharacterSkillCoverage } from '../components/CharacterSkillCoverage'
 import { growthData } from '../data/growth-data'
 import { japaneseCharacterNames } from '../data/character-names-data'
+import { characterSkillData, characterSkillsByCharacter } from '../data/character-skills-data'
+import { uniqueSkillResearch } from '../data/unique-skill-research'
+import { buildCharacterSkillSearchTexts } from '../lib/character-skills'
 import { filterAndSortGrowthCharacters } from '../lib/growth'
 import type { GrowthDataset, GrowthSort, GrowthSortKey } from '../types/growth'
 import './GrowthRatesPage.css'
 
+const skillSearchTexts = buildCharacterSkillSearchTexts(characterSkillData.data?.skills ?? [])
+
 function GrowthRatesContent({ data }: { data: GrowthDataset }) {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<GrowthSort>({ key: 'name', direction: 'asc' })
-  const characters = filterAndSortGrowthCharacters(data.characters, query, sort, japaneseCharacterNames)
+  const characters = filterAndSortGrowthCharacters(data.characters, query, sort, japaneseCharacterNames, skillSearchTexts)
+  const sources = [...new Map([...data.sources, ...(characterSkillData.data?.sources ?? []), ...uniqueSkillResearch.sources].map((source) => [source.id, source])).values()]
   const sampleCount = data.characters.filter((character) => character.status === 'sample').length
   const allSamples = sampleCount > 0 && sampleCount === data.characters.length
   const unverifiedCount = data.characters.filter((character) => character.status === 'unverified').length
@@ -26,12 +33,12 @@ function GrowthRatesContent({ data }: { data: GrowthDataset }) {
     <section aria-label="個人成長率">
       <div className="growth-toolbar">
         <label className="growth-search" htmlFor="growth-search">
-          キャラクター名
+          キャラ・スキル
           <span className="growth-search-field">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
               <circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" strokeLinecap="round" />
             </svg>
-            <input id="growth-search" type="search" placeholder="名前で検索" autoComplete="off" value={query} onChange={(event) => setQuery(event.target.value)} />
+            <input id="growth-search" type="search" placeholder="キャラ・スキル名・効果で検索" autoComplete="off" value={query} onChange={(event) => setQuery(event.target.value)} />
           </span>
         </label>
         <div className="growth-result-info">
@@ -41,8 +48,11 @@ function GrowthRatesContent({ data }: { data: GrowthDataset }) {
         </div>
       </div>
 
+      {characterSkillData.error && <p role="alert">{characterSkillData.error}</p>}
+      {characterSkillData.data && <CharacterSkillCoverage characters={data.characters} skills={characterSkillData.data.skills}
+        displayNames={japaneseCharacterNames} research={uniqueSkillResearch} />}
       {characters.length > 0 ? (
-        <GrowthRatesTable characters={characters} displayNames={japaneseCharacterNames} sort={sort} onSort={changeSort} showSampleLabels={!allSamples} showUnverifiedLabels={!allUnverified} />
+        <GrowthRatesTable characters={characters} displayNames={japaneseCharacterNames} skillsByCharacter={characterSkillsByCharacter} sort={sort} onSort={changeSort} showSampleLabels={!allSamples} showUnverifiedLabels={!allUnverified} />
       ) : (
         <p className="growth-empty">{data.characters.length === 0 ? '成長率データはまだありません。' : '該当するキャラクターがいません。'}</p>
       )}
@@ -50,7 +60,7 @@ function GrowthRatesContent({ data }: { data: GrowthDataset }) {
       <div className="growth-table-meta"><span>個人成長率（%）</span><span>—：未確認</span></div>
       <details className="growth-sources">
         <summary>データの出典</summary>
-        {data.sources.map((source) => (
+        {sources.map((source) => (
           <div className="growth-source" key={source.id}>
             <p className="growth-source-name">{source.url ? <a href={source.url} target="_blank" rel="noreferrer">{source.name}</a> : source.name}</p>
             {source.note && <p>{source.note}</p>}

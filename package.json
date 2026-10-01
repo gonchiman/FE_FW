@@ -11,6 +11,8 @@
     "test": "node --test tests/*.test.ts",
     "data:import": "node scripts/import-growths.ts",
     "data:check": "node scripts/import-growths.ts --check",
+    "skills:import": "node scripts/import-character-skills.ts",
+    "skills:check": "node scripts/import-character-skills.ts --check",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },

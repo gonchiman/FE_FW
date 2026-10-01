@@ -1,0 +1,5986 @@
+{
+  "provenance": {
+    "retrievedAt": "2026-10-01T07:49:48Z",
+    "repository": "Rico0319/Fortunes-Weave-Helper",
+    "revision": "29609cc76a0a79a86473ef1e0980771e94c97640",
+    "path": "data/fwe.db",
+    "license": null,
+    "note": "Upstream does not declare a license. Only factual game attributes are extracted; no upstream code is copied. Japanese source skill rules are reference observations, not article commentary. Missing facts remain unknown.",
+    "descriptionPolicy": "数値・発動条件・効果を短い日本語で独自に要約。成長補正や回復割合など出典に具体値がないものは推定しない。記事の育成推奨や解説文章は収録しない。",
+    "classificationPolicy": "日本語一覧で個人スキルまたはキャラ固有と明示された能力と、英語DBの同一キャラの同名系統のLv習得段階を収録。個人別Lv欄にも混在する共通技能は除外。名称末尾+だけから前段階の日本語名を作らない。",
+    "replacementPolicy": "名称やレベルだけでは置換を確定せず、upgradesSkillIdは未確認のnull。両段階は別レコードとして保持する。",
+    "aliases": [
+      {
+        "characterId": "fwe-eshmel",
+        "sourceLabel": "救世主",
+        "displayName": "イシュマール",
+        "sourceId": "gamewith-eshmel-alias"
+      }
+    ],
+    "excludedCandidates": [
+      {
+        "characterId": "fwe-orchel",
+        "name": "Predictive Sense / 動体予測",
+        "reason": "個人別Lvスキル表に掲載されるが、日本語キャラ固有一覧にない。共通技能との区別を確定できないため採用しない。"
+      },
+      {
+        "characterId": "fwe-anatolia",
+        "name": "経絡拡張 / 身躱し+ / 咄嗟の回避",
+        "reason": "個人別Lvスキル表だけではキャラ固有を確認できないため採用しない。"
+      }
+    ],
+    "coverage": {
+      "characters": 62,
+      "personalSkills": 62,
+      "uniqueSkills": 106,
+      "charactersWithUniqueSkills": 55,
+      "unknownUniqueCharacterIds": [
+        "fwe-aswan",
+        "fwe-centurio",
+        "fwe-creek",
+        "fwe-hong-hua",
+        "fwe-nathan",
+        "fwe-tahonia",
+        "fwe-troy"
+      ],
+      "japaneseSkillNames": 137,
+      "englishOnlySkillNames": 31,
+      "note": "未収録は固有スキルが存在しないことを意味しない。収録分もゲーム内照合は未実施。"
+    }
+  },
+  "observations": {
+    "english": [
+      {
+        "characterId": "fwe-alexandra",
+        "kind": "personal",
+        "name": "Silver Maiden",
+        "effect": "Grants Hit/Avo+5 to unit for each adjacent ally.",
+        "level": null,
+        "pageId": "623983"
+      },
+      {
+        "characterId": "fwe-alexandra",
+        "kind": "unique",
+        "name": "Soar",
+        "effect": "If unit is on inaccessible terrain, grants AS+3.",
+        "level": 20,
+        "pageId": "623983"
+      },
+      {
+        "characterId": "fwe-alexandra",
+        "kind": "unique",
+        "name": "Soar+ Soar+",
+        "effect": "If unit is on inaccesible terrain, grants AS+5.",
+        "level": 35,
+        "pageId": "623983"
+      },
+      {
+        "characterId": "fwe-anatolia",
+        "kind": "personal",
+        "name": "Celestial Flow",
+        "effect": "Grants Avo+3.",
+        "level": null,
+        "pageId": "623966"
+      },
+      {
+        "characterId": "fwe-anatolia",
+        "kind": "unique",
+        "name": "Continuum",
+        "effect": "When unit avoid an attack, restores 5 HP to unit.",
+        "level": null,
+        "pageId": "623966"
+      },
+      {
+        "characterId": "fwe-anatolia",
+        "kind": "unique",
+        "name": "Continuum+",
+        "effect": "When unit avoid an attack, restores 10 HP to unit.",
+        "level": null,
+        "pageId": "623966"
+      },
+      {
+        "characterId": "fwe-aswan",
+        "kind": "personal",
+        "name": "Princess of Arrows",
+        "effect": "When equipped with a bow, grants Hit+20.",
+        "level": null,
+        "pageId": "624395"
+      },
+      {
+        "characterId": "fwe-benditz",
+        "kind": "personal",
+        "name": "Wheeled Warrior",
+        "effect": "(Cavalry) If unit is a charioteer, grants Hit+20.",
+        "level": null,
+        "pageId": "623982"
+      },
+      {
+        "characterId": "fwe-benditz",
+        "kind": "unique",
+        "name": "Chariot Stagger",
+        "effect": "If unit is a charioteer, grants +1 uses to staggering blows.",
+        "level": 20,
+        "pageId": "623982"
+      },
+      {
+        "characterId": "fwe-benditz",
+        "kind": "unique",
+        "name": "Chariot Stagger+",
+        "effect": "If unit is charioteer, grants +2 uses to staggering blows.",
+        "level": 35,
+        "pageId": "623982"
+      },
+      {
+        "characterId": "fwe-bertrand",
+        "kind": "personal",
+        "name": "Requiem Style",
+        "effect": "Unit makes a follow up regardless of AS during combat. Trigger % = 5.",
+        "level": null,
+        "pageId": "624391"
+      },
+      {
+        "characterId": "fwe-bertrand",
+        "kind": "unique",
+        "name": "Go No Sen",
+        "effect": "In enemy's phase, unit attacks first during combat. Trigger % = 25.",
+        "level": null,
+        "pageId": "624391"
+      },
+      {
+        "characterId": "fwe-bonaventure",
+        "kind": "personal",
+        "name": "Sage Advice",
+        "effect": "Grants Dex +3 to adjacent allies.",
+        "level": null,
+        "pageId": "623614"
+      },
+      {
+        "characterId": "fwe-bonaventure",
+        "kind": "unique",
+        "name": "Additional Intel",
+        "effect": "Grants Hit+10 to adjacent allies during their combats. Trigger% = 30.",
+        "level": 20,
+        "pageId": "623614"
+      },
+      {
+        "characterId": "fwe-bonaventure",
+        "kind": "unique",
+        "name": "Additional Intel+",
+        "effect": "Grants Hit+20 to adjacent allies during their combats. Trigger% = 30.",
+        "level": 35,
+        "pageId": "623614"
+      },
+      {
+        "characterId": "fwe-buccar",
+        "kind": "personal",
+        "name": "Guardian's Duty",
+        "effect": "Reduces damage to 90% when attacked.",
+        "level": null,
+        "pageId": "624003"
+      },
+      {
+        "characterId": "fwe-buccar",
+        "kind": "unique",
+        "name": "Retaliatory Blow",
+        "effect": "If foes attacks first, multiplies unit's damage by 1.3 when attacking. Trigger % = 5.",
+        "level": 20,
+        "pageId": "624003"
+      },
+      {
+        "characterId": "fwe-buccar",
+        "kind": "unique",
+        "name": "Retaliatory Blow+",
+        "effect": "If foes attacks first, multiplies unit's damage by 1.3 when attacking. Trigger % = 10.",
+        "level": 35,
+        "pageId": "624003"
+      },
+      {
+        "characterId": "fwe-cai",
+        "kind": "personal",
+        "name": "Brio",
+        "effect": "Grants Mov+1.",
+        "level": null,
+        "pageId": "620167"
+      },
+      {
+        "characterId": "fwe-catania",
+        "kind": "personal",
+        "name": "Punishing Squall",
+        "effect": "If AS ≥ foe's AS+3, grants Hit+20 during combat.",
+        "level": null,
+        "pageId": "623981"
+      },
+      {
+        "characterId": "fwe-catania",
+        "kind": "unique",
+        "name": "Wind My Friend",
+        "effect": "If AS is greater than or equal to foe's AS+5, grants Atk+3 during combat.",
+        "level": 20,
+        "pageId": "623981"
+      },
+      {
+        "characterId": "fwe-catania",
+        "kind": "unique",
+        "name": "Wind My Friend+",
+        "effect": "If AS ≥ foe’s AS+5, grants Atk+3, and if AS ≥ foe’s AS+8, grants Avo+20 during combat.",
+        "level": 35,
+        "pageId": "623981"
+      },
+      {
+        "characterId": "fwe-centurio",
+        "kind": "personal",
+        "name": "Sturdy Corundum",
+        "effect": "For the first combat in enemy's phase, unit takes half damage.",
+        "level": null,
+        "pageId": "624394"
+      },
+      {
+        "characterId": "fwe-creek",
+        "kind": "personal",
+        "name": "Steady Hands",
+        "effect": "If foe attacks first, grants AS+3, Avo+10 to unit during combat.",
+        "level": null,
+        "pageId": "624389"
+      },
+      {
+        "characterId": "fwe-dadao",
+        "kind": "personal",
+        "name": "One Chance",
+        "effect": "If unit and foe cannot make a follow-up, grants Atk+5 to unit during combat.",
+        "level": null,
+        "pageId": "623998"
+      },
+      {
+        "characterId": "fwe-dadao",
+        "kind": "unique",
+        "name": "Full Strength",
+        "effect": "Multiplies damage by 1.3 when attacking. Trigger % = Str÷2.",
+        "level": 20,
+        "pageId": "623998"
+      },
+      {
+        "characterId": "fwe-dadao",
+        "kind": "unique",
+        "name": "Full Strength+",
+        "effect": "Multiplies damage by 1.5 when attacking. Trigger % = Str ÷ 2.",
+        "level": 35,
+        "pageId": "623998"
+      },
+      {
+        "characterId": "fwe-dante",
+        "kind": "personal",
+        "name": "Stage Directions",
+        "effect": "Grants Ddg+10 to allies within 2 spaces during their combats. Trigger % = ally's Cha ÷ 2.",
+        "level": null,
+        "pageId": "624018"
+      },
+      {
+        "characterId": "fwe-dante",
+        "kind": "unique",
+        "name": "Dramatic Effect",
+        "effect": "When Stage Directions triggers, grans Hit+10 to target allies.",
+        "level": 20,
+        "pageId": "624018"
+      },
+      {
+        "characterId": "fwe-dante",
+        "kind": "unique",
+        "name": "Dramatic Effect+",
+        "effect": "When Stage Directions triggers, grans Hit/Crit+10 to target allies.",
+        "level": 35,
+        "pageId": "624018"
+      },
+      {
+        "characterId": "fwe-diego",
+        "kind": "personal",
+        "name": "Caretaker",
+        "effect": "Adjacent allies cannot suffer a follow-up during combat. Trigger % = 5.",
+        "level": null,
+        "pageId": "624016"
+      },
+      {
+        "characterId": "fwe-diego",
+        "kind": "unique",
+        "name": "No Mercy+ No Mercy+",
+        "effect": "Grants Hit/Crit+10 when making a follow-up.",
+        "level": 35,
+        "pageId": "624016"
+      },
+      {
+        "characterId": "fwe-diego",
+        "kind": "unique",
+        "name": "No Mercy",
+        "effect": "Grants Hit/Crit+5 when making a follow-up.",
+        "level": 20,
+        "pageId": "624016"
+      },
+      {
+        "characterId": "fwe-dietrich",
+        "kind": "personal",
+        "name": "Murderous Intent",
+        "effect": "If unit attacks first, grants Crit+5 during combat.",
+        "level": null,
+        "pageId": "620168"
+      },
+      {
+        "characterId": "fwe-dietrich",
+        "kind": "unique",
+        "name": "Bestial Impulse",
+        "effect": "After combat, grants Crit+2 until a nit makes a critical.",
+        "level": 5,
+        "pageId": "620168"
+      },
+      {
+        "characterId": "fwe-esmeralda",
+        "kind": "personal",
+        "name": "Brawn",
+        "effect": "Reduces Wt of unit's equipment to 80%.",
+        "level": null,
+        "pageId": "624005"
+      },
+      {
+        "characterId": "fwe-esmeralda",
+        "kind": "unique",
+        "name": "Throwing Arm",
+        "effect": "If throwing a spear, grants Hit+10, Atk+2 during combat.",
+        "level": 20,
+        "pageId": "624005"
+      },
+      {
+        "characterId": "fwe-esmeralda",
+        "kind": "unique",
+        "name": "Throwing Arm+",
+        "effect": "If throwing a spear, grants Hit+20, Atk+4 during combat.",
+        "level": 35,
+        "pageId": "624005"
+      },
+      {
+        "characterId": "fwe-fabio",
+        "kind": "personal",
+        "name": "Dark Calling",
+        "effect": "Inflicts Ddg-5 on adjacent foes.",
+        "level": null,
+        "pageId": "623964"
+      },
+      {
+        "characterId": "fwe-fabio",
+        "kind": "unique",
+        "name": "Dark Secrets",
+        "effect": "Extends range of Dark Calling",
+        "level": 20,
+        "pageId": "623964"
+      },
+      {
+        "characterId": "fwe-fabio",
+        "kind": "unique",
+        "name": "Dark Secrets+",
+        "effect": "Extends range of Dark Calling to 3 spaces.",
+        "level": 35,
+        "pageId": "623964"
+      },
+      {
+        "characterId": "fwe-fianna",
+        "kind": "personal",
+        "name": "Graceful Light",
+        "effect": "When healing an ally with magic, reduces magic cost to 0. Trigger % = Lck.",
+        "level": null,
+        "pageId": "623995"
+      },
+      {
+        "characterId": "fwe-fianna",
+        "kind": "unique",
+        "name": "Gift of Faith",
+        "effect": "When healing an ally with magic, restores +20 HP. Trigger % = Lck.",
+        "level": 20,
+        "pageId": "623995"
+      },
+      {
+        "characterId": "fwe-fianna",
+        "kind": "unique",
+        "name": "Gift of Faith+",
+        "effect": "When healing an ally with magic, restores +30 HP. Trigger % = Lck.",
+        "level": 35,
+        "pageId": "623995"
+      },
+      {
+        "characterId": "fwe-gaitz",
+        "kind": "personal",
+        "name": "Brave Assist",
+        "effect": "Grants Def+3 to adjacent allies.",
+        "level": null,
+        "pageId": "624014"
+      },
+      {
+        "characterId": "fwe-gaitz",
+        "kind": "unique",
+        "name": "Flashing Fang",
+        "effect": "Grants Atk+4, Hit+50 when attacking. Trigger % = 20.",
+        "level": 20,
+        "pageId": "624014"
+      },
+      {
+        "characterId": "fwe-gaitz",
+        "kind": "unique",
+        "name": "Flashing Fang+",
+        "effect": "Grants Atk+7, Hit+100 when attacking. Trigger % = 20.",
+        "level": 35,
+        "pageId": "624014"
+      },
+      {
+        "characterId": "fwe-goliath",
+        "kind": "personal",
+        "name": "Heavyweight Class",
+        "effect": "Unit cannot change to cavalry or flying. Grants Bld+5.",
+        "level": null,
+        "pageId": "623976"
+      },
+      {
+        "characterId": "fwe-goliath",
+        "kind": "unique",
+        "name": "Pin Down",
+        "effect": "Inflicts Mov-3 on adjacent foes.",
+        "level": 20,
+        "pageId": "623976"
+      },
+      {
+        "characterId": "fwe-goliath",
+        "kind": "unique",
+        "name": "Pin Down+",
+        "effect": "Inflicts Mov-5 on adjacent foes.",
+        "level": 35,
+        "pageId": "623976"
+      },
+      {
+        "characterId": "fwe-guzran",
+        "kind": "personal",
+        "name": "Hot-Headed",
+        "effect": "Grants one of Hit+10, Avo+10, or Crit+10 during combat.",
+        "level": null,
+        "pageId": "623978"
+      },
+      {
+        "characterId": "fwe-guzran",
+        "kind": "unique",
+        "name": "Top Form",
+        "effect": "Changes the Effect of Hot-Headed to grant +15",
+        "level": 20,
+        "pageId": "623978"
+      },
+      {
+        "characterId": "fwe-guzran",
+        "kind": "unique",
+        "name": "Top Form+ Top Form+",
+        "effect": "Changes the effect of Hot-Headed to grant +20.",
+        "level": 35,
+        "pageId": "623978"
+      },
+      {
+        "characterId": "fwe-halvin",
+        "kind": "personal",
+        "name": "Adaptability",
+        "effect": "After combat, grants Hit+2 until the end of the map. (Max +30)",
+        "level": null,
+        "pageId": "623997"
+      },
+      {
+        "characterId": "fwe-halvin",
+        "kind": "unique",
+        "name": "Halt Advance",
+        "effect": "After combat, if unit attacked first, inflicts Spd-2 on foe through their next combat.",
+        "level": 20,
+        "pageId": "623997"
+      },
+      {
+        "characterId": "fwe-halvin",
+        "kind": "unique",
+        "name": "Halt Advance+",
+        "effect": "After combat, if unit attacked first, inflicts Spd-3 on foe throughout their next combat.",
+        "level": 35,
+        "pageId": "623997"
+      },
+      {
+        "characterId": "fwe-hong-hua",
+        "kind": "personal",
+        "name": "Zhu Ming",
+        "effect": "When equipped with magic, grants Hit +10.",
+        "level": null,
+        "pageId": "624012"
+      },
+      {
+        "characterId": "fwe-inyoni",
+        "kind": "personal",
+        "name": "Heavy-Bow User",
+        "effect": "When equipped with a bow, grants Str+3",
+        "level": null,
+        "pageId": "624001"
+      },
+      {
+        "characterId": "fwe-inyoni",
+        "kind": "unique",
+        "name": "Pierce",
+        "effect": "Grants Atk+2, Crit+5 when attacking with a bow combat art.",
+        "level": 20,
+        "pageId": "624001"
+      },
+      {
+        "characterId": "fwe-inyoni",
+        "kind": "unique",
+        "name": "Pierce+",
+        "effect": "Grants Atk+4, Crit+10 when attacking with a bow combat art.",
+        "level": 35,
+        "pageId": "624001"
+      },
+      {
+        "characterId": "fwe-io",
+        "kind": "personal",
+        "name": "With My Steed",
+        "effect": "(Cavalry) If unit attacks first, grants Shld+3, Ddg+30 during combat.",
+        "level": null,
+        "pageId": "623980"
+      },
+      {
+        "characterId": "fwe-io",
+        "kind": "unique",
+        "name": "Mounted Push Mounted Push",
+        "effect": "(Cavalry) If unit attacks first, grants Hit+10 during combat.",
+        "level": 20,
+        "pageId": "623980"
+      },
+      {
+        "characterId": "fwe-io",
+        "kind": "unique",
+        "name": "Mounted Push+",
+        "effect": "(Cavalry) If unit attacks first, grants Hit+10, Atk+3 during combat.",
+        "level": 35,
+        "pageId": "623980"
+      },
+      {
+        "characterId": "fwe-jasmine",
+        "kind": "personal",
+        "name": "Expert Counter",
+        "effect": "If foe attacks first, grants Hit+20 to unit during combat.",
+        "level": null,
+        "pageId": "623999"
+      },
+      {
+        "characterId": "fwe-jasmine",
+        "kind": "unique",
+        "name": "Raging Counter",
+        "effect": "If foe attacks first, grants Atk+3 to unit during combat.",
+        "level": 20,
+        "pageId": "623999"
+      },
+      {
+        "characterId": "fwe-jasmine",
+        "kind": "unique",
+        "name": "Raging Counter+",
+        "effect": "If foe attacks first, grants Atk+3, Crit+10 to unit during combat.",
+        "level": 35,
+        "pageId": "623999"
+      },
+      {
+        "characterId": "fwe-jester",
+        "kind": "personal",
+        "name": "Blink of an Eye",
+        "effect": "After using Swap, grants Def+3 until unit's next phase.",
+        "level": null,
+        "pageId": "623991"
+      },
+      {
+        "characterId": "fwe-jester",
+        "kind": "unique",
+        "name": "Flickering Edge",
+        "effect": "When unit avoids an attack, grants Atk+3 during combat.",
+        "level": 20,
+        "pageId": "623991"
+      },
+      {
+        "characterId": "fwe-jester",
+        "kind": "unique",
+        "name": "Flickering Edge+",
+        "effect": "When unit avoids an attack, grants Atk+5 during combat.",
+        "level": 35,
+        "pageId": "623991"
+      },
+      {
+        "characterId": "fwe-kiroc",
+        "kind": "personal",
+        "name": "Tyranny",
+        "effect": "If foe has a status effect, grants Atk+3, Crit+10 to unit during combat.",
+        "level": null,
+        "pageId": "623994"
+      },
+      {
+        "characterId": "fwe-kiroc",
+        "kind": "unique",
+        "name": "Menace",
+        "effect": "Halves foes' Ddg during combat. Trigger % = 10.",
+        "level": 20,
+        "pageId": "623994"
+      },
+      {
+        "characterId": "fwe-kiroc",
+        "kind": "unique",
+        "name": "Menace+",
+        "effect": "Halves foes' Ddg during combat. Trigger % = 20.",
+        "level": 35,
+        "pageId": "623994"
+      },
+      {
+        "characterId": "fwe-leda",
+        "kind": "personal",
+        "name": "Blindside",
+        "effect": "If unit attacks first, cannot be countered during combat. Trigger % = 5.",
+        "level": null,
+        "pageId": "620437"
+      },
+      {
+        "characterId": "fwe-lilian",
+        "kind": "personal",
+        "name": "Safety First",
+        "effect": "If foe cannot counter, grants Hit +10 to unit during combat.",
+        "level": null,
+        "pageId": "624009"
+      },
+      {
+        "characterId": "fwe-lilian",
+        "kind": "unique",
+        "name": "Upper Hand Upper Hand",
+        "effect": "If unit's hit % = 100, grants Atk+3 when attacking.",
+        "level": 20,
+        "pageId": "624009"
+      },
+      {
+        "characterId": "fwe-lilian",
+        "kind": "unique",
+        "name": "Upper Hand+",
+        "effect": "If unit's hit % = 100, grants Atk+5 when attacking.",
+        "level": 35,
+        "pageId": "624009"
+      },
+      {
+        "characterId": "fwe-loretta",
+        "kind": "personal",
+        "name": "Steadfast",
+        "effect": "If unit's HP ≥ 50%, grants Avo+10 during combat.",
+        "level": null,
+        "pageId": "623996"
+      },
+      {
+        "characterId": "fwe-loretta",
+        "kind": "unique",
+        "name": "Peak Form",
+        "effect": "If unit HP = 100%, grants Atk+3 during combat.",
+        "level": 20,
+        "pageId": "623996"
+      },
+      {
+        "characterId": "fwe-loretta",
+        "kind": "unique",
+        "name": "Peak Form+",
+        "effect": "If unit's HP = 100%, grants Atk+3, Avo+10 during combat.",
+        "level": 35,
+        "pageId": "623996"
+      },
+      {
+        "characterId": "fwe-ludia",
+        "kind": "personal",
+        "name": "Falcon",
+        "effect": "If unit attacks first, grants AS+3 during combat.",
+        "level": null,
+        "pageId": "623992"
+      },
+      {
+        "characterId": "fwe-ludia",
+        "kind": "unique",
+        "name": "Perception",
+        "effect": "If unit can make a follow-up, grants Avo+10 during combat.",
+        "level": 20,
+        "pageId": "623992"
+      },
+      {
+        "characterId": "fwe-ludia",
+        "kind": "unique",
+        "name": "Perception+",
+        "effect": "If unit can make a follow-up, grants Avo+20 during combat.",
+        "level": 35,
+        "pageId": "623992"
+      },
+      {
+        "characterId": "fwe-lysander",
+        "kind": "personal",
+        "name": "Racing Attack",
+        "effect": "If unit attacks first, grants Avo +15 during combat.",
+        "level": null,
+        "pageId": "624002"
+      },
+      {
+        "characterId": "fwe-lysander",
+        "kind": "unique",
+        "name": "Accelerate",
+        "effect": "After defeating a foe, grants Spd +1 until the end of the map. (Max +10)",
+        "level": 20,
+        "pageId": "624002"
+      },
+      {
+        "characterId": "fwe-lysander",
+        "kind": "unique",
+        "name": "Accelerate+",
+        "effect": "After defeating a foe, grants Spd+2 until the end of the map. (Max +10)",
+        "level": 35,
+        "pageId": "624002"
+      },
+      {
+        "characterId": "fwe-majide",
+        "kind": "personal",
+        "name": "Hellbent Axe",
+        "effect": "When equipped with an axe, grants Str+3.",
+        "level": null,
+        "pageId": "623988"
+      },
+      {
+        "characterId": "fwe-majide",
+        "kind": "unique",
+        "name": "Fear Nothing",
+        "effect": "If unit attacks first, grants Atk+3 at cost of Avo-30 to unit during combat.",
+        "level": 20,
+        "pageId": "623988"
+      },
+      {
+        "characterId": "fwe-majide",
+        "kind": "unique",
+        "name": "Fear Nothing+",
+        "effect": "If unit attacks first, grants Atk+6 at cost of Avo-30 to unit during combat.",
+        "level": 35,
+        "pageId": "623988"
+      },
+      {
+        "characterId": "fwe-mikaela",
+        "kind": "personal",
+        "name": "Veteran's Mettle",
+        "effect": "Grants Hit+10 during combat against an adjacent foe.",
+        "level": null,
+        "pageId": "624008"
+      },
+      {
+        "characterId": "fwe-mikaela",
+        "kind": "unique",
+        "name": "Redblade Redblade's Will",
+        "effect": "Grants Atk+3 during combat against an adjacent foe.",
+        "level": 20,
+        "pageId": "624008"
+      },
+      {
+        "characterId": "fwe-mikaela",
+        "kind": "unique",
+        "name": "Redblade's Will+",
+        "effect": "Grants Atk+3 during combat against an adjacent foe. Also grants Atk+3 when attacking an adjacent foe (trigger % = 30).",
+        "level": 35,
+        "pageId": "624008"
+      },
+      {
+        "characterId": "fwe-mu",
+        "kind": "personal",
+        "name": "Signs of Growth",
+        "effect": "When unit levels up, grants enhanced basic stat growth.",
+        "level": null,
+        "pageId": "624010"
+      },
+      {
+        "characterId": "fwe-mu",
+        "kind": "unique",
+        "name": "Warrior's Blood",
+        "effect": "Grants stat increase based on equipped weapon type.",
+        "level": 20,
+        "pageId": "624010"
+      },
+      {
+        "characterId": "fwe-mu",
+        "kind": "unique",
+        "name": "Warrior's Blood+",
+        "effect": "Grants a large stat increase based on equipped weapon type.",
+        "level": 35,
+        "pageId": "624010"
+      },
+      {
+        "characterId": "fwe-nathan",
+        "kind": "personal",
+        "name": "Headlong Rush",
+        "effect": "If unit attacks first, grants AS+3, Hit+10 during combat.",
+        "level": null,
+        "pageId": "624390"
+      },
+      {
+        "characterId": "fwe-nezha",
+        "kind": "personal",
+        "name": "Quick Draw",
+        "effect": "If unit attacks first, grants Atk+3 during combat. Trigger % = 50.",
+        "level": null,
+        "pageId": "623977"
+      },
+      {
+        "characterId": "fwe-nezha",
+        "kind": "unique",
+        "name": "Never Stop",
+        "effect": "Grants Atk+5 when attacking after Quick Draw triggers. Trigger % = 30.",
+        "level": 20,
+        "pageId": "623977"
+      },
+      {
+        "characterId": "fwe-nezha",
+        "kind": "unique",
+        "name": "Never Stop+",
+        "effect": "Grants Atk+5 when attacking after Quick Draw triggers. Trigger % = 50.",
+        "level": 35,
+        "pageId": "623977"
+      },
+      {
+        "characterId": "fwe-ninae",
+        "kind": "personal",
+        "name": "Spirits' Voices",
+        "effect": "If foes uses magic, grants Hit/Avo+10 to unit during combat.",
+        "level": null,
+        "pageId": "623990"
+      },
+      {
+        "characterId": "fwe-ninae",
+        "kind": "unique",
+        "name": "Spirits' Guidance",
+        "effect": "Grants Spirits' Voices to adjacent allies.",
+        "level": 20,
+        "pageId": "623990"
+      },
+      {
+        "characterId": "fwe-ninae",
+        "kind": "unique",
+        "name": "Spirits' Guidance+",
+        "effect": "Grants Spirits' Voices to allies within 2 spaces.",
+        "level": 35,
+        "pageId": "623990"
+      },
+      {
+        "characterId": "fwe-noctula",
+        "kind": "personal",
+        "name": "Warrior's Clarity",
+        "effect": "After combat, grants Avo+3 until unit's next phase.",
+        "level": null,
+        "pageId": "623984"
+      },
+      {
+        "characterId": "fwe-noctula",
+        "kind": "unique",
+        "name": "Attuned",
+        "effect": "When Warrior's Clarity triggers, grants Avo+10 until unit's next phase. Trigger % = 10.",
+        "level": 20,
+        "pageId": "623984"
+      },
+      {
+        "characterId": "fwe-noctula",
+        "kind": "unique",
+        "name": "Attuned+",
+        "effect": "When Warrior's Clarity triggers, grants Avo+10 until unit's next phase. Trigger % = 20.",
+        "level": 35,
+        "pageId": "623984"
+      },
+      {
+        "characterId": "fwe-nuzzuo",
+        "kind": "personal",
+        "name": "Har Hali Wisdom",
+        "effect": "If unit is effective against foe, grant Atk+3 during combat.",
+        "level": null,
+        "pageId": "623987"
+      },
+      {
+        "characterId": "fwe-nuzzuo",
+        "kind": "unique",
+        "name": "Precision Strike",
+        "effect": "If unit is effective against foe, grants Hit+10 during combat.",
+        "level": 20,
+        "pageId": "623987"
+      },
+      {
+        "characterId": "fwe-nuzzuo",
+        "kind": "unique",
+        "name": "Precision Strike+",
+        "effect": "If unit is effective against foe, grants Hit+20 during combat.",
+        "level": 35,
+        "pageId": "623987"
+      },
+      {
+        "characterId": "fwe-nydine",
+        "kind": "personal",
+        "name": "Barge Through",
+        "effect": "(Cavalry) Can move through foe's space. (Cannot move through large-scale foes.)",
+        "level": null,
+        "pageId": "623979"
+      },
+      {
+        "characterId": "fwe-nydine",
+        "kind": "unique",
+        "name": "At a Gallop",
+        "effect": "(Cavalry) Applies -1 to movement cost for terrain (cannot be reduced to below 1).",
+        "level": 20,
+        "pageId": "623979"
+      },
+      {
+        "characterId": "fwe-nydine",
+        "kind": "unique",
+        "name": "At a Gallop+",
+        "effect": "(Cavalry) Applies -2 movement cost for terrain (cannot be reduced below 1).",
+        "level": 35,
+        "pageId": "623979"
+      },
+      {
+        "characterId": "fwe-olympia",
+        "kind": "personal",
+        "name": "Competitive Zeal",
+        "effect": "When equipped with magic, grants Crit+10.",
+        "level": null,
+        "pageId": "624011"
+      },
+      {
+        "characterId": "fwe-olympia",
+        "kind": "unique",
+        "name": "Ardent Nosferatu Ardent Nosferatu",
+        "effect": "When using Nosferatu, grants Atk+3, Crit+5 during combat.",
+        "level": 20,
+        "pageId": "624011"
+      },
+      {
+        "characterId": "fwe-olympia",
+        "kind": "unique",
+        "name": "Ardent Nosferatu+",
+        "effect": "When using Nosferatu, grants Atk+5, Crit+10 during combat.",
+        "level": 35,
+        "pageId": "624011"
+      },
+      {
+        "characterId": "fwe-orchel",
+        "kind": "personal",
+        "name": "Solid and Sturdy",
+        "effect": "Grants Def+5. Unit is armored. Cannot change to cavalry or flying.",
+        "level": null,
+        "pageId": "624393"
+      },
+      {
+        "characterId": "fwe-orchel",
+        "kind": "unique",
+        "name": "Harmonic Soul",
+        "effect": "When healing an ally with magic, restores a little HP to unit.",
+        "level": null,
+        "pageId": "624393"
+      },
+      {
+        "characterId": "fwe-orchel",
+        "kind": "unique",
+        "name": "Harmonic Soul+",
+        "effect": "When healing an ally with magic, restores some HP to unit.",
+        "level": null,
+        "pageId": "624393"
+      },
+      {
+        "characterId": "fwe-peppe",
+        "kind": "personal",
+        "name": "Hunter's Snare",
+        "effect": "In enemy's phase, if foes is damaged, unit attacks first during combat. Trigger % = 30.",
+        "level": null,
+        "pageId": "624000"
+      },
+      {
+        "characterId": "fwe-peppe",
+        "kind": "unique",
+        "name": "King's Majesty",
+        "effect": "If foe is damaged, grants Atk+2, Crit+5 during combat.",
+        "level": 20,
+        "pageId": "624000"
+      },
+      {
+        "characterId": "fwe-peppe",
+        "kind": "unique",
+        "name": "King's Majesty+",
+        "effect": "If foe is damaged, grants Atk+4, Crit+10 during combat.",
+        "level": 35,
+        "pageId": "624000"
+      },
+      {
+        "characterId": "fwe-peter",
+        "kind": "personal",
+        "name": "Steady Aim",
+        "effect": "Grants Rng+1 when attacking with a bow combat art.",
+        "level": null,
+        "pageId": "624004"
+      },
+      {
+        "characterId": "fwe-peter",
+        "kind": "unique",
+        "name": "Correct for Drift",
+        "effect": "If unit's hit percent is ≥ to 90%, grants Hit +10 during combat.",
+        "level": 20,
+        "pageId": "624004"
+      },
+      {
+        "characterId": "fwe-peter",
+        "kind": "unique",
+        "name": "Correct for Drift+",
+        "effect": "If unit's hit % ≥ 75%, grants Hit+20 during combat.",
+        "level": 35,
+        "pageId": "624004"
+      },
+      {
+        "characterId": "fwe-seteth",
+        "kind": "personal",
+        "name": "Ready for Battle",
+        "effect": "For the first combat in enemy's phase, unit attacks first. Trigger % = 50.",
+        "level": null,
+        "pageId": "623993"
+      },
+      {
+        "characterId": "fwe-seteth",
+        "kind": "unique",
+        "name": "Pass Judgment",
+        "effect": "When Diadem of Balance triggers, grants Atk+4.",
+        "level": 20,
+        "pageId": "623993"
+      },
+      {
+        "characterId": "fwe-seteth",
+        "kind": "unique",
+        "name": "Pass Judgment+ Pass Judgment+",
+        "effect": "When Diadem of Balance triggers, grants Atk+7.",
+        "level": 35,
+        "pageId": "623993"
+      },
+      {
+        "characterId": "fwe-sha-lan",
+        "kind": "personal",
+        "name": "Cooler Heads",
+        "effect": "After using Draw Back, unit can use assist magic.",
+        "level": null,
+        "pageId": "624017"
+      },
+      {
+        "characterId": "fwe-sha-lan",
+        "kind": "unique",
+        "name": "Watchfulness",
+        "effect": "Grants Spd+2 to adjacent allies.",
+        "level": 20,
+        "pageId": "624017"
+      },
+      {
+        "characterId": "fwe-sha-lan",
+        "kind": "unique",
+        "name": "Watchfulness+",
+        "effect": "Grants Spd+4 to adjacent allies.",
+        "level": 35,
+        "pageId": "624017"
+      },
+      {
+        "characterId": "fwe-simon",
+        "kind": "personal",
+        "name": "Close Call",
+        "effect": "If unit's HP ≥ 2 and damage would reduce it to 0, leaves unit with 1 HP. Trigger % = Lck.",
+        "level": null,
+        "pageId": "624019"
+      },
+      {
+        "characterId": "fwe-simon",
+        "kind": "unique",
+        "name": "Devil's Luck",
+        "effect": "After defeating a foe, grants Lck+1 until the end of the map. (Max +10)",
+        "level": 20,
+        "pageId": "624019"
+      },
+      {
+        "characterId": "fwe-simon",
+        "kind": "unique",
+        "name": "Devil's Luck+",
+        "effect": "After defeating a foe, grants Lck+2 until the end of the map. (Max +10)",
+        "level": 35,
+        "pageId": "624019"
+      },
+      {
+        "characterId": "fwe-sirocco",
+        "kind": "personal",
+        "name": "Goddess's Favor",
+        "effect": "After combat, restores 5 HP to unit.",
+        "level": null,
+        "pageId": "624006"
+      },
+      {
+        "characterId": "fwe-sirocco",
+        "kind": "unique",
+        "name": "Wind's Caprice",
+        "effect": "Grants one of Avo+1, Avo+5, or Avo+20 during combat.",
+        "level": 20,
+        "pageId": "624006"
+      },
+      {
+        "characterId": "fwe-sirocco",
+        "kind": "unique",
+        "name": "Wind's Caprice+",
+        "effect": "Grants one of Avo+1, Avo+5, Avo+20, or Avo+30 during combat.",
+        "level": 35,
+        "pageId": "624006"
+      },
+      {
+        "characterId": "fwe-sofia",
+        "kind": "personal",
+        "name": "Healing Knowledge",
+        "effect": "When healing an ally with magic, restores +10 HP.",
+        "level": null,
+        "pageId": "623986"
+      },
+      {
+        "characterId": "fwe-sofia",
+        "kind": "unique",
+        "name": "Distant Healing",
+        "effect": "Grants Rng+1 to healing magic.",
+        "level": 20,
+        "pageId": "623986"
+      },
+      {
+        "characterId": "fwe-sofia",
+        "kind": "unique",
+        "name": "Distant Healing+",
+        "effect": "Grants Rng+2 to healing magic.",
+        "level": 35,
+        "pageId": "623986"
+      },
+      {
+        "characterId": "fwe-tahonia",
+        "kind": "personal",
+        "name": "Python Technique",
+        "effect": "When using a gauntlet combat art, unit makes a follow-up regardless of AS during combat. Trigger % = 15.",
+        "level": null,
+        "pageId": "624396"
+      },
+      {
+        "characterId": "fwe-talimun",
+        "kind": "personal",
+        "name": "Swashbuckler's Luck",
+        "effect": "Grants Lck+3.",
+        "level": null,
+        "pageId": "624392"
+      },
+      {
+        "characterId": "fwe-talimun",
+        "kind": "unique",
+        "name": "Cannoning Flair",
+        "effect": "When using artillery, grants Hit+30 during combat.",
+        "level": null,
+        "pageId": "624392"
+      },
+      {
+        "characterId": "fwe-talimun",
+        "kind": "unique",
+        "name": "Winds of Victory",
+        "effect": "Grants Hit+15 when attacking. Grants Avo+15 when attacked. Trigger% = Lck.",
+        "level": null,
+        "pageId": "624392"
+      },
+      {
+        "characterId": "fwe-theodora",
+        "kind": "personal",
+        "name": "Royal Resolve",
+        "effect": "Unit takes half damage when attacked. Trigger % = 30.",
+        "level": null,
+        "pageId": "620411"
+      },
+      {
+        "characterId": "fwe-theodora",
+        "kind": "unique",
+        "name": "Direct Hit",
+        "effect": "Deals +10 damage when attacking with Blaze Arts. Trigger % = 30.",
+        "level": 5,
+        "pageId": "620411"
+      },
+      {
+        "characterId": "fwe-tialla",
+        "kind": "personal",
+        "name": "Tactician's Wit",
+        "effect": "Grants Rng+1 to combat arts usable on allies.",
+        "level": null,
+        "pageId": "623941"
+      },
+      {
+        "characterId": "fwe-tialla",
+        "kind": "unique",
+        "name": "Tactician's Insight",
+        "effect": "After combat, if unit attacked first, inflicts Avo-5 on foe through unit's next combat.",
+        "level": 20,
+        "pageId": "623941"
+      },
+      {
+        "characterId": "fwe-tialla",
+        "kind": "unique",
+        "name": "Tactician's Insight+",
+        "effect": "After combat, if unit attacked first, inflicts Avo-10 on foe through unit's next combat.",
+        "level": 35,
+        "pageId": "623941"
+      },
+      {
+        "characterId": "fwe-tobias",
+        "kind": "personal",
+        "name": "Power Arts",
+        "effect": "Grants Atk +3 when attacking with a combat art,",
+        "level": null,
+        "pageId": "623758"
+      },
+      {
+        "characterId": "fwe-tobias",
+        "kind": "unique",
+        "name": "All-Out Attack",
+        "effect": "Multiplies damage by 1.3 when attacking with a combat art. Trigger % = 30.",
+        "level": 20,
+        "pageId": "623758"
+      },
+      {
+        "characterId": "fwe-tobias",
+        "kind": "unique",
+        "name": "All-Out Attack+",
+        "effect": "Multiplies damage by 1.5 when attacking with a combat art. Trigger % = 30.",
+        "level": 35,
+        "pageId": "623758"
+      },
+      {
+        "characterId": "fwe-troy",
+        "kind": "personal",
+        "name": "Yun Shou",
+        "effect": "When equipped with gauntlets, grants Hit +10.",
+        "level": null,
+        "pageId": "624013"
+      },
+      {
+        "characterId": "fwe-ultand",
+        "kind": "personal",
+        "name": "Patch Up",
+        "effect": "After an adjacent ally's combat, restores a little HP to that ally.",
+        "level": null,
+        "pageId": "624007"
+      },
+      {
+        "characterId": "fwe-ultand",
+        "kind": "unique",
+        "name": "Pray for Safety",
+        "effect": "Grants Ddg+10 to adjacent allies.",
+        "level": 20,
+        "pageId": "624007"
+      },
+      {
+        "characterId": "fwe-ultand",
+        "kind": "unique",
+        "name": "Pray for Safety+ Pray for Safety+",
+        "effect": "Grants Ddg+20 to adjacent allies.",
+        "level": 35,
+        "pageId": "624007"
+      },
+      {
+        "characterId": "fwe-ursula",
+        "kind": "personal",
+        "name": "Management Skills",
+        "effect": "Allows storage access to unit and allies within 2 spaces.",
+        "level": null,
+        "pageId": "624015"
+      },
+      {
+        "characterId": "fwe-ursula",
+        "kind": "unique",
+        "name": "Seize the Chance",
+        "effect": "Multiplies damage by 1.3 when attacking. Trigger % = Lck ÷ 2.",
+        "level": 20,
+        "pageId": "624015"
+      },
+      {
+        "characterId": "fwe-ursula",
+        "kind": "unique",
+        "name": "Seize the Chance+",
+        "effect": "Multiplies damage by 1.5 when attacking. Trigger % = Lck ÷ 2.",
+        "level": 35,
+        "pageId": "624015"
+      },
+      {
+        "characterId": "fwe-yang-jie",
+        "kind": "personal",
+        "name": "Monkly Havoc",
+        "effect": "After defeating a foe, unit recovers HP equal to max HP. Trigger % = Lck / 2",
+        "level": null,
+        "pageId": "623985"
+      },
+      {
+        "characterId": "fwe-yang-jie",
+        "kind": "unique",
+        "name": "Robust Health",
+        "effect": "Grants Shld+3 when attacked. Trigger % = unit's remaining HP.",
+        "level": 20,
+        "pageId": "623985"
+      },
+      {
+        "characterId": "fwe-yang-jie",
+        "kind": "unique",
+        "name": "Robust Health+",
+        "effect": "Grants Shld+5 when attacked. Trigger % = unit's remaining HP.",
+        "level": 35,
+        "pageId": "623985"
+      },
+      {
+        "characterId": "fwe-zarcone",
+        "kind": "personal",
+        "name": "Hatchet Man",
+        "effect": "When equipped with an axe, grants Hit+10.",
+        "level": null,
+        "pageId": "623989"
+      },
+      {
+        "characterId": "fwe-zarcone",
+        "kind": "unique",
+        "name": "Vulgar Conduct",
+        "effect": "If foe's HP is less than or equal to 50%, grants Hit+20 during combat.",
+        "level": 20,
+        "pageId": "623989"
+      },
+      {
+        "characterId": "fwe-zarcone",
+        "kind": "unique",
+        "name": "Vulgar Conduct+",
+        "effect": "If foe's HP is less than or equal to 50%, grants Hit+20, Atk+3 during combat.",
+        "level": 35,
+        "pageId": "623989"
+      }
+    ],
+    "japanese": [
+      {
+        "characterId": "fwe-cai",
+        "kind": "personal",
+        "name": "活発",
+        "effect": "移動力+1"
+      },
+      {
+        "characterId": "fwe-dietrich",
+        "kind": "personal",
+        "name": "殺意",
+        "effect": "先行での戦闘時、必殺+5"
+      },
+      {
+        "characterId": "fwe-theodora",
+        "kind": "personal",
+        "name": "不退の覚悟",
+        "effect": "攻撃された時、30%で発動。受けるダメージを半減する。"
+      },
+      {
+        "characterId": "fwe-leda",
+        "kind": "personal",
+        "name": "闇討ち",
+        "effect": "先行での戦闘時、5%で発動、反撃されなくなる。"
+      },
+      {
+        "characterId": "fwe-tialla",
+        "kind": "personal",
+        "name": "軍師の才",
+        "effect": "味方に使用可能な戦技の射程+1"
+      },
+      {
+        "characterId": "fwe-peter",
+        "kind": "personal",
+        "name": "狙い射ち",
+        "effect": "弓の戦技を使う時、射程+1"
+      },
+      {
+        "characterId": "fwe-ultand",
+        "kind": "personal",
+        "name": "応急手当",
+        "effect": "隣接する味方の戦闘後、その味方のHPを小回復する"
+      },
+      {
+        "characterId": "fwe-fabio",
+        "kind": "personal",
+        "name": "闇呼び",
+        "effect": "隣接する敵の必避-5"
+      },
+      {
+        "characterId": "fwe-esmeralda",
+        "kind": "personal",
+        "name": "怪力",
+        "effect": "自分が装備している武器、装備品の重さを80%に抑える"
+      },
+      {
+        "characterId": "fwe-mikaela",
+        "kind": "personal",
+        "name": "歴戦の強者",
+        "effect": "隣接する敵との戦闘時、命中+10"
+      },
+      {
+        "characterId": "fwe-lilian",
+        "kind": "personal",
+        "name": "安全策",
+        "effect": "戦闘時、敵が反撃できないなら、命中+10"
+      },
+      {
+        "characterId": "fwe-lysander",
+        "kind": "personal",
+        "name": "疾走攻撃",
+        "effect": "先攻での戦闘時、回避+15"
+      },
+      {
+        "characterId": "fwe-buccar",
+        "kind": "personal",
+        "name": "守護騎士の務め",
+        "effect": "攻撃された時、受けるダメージを90%に抑える"
+      },
+      {
+        "characterId": "fwe-sirocco",
+        "kind": "personal",
+        "name": "女神の恩寵",
+        "effect": "戦闘後、自分のHPを5回復する"
+      },
+      {
+        "characterId": "fwe-olympia",
+        "kind": "personal",
+        "name": "負けず嫌い",
+        "effect": "魔法を装備中、必殺+10"
+      },
+      {
+        "characterId": "fwe-mu",
+        "kind": "personal",
+        "name": "成長の兆し",
+        "effect": "レベルアップした時、基本能力が成長しやすい"
+      },
+      {
+        "characterId": "fwe-gaitz",
+        "kind": "personal",
+        "name": "助太刀",
+        "effect": "隣接する味方の守備+3"
+      },
+      {
+        "characterId": "fwe-dante",
+        "kind": "personal",
+        "name": "戦場の作劇",
+        "effect": "周囲2マスにいる味方の戦闘時、その味方の（魅力÷2）%で発動、その味方の必避+10"
+      },
+      {
+        "characterId": "fwe-simon",
+        "kind": "personal",
+        "name": "死にそびれ",
+        "effect": "自分のHPが2以上で、HPが0になるようなダメージを受けた時、幸運%で発動、HPが1残る"
+      },
+      {
+        "characterId": "fwe-diego",
+        "kind": "personal",
+        "name": "用心棒",
+        "effect": "隣接する味方の戦闘時、5%で発動、その味方は追撃されなくなる"
+      },
+      {
+        "characterId": "fwe-ninae",
+        "kind": "personal",
+        "name": "精霊の声",
+        "effect": "戦闘時、敵が魔法なら、命中・回避+10"
+      },
+      {
+        "characterId": "fwe-sha-lan",
+        "kind": "personal",
+        "name": "引き留め役",
+        "effect": "「引き寄せ」を使用後、補助魔法を使用できる"
+      },
+      {
+        "characterId": "fwe-nezha",
+        "kind": "personal",
+        "name": "先手必勝",
+        "effect": "先攻での戦闘時、50%で発動、攻撃力+3"
+      },
+      {
+        "characterId": "fwe-guzran",
+        "kind": "personal",
+        "name": "気分屋",
+        "effect": "戦闘時、命中・回避・必殺のどれかが+10"
+      },
+      {
+        "characterId": "fwe-io",
+        "kind": "personal",
+        "name": "愛馬との連携",
+        "effect": "【騎兵】先攻での戦闘時、防御力+3、必避+30"
+      },
+      {
+        "characterId": "fwe-catania",
+        "kind": "personal",
+        "name": "疾風",
+        "effect": "戦闘時、自分の攻速が敵より3以上大きければ、命中+20"
+      },
+      {
+        "characterId": "fwe-nydine",
+        "kind": "personal",
+        "name": "強行突破",
+        "effect": "【騎兵】敵のいるマスを通過して移動できる（自分が大型ユニットなら無効）"
+      },
+      {
+        "characterId": "fwe-hong-hua",
+        "kind": "personal",
+        "name": "朱明",
+        "effect": "魔法を装備中、命中+10"
+      },
+      {
+        "characterId": "fwe-troy",
+        "kind": "personal",
+        "name": "雲手",
+        "effect": "籠手を装備中、命中+10"
+      },
+      {
+        "characterId": "fwe-yang-jie",
+        "kind": "personal",
+        "name": "破戒僧",
+        "effect": "敵を倒した時、（幸運÷2）%で発動、自分のHPを最大HP分回復する"
+      },
+      {
+        "characterId": "fwe-noctula",
+        "kind": "personal",
+        "name": "集中",
+        "effect": "戦闘後、回避+3（次の自分のフェイズまで）"
+      },
+      {
+        "characterId": "fwe-sofia",
+        "kind": "personal",
+        "name": "治癒の心得",
+        "effect": "魔法で味方を回復する時、回復量+10"
+      },
+      {
+        "characterId": "fwe-peppe",
+        "kind": "personal",
+        "name": "狩人の待ち伏せ",
+        "effect": "敵フェイズ中の戦闘時、敵がダメージを受けているなら、30%で発動、自分が先攻になる"
+      },
+      {
+        "characterId": "fwe-seteth",
+        "kind": "personal",
+        "name": "臨戦態勢",
+        "effect": "敵のフェイズ中、1度目の戦闘時、50%で発動、自分が先攻になる"
+      },
+      {
+        "characterId": "fwe-loretta",
+        "kind": "personal",
+        "name": "心の余裕",
+        "effect": "戦闘時、自分のHPが半分以上なら、回避+10"
+      },
+      {
+        "characterId": "fwe-jester",
+        "kind": "personal",
+        "name": "瞬転",
+        "effect": "「入れ替え」を使用後、守備+3（次の自分のフェイズまで）"
+      },
+      {
+        "characterId": "fwe-goliath",
+        "kind": "personal",
+        "name": "重量級の戦士",
+        "effect": "騎兵、飛行の兵種になれない、体格+5"
+      },
+      {
+        "characterId": "fwe-ludia",
+        "kind": "personal",
+        "name": "はやぶさ",
+        "effect": "先攻での戦闘時、攻速+3"
+      },
+      {
+        "characterId": "fwe-dadao",
+        "kind": "personal",
+        "name": "一発勝負",
+        "effect": "戦闘時、自分も敵も追撃できないなら、自分の攻撃力+5"
+      },
+      {
+        "characterId": "fwe-fianna",
+        "kind": "personal",
+        "name": "淑光",
+        "effect": "魔法で味方を回復する時、幸運%で発動、魔法の回数が減らなくなる"
+      },
+      {
+        "characterId": "fwe-halvin",
+        "kind": "personal",
+        "name": "順応",
+        "effect": "戦闘後、命中+2（+30が最大）（マップ終了まで）"
+      },
+      {
+        "characterId": "fwe-zarcone",
+        "kind": "personal",
+        "name": "斧包丁",
+        "effect": "斧を装備中、命中+10"
+      },
+      {
+        "characterId": "fwe-majide",
+        "kind": "personal",
+        "name": "暴れ斧",
+        "effect": "斧を装備中、力+3"
+      },
+      {
+        "characterId": "fwe-kiroc",
+        "kind": "personal",
+        "name": "暴虐",
+        "effect": "戦闘時、敵が状態異常なら、攻撃力+3、必殺+10"
+      },
+      {
+        "characterId": "fwe-jasmine",
+        "kind": "personal",
+        "name": "熟練の反撃術",
+        "effect": "後攻での戦闘時、命中+20"
+      },
+      {
+        "characterId": "fwe-nuzzuo",
+        "kind": "personal",
+        "name": "部族の秘技",
+        "effect": "戦闘時、自分の攻撃が敵に有効・特効なら、攻撃力+3"
+      },
+      {
+        "characterId": "fwe-alexandra",
+        "kind": "personal",
+        "name": "白銀の乙女",
+        "effect": "隣接する味方1人につき、自分の命中・回避+5"
+      },
+      {
+        "characterId": "fwe-benditz",
+        "kind": "personal",
+        "name": "車上の戦闘術",
+        "effect": "【騎兵】自分が「戦車兵」なら、命中+20"
+      },
+      {
+        "characterId": "fwe-ursula",
+        "kind": "personal",
+        "name": "商会の支配人",
+        "effect": "自分を含め、周囲2マスにいる味方は道具袋を使用できる"
+      },
+      {
+        "characterId": "fwe-tobias",
+        "kind": "personal",
+        "name": "大技",
+        "effect": "戦技での攻撃時、攻撃力+3"
+      },
+      {
+        "characterId": "fwe-bonaventure",
+        "kind": "personal",
+        "name": "入れ知恵",
+        "effect": "隣接する味方の技+3"
+      },
+      {
+        "characterId": "fwe-inyoni",
+        "kind": "personal",
+        "name": "強弓使い",
+        "effect": "弓を装備中、力+3"
+      },
+      {
+        "characterId": "fwe-anatolia",
+        "kind": "personal",
+        "name": "流気巧",
+        "effect": "回避+3"
+      },
+      {
+        "characterId": "fwe-orchel",
+        "kind": "personal",
+        "name": "堅牢堅固",
+        "effect": "守備+5、重装になる。騎兵、飛行の兵種になれない。"
+      },
+      {
+        "characterId": "fwe-centurio",
+        "kind": "personal",
+        "name": "鋼玉の守護",
+        "effect": "敵のフェイズ中、1度目の戦闘だけ攻撃で受けるダメージを半減する"
+      },
+      {
+        "characterId": "fwe-bertrand",
+        "kind": "personal",
+        "name": "鎧葬流",
+        "effect": "戦闘時、5%で発動。攻速に関係なく追撃する。"
+      },
+      {
+        "characterId": "fwe-talimun",
+        "kind": "personal",
+        "name": "冒険王の英運",
+        "effect": "幸運+3"
+      },
+      {
+        "characterId": "fwe-creek",
+        "kind": "personal",
+        "name": "冷静沈着",
+        "effect": "後攻での戦闘時、攻速+3 回避+10"
+      },
+      {
+        "characterId": "fwe-aswan",
+        "kind": "personal",
+        "name": "弓姫",
+        "effect": "弓を装備中、命中+20"
+      },
+      {
+        "characterId": "fwe-tahonia",
+        "kind": "personal",
+        "name": "ピュトーンの流儀",
+        "effect": "籠手の戦技を使う戦闘時、15%で発動。攻速に関係なく追撃する。"
+      },
+      {
+        "characterId": "fwe-nathan",
+        "kind": "personal",
+        "name": "猪突猛進",
+        "effect": "先行での戦闘時、攻速+3 命中+10"
+      },
+      {
+        "characterId": "fwe-sirocco",
+        "kind": "unique",
+        "name": "風任せ+",
+        "effect": "戦闘時、「回避+1」「回避+5」「回避+20」「回避+30」のどれかが発動する"
+      },
+      {
+        "characterId": "fwe-sofia",
+        "kind": "unique",
+        "name": "遠隔治癒+",
+        "effect": "回復魔法の射程+2"
+      },
+      {
+        "characterId": "fwe-fabio",
+        "kind": "unique",
+        "name": "闇の秘術+",
+        "effect": "「闇呼び」の効果の範囲が周囲3マスになる"
+      },
+      {
+        "characterId": "fwe-dietrich",
+        "kind": "unique",
+        "name": "獣の衝動",
+        "effect": "戦闘後、必殺+2（必殺の一撃が発生した戦闘後、元に戻る）"
+      },
+      {
+        "characterId": "fwe-mu",
+        "kind": "unique",
+        "name": "強戦士の血+",
+        "effect": "装備する武器の種類によって基本能力が大きく上がる"
+      },
+      {
+        "characterId": "fwe-mikaela",
+        "kind": "unique",
+        "name": "鉄血+",
+        "effect": "隣接する敵との戦闘時、攻撃力+3。さらにその攻撃時、30%で発動。攻撃力+3"
+      },
+      {
+        "characterId": "fwe-lilian",
+        "kind": "unique",
+        "name": "なんかいい感じ+",
+        "effect": "攻撃時、自分の命中率が100%なら、攻撃力+5"
+      },
+      {
+        "characterId": "fwe-tobias",
+        "kind": "unique",
+        "name": "本気の一発+",
+        "effect": "戦技での攻撃時、30%で発動。与えるダメージが1.5倍になる"
+      },
+      {
+        "characterId": "fwe-leda",
+        "kind": "unique",
+        "name": "即興",
+        "effect": "ブレイズアーツを使用後、自分がオーバーブレイズ中なら、さらに攻撃できる"
+      },
+      {
+        "characterId": "fwe-theodora",
+        "kind": "unique",
+        "name": "計略の達人",
+        "effect": "計略の回数+1"
+      },
+      {
+        "characterId": "fwe-theodora",
+        "kind": "unique",
+        "name": "直撃",
+        "effect": "ブレイズアーツでの攻撃時、30%で発動。与えるダメージ+10"
+      },
+      {
+        "characterId": "fwe-bonaventure",
+        "kind": "unique",
+        "name": "補足説明+",
+        "effect": "隣接する味方の戦闘時、30%で発動。その味方の命中+20"
+      },
+      {
+        "characterId": "fwe-olympia",
+        "kind": "unique",
+        "name": "情動のリザイア+",
+        "effect": "リザイアを使う戦闘時、攻撃力+5、必殺+10"
+      },
+      {
+        "characterId": "fwe-guzran",
+        "kind": "unique",
+        "name": "気分は上々+",
+        "effect": "「気分屋」の効果の能力上昇が+20になる"
+      },
+      {
+        "characterId": "fwe-lysander",
+        "kind": "unique",
+        "name": "加速+",
+        "effect": "敵を倒した時、速さ+2（+10が最大）（マップ終了まで）"
+      },
+      {
+        "characterId": "fwe-esmeralda",
+        "kind": "unique",
+        "name": "槍投げの達人+",
+        "effect": "戦闘時、槍を投げて攻撃するなら、命中+20、攻撃力+4"
+      },
+      {
+        "characterId": "fwe-buccar",
+        "kind": "unique",
+        "name": "返礼の一撃+",
+        "effect": "後攻での攻撃時、10%で発動。与えるダメージが1.3倍になる"
+      },
+      {
+        "characterId": "fwe-ultand",
+        "kind": "unique",
+        "name": "無事の祈り+",
+        "effect": "隣接する味方の必避+20"
+      },
+      {
+        "characterId": "fwe-yang-jie",
+        "kind": "unique",
+        "name": "活力結界+",
+        "effect": "攻撃された時、（自分の残りHP）%で発動。防御力+5"
+      },
+      {
+        "characterId": "fwe-cai",
+        "kind": "unique",
+        "name": "冥炎の主",
+        "effect": "自分が出撃中、全味方は冥炎の影響を受けず、冥炎にいる全味方が攻撃で受けるダメージを半減する"
+      },
+      {
+        "characterId": "fwe-tialla",
+        "kind": "unique",
+        "name": "軍師の炯眼+",
+        "effect": "先攻での戦闘後、その敵の回避-10（1回戦闘すると元に戻る）"
+      },
+      {
+        "characterId": "fwe-peter",
+        "kind": "unique",
+        "name": "誤差修正+",
+        "effect": "戦闘時、自分の命中率が75%以上なら、命中+20"
+      },
+      {
+        "characterId": "fwe-noctula",
+        "kind": "unique",
+        "name": "ゾーン+",
+        "effect": "「集中」発動時、20%で発動。回避+10（次の自分のフェイズまで）"
+      },
+      {
+        "characterId": "fwe-peppe",
+        "kind": "unique",
+        "name": "王の威光+",
+        "effect": "戦闘時、敵がダメージを受けているなら、攻撃力+4、必殺+10"
+      },
+      {
+        "characterId": "fwe-alexandra",
+        "kind": "unique",
+        "name": "飛翔+",
+        "effect": "自分が歩行不可の地形にいる時、攻速+5"
+      },
+      {
+        "characterId": "fwe-dante",
+        "kind": "unique",
+        "name": "追加演出+",
+        "effect": "「戦場の作劇」発動時、その味方の命中・必殺+10"
+      },
+      {
+        "characterId": "fwe-kiroc",
+        "kind": "unique",
+        "name": "威迫+",
+        "effect": "戦闘時、20%で発動。敵の必避を半減させる"
+      },
+      {
+        "characterId": "fwe-jasmine",
+        "kind": "unique",
+        "name": "怒涛の反撃+",
+        "effect": "後攻での戦闘時、攻撃力+3、必殺+10"
+      },
+      {
+        "characterId": "fwe-catania",
+        "kind": "unique",
+        "name": "風を味方に+",
+        "effect": "戦闘時、自分の攻速が敵より5以上大きければ、攻撃力+3、8以上大きければ、回避+20"
+      },
+      {
+        "characterId": "fwe-nydine",
+        "kind": "unique",
+        "name": "疾駆+",
+        "effect": "【騎兵】移動時、地形の移動コスト-2（1より小さくならない）"
+      },
+      {
+        "characterId": "fwe-ninae",
+        "kind": "unique",
+        "name": "精霊の導き+",
+        "effect": "周囲2マスにいる味方に「精霊の声」を付与する"
+      },
+      {
+        "characterId": "fwe-io",
+        "kind": "unique",
+        "name": "騎乗突撃+",
+        "effect": "【騎兵】先攻での戦闘時、命中+10、攻撃力+3"
+      },
+      {
+        "characterId": "fwe-jester",
+        "kind": "unique",
+        "name": "瞬刃+",
+        "effect": "自分が攻撃を回避した戦闘中、攻撃力+5"
+      },
+      {
+        "characterId": "fwe-fianna",
+        "kind": "unique",
+        "name": "信仰の賜物+",
+        "effect": "魔法で味方を回復する時、幸運%で発動。回復量+30"
+      },
+      {
+        "characterId": "fwe-ludia",
+        "kind": "unique",
+        "name": "見切り+",
+        "effect": "戦闘時、自分が追撃可能なら、回避+20"
+      },
+      {
+        "characterId": "fwe-nuzzuo",
+        "kind": "unique",
+        "name": "秘奥+",
+        "effect": "戦闘時、自分の攻撃が敵に有効・特効なら、命中+20"
+      },
+      {
+        "characterId": "fwe-goliath",
+        "kind": "unique",
+        "name": "抑えつけ+",
+        "effect": "隣接する敵の移動力-5"
+      },
+      {
+        "characterId": "fwe-sha-lan",
+        "kind": "unique",
+        "name": "注意喚起+",
+        "effect": "隣接する味方の速さ+4"
+      },
+      {
+        "characterId": "fwe-loretta",
+        "kind": "unique",
+        "name": "絶好調+",
+        "effect": "戦闘時、自分のHPが最大なら、攻撃力+3、回避+10"
+      },
+      {
+        "characterId": "fwe-benditz",
+        "kind": "unique",
+        "name": "戦車乗り+",
+        "effect": "自分が「戦車兵」なら、猛撃の回数+2"
+      },
+      {
+        "characterId": "fwe-nezha",
+        "kind": "unique",
+        "name": "俺は止まらねぇ+",
+        "effect": "「先手必勝」発動後の攻撃時、50%で発動。攻撃力+5"
+      },
+      {
+        "characterId": "fwe-halvin",
+        "kind": "unique",
+        "name": "足止め+",
+        "effect": "先攻での戦闘後、敵の速さ-3（1回戦闘すると元に戻る）"
+      },
+      {
+        "characterId": "fwe-zarcone",
+        "kind": "unique",
+        "name": "卑劣+",
+        "effect": "戦闘時、敵の残りHPが半分以下なら、命中+20、攻撃力+3"
+      },
+      {
+        "characterId": "fwe-dadao",
+        "kind": "unique",
+        "name": "全力+",
+        "effect": "攻撃時、（力÷2）%で発動。与えるダメージが1.5倍になる"
+      },
+      {
+        "characterId": "fwe-gaitz",
+        "kind": "unique",
+        "name": "牙閃+",
+        "effect": "攻撃時、20%で発動。攻撃力+7、命中+100"
+      },
+      {
+        "characterId": "fwe-bertrand",
+        "kind": "unique",
+        "name": "後の先",
+        "effect": "敵フェイズ中の戦闘時、25%で発動。自分が先攻になる"
+      },
+      {
+        "characterId": "fwe-bertrand",
+        "kind": "unique",
+        "name": "先の先",
+        "effect": "先攻での戦闘時、25%で発動。敵の反撃より先に追撃できる"
+      },
+      {
+        "characterId": "fwe-anatolia",
+        "kind": "unique",
+        "name": "連貫円滑+",
+        "effect": "自分が攻撃を回避した時、自分のHPを10回復する"
+      },
+      {
+        "characterId": "fwe-orchel",
+        "kind": "unique",
+        "name": "調魂+",
+        "effect": "魔法で味方を回復する時、自分のHPを中回復する"
+      },
+      {
+        "characterId": "fwe-talimun",
+        "kind": "unique",
+        "name": "熟練の砲手",
+        "effect": "兵器を使う戦闘時、命中+30"
+      },
+      {
+        "characterId": "fwe-talimun",
+        "kind": "unique",
+        "name": "勝利の風",
+        "effect": "自分と敵の攻撃時、幸運%で発動。自分の攻撃時なら、命中+15。敵の攻撃時なら、回避+15"
+      },
+      {
+        "characterId": "fwe-majide",
+        "kind": "unique",
+        "name": "恐れ知らず+",
+        "effect": "先攻での戦闘時、攻撃力+6、回避-30"
+      },
+      {
+        "characterId": "fwe-diego",
+        "kind": "unique",
+        "name": "容赦無し+",
+        "effect": "追撃時、命中・必殺+10"
+      },
+      {
+        "characterId": "fwe-ursula",
+        "kind": "unique",
+        "name": "好機+",
+        "effect": "攻撃時、（幸運÷2）%で発動。与えるダメージが1.5倍になる"
+      },
+      {
+        "characterId": "fwe-seteth",
+        "kind": "unique",
+        "name": "正義の執行+",
+        "effect": "「天秤の天冠」の発動時、攻撃力+7"
+      },
+      {
+        "characterId": "fwe-inyoni",
+        "kind": "unique",
+        "name": "ぶち抜き+",
+        "effect": "弓の戦技での攻撃時、攻撃力+4、必殺+10"
+      },
+      {
+        "characterId": "fwe-simon",
+        "kind": "unique",
+        "name": "悪運+",
+        "effect": "敵を倒した時、幸運+2（+10が最大）（マップ終了まで）"
+      },
+      {
+        "characterId": "fwe-eshmel",
+        "kind": "personal",
+        "name": "救世の光",
+        "effect": "周囲2マスにいる敵の「冥府の加護」を無効化する"
+      },
+      {
+        "characterId": "fwe-eshmel",
+        "kind": "unique",
+        "name": "烈日の加護",
+        "effect": "冥魔の敵に攻撃された時、5%で発動。受けるダメージを0にする"
+      }
+    ],
+    "gamewith": [
+      {
+        "name": "騎乗突撃",
+        "category": "装備",
+        "effect": "【騎兵】先攻での戦闘時、命中+10",
+        "characterIds": []
+      },
+      {
+        "name": "戦車乗り",
+        "category": "装備",
+        "effect": "自分が「戦車兵」なら、猛撃の回数+1",
+        "characterIds": []
+      },
+      {
+        "name": "連貫円滑",
+        "category": "装備",
+        "effect": "自分が攻撃を回避した時、自分のHPを5回復する",
+        "characterIds": []
+      },
+      {
+        "name": "飛翔",
+        "category": "装備",
+        "effect": "自分が歩行不可のち京にいる時、攻速+3",
+        "characterIds": []
+      },
+      {
+        "name": "秘奥",
+        "category": "装備",
+        "effect": "戦闘時、自分の攻撃が敵に有効・特攻なら、命中+10",
+        "characterIds": []
+      },
+      {
+        "name": "ぶち抜き",
+        "category": "装備",
+        "effect": "弓の戦技での攻撃時、攻撃力+2、必殺+5",
+        "characterIds": []
+      }
+    ],
+    "gamewithCharacters": [
+      {
+        "characterId": "fwe-leda",
+        "url": "https://gamewith.jp/fefw/577322",
+        "skills": [
+          {
+            "name": "即興",
+            "level": 35,
+            "effect": "ブレイズアーツを使用後、自分がオーバーブレイズ中なら、さらに攻撃できる"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-anatolia",
+        "url": "https://gamewith.jp/fefw/577372",
+        "skills": [
+          {
+            "name": "連貫円滑+",
+            "level": null,
+            "effect": "自分が攻撃を回避した時、自分のHPを10回復する"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-ursula",
+        "url": "https://gamewith.jp/fefw/577307",
+        "skills": [
+          {
+            "name": "好機+",
+            "level": 35,
+            "effect": "攻撃時、(幸運÷2)%で発動与えるダメージが1.5倍になる"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-ultand",
+        "url": "https://gamewith.jp/fefw/577319",
+        "skills": [
+          {
+            "name": "無事の祈り+",
+            "level": 35,
+            "effect": "隣接する味方の必避+20"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-fabio",
+        "url": "https://gamewith.jp/fefw/577318",
+        "skills": [
+          {
+            "name": "闇の秘術",
+            "level": 20,
+            "effect": null
+          },
+          {
+            "name": "闇の秘術+",
+            "level": 35,
+            "effect": "「闇呼び」の効果の範囲が周囲3マスになる"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-bonaventure",
+        "url": "https://gamewith.jp/fefw/577315",
+        "skills": [
+          {
+            "name": "補足説明",
+            "level": 20,
+            "effect": "隣接する味方の戦闘時30%で発動、その味方の命中+10"
+          },
+          {
+            "name": "補足説明+",
+            "level": 35,
+            "effect": "隣接する味方の戦闘時、30%で発動。その味方の命中+20"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-olympia",
+        "url": "https://gamewith.jp/fefw/577309",
+        "skills": [
+          {
+            "name": "情動のリザイア",
+            "level": 20,
+            "effect": "リザイアを使う戦闘時、攻撃力+3 必殺+5"
+          },
+          {
+            "name": "情動のリザイア+",
+            "level": 35,
+            "effect": "リザイアを使う戦闘時、攻撃力+5、必殺+10"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-sha-lan",
+        "url": "https://gamewith.jp/fefw/577339",
+        "skills": [
+          {
+            "name": "注意喚起+",
+            "level": 35,
+            "effect": "隣接する味方の速さ+4"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-dante",
+        "url": "https://gamewith.jp/fefw/577305",
+        "skills": [
+          {
+            "name": "追加演出+",
+            "level": 35,
+            "effect": "「戦場の作劇」発動時、その味方の命中・必殺+10"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-yang-jie",
+        "url": "https://gamewith.jp/fefw/577295",
+        "skills": [
+          {
+            "name": "活力結界+",
+            "level": 35,
+            "effect": "攻撃された時、(自分の残りHP)%で発動し、防御力+5"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-sofia",
+        "url": "https://gamewith.jp/fefw/577294",
+        "skills": [
+          {
+            "name": "遠隔治癒+",
+            "level": 35,
+            "effect": "回復魔法の射程+2"
+          },
+          {
+            "name": "遠隔治癒",
+            "level": 20,
+            "effect": "回復魔法の射程+1"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-fianna",
+        "url": "https://gamewith.jp/fefw/577288",
+        "skills": [
+          {
+            "name": "信仰の賜物+",
+            "level": 35,
+            "effect": "魔法の味方を回復する時、幸運%で発動回復量+30"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-lysander",
+        "url": "https://gamewith.jp/fefw/577312",
+        "skills": [
+          {
+            "name": "加速+",
+            "level": 35,
+            "effect": "敵を倒した時、速さ+2(最大+10) ※マップ終了まで"
+          },
+          {
+            "name": "加速",
+            "level": 20,
+            "effect": "敵を倒した時、速さ+1 (最大+10)(マップ終了まで)"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-buccar",
+        "url": "https://gamewith.jp/fefw/577310",
+        "skills": [
+          {
+            "name": "返礼の一撃",
+            "level": 20,
+            "effect": "後攻での攻撃時5%で発動、与えるダメージが1.3倍になる"
+          },
+          {
+            "name": "返礼の一撃+",
+            "level": 35,
+            "effect": "後攻での攻撃時、10％で与えるダメージが1.3倍になる"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-nydine",
+        "url": "https://gamewith.jp/fefw/577300",
+        "skills": [
+          {
+            "name": "疾駆+",
+            "level": 35,
+            "effect": "【騎兵】移動時、地形の移動コスト-2(1より小さくならない)"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-catania",
+        "url": "https://gamewith.jp/fefw/577298",
+        "skills": [
+          {
+            "name": "風を味方に+",
+            "level": 35,
+            "effect": "戦闘時、自分の攻速が敵より5以上大きければ、攻撃力+3、8以上大きければ回避+20"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-alexandra",
+        "url": "https://gamewith.jp/fefw/577376",
+        "skills": [
+          {
+            "name": "飛翔+",
+            "level": 35,
+            "effect": "自分が歩行不可の地形にいる時、攻速+5"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-seteth",
+        "url": "https://gamewith.jp/fefw/577340",
+        "skills": [
+          {
+            "name": "正義の執行+",
+            "level": 35,
+            "effect": "「天秤の天冠」の発動時、攻撃力+7"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-loretta",
+        "url": "https://gamewith.jp/fefw/577378",
+        "skills": [
+          {
+            "name": "絶好調+",
+            "level": 35,
+            "effect": "戦闘時、自分のHPが最大なら、攻撃力+3　回避+10"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-theodora",
+        "url": "https://gamewith.jp/fefw/577323",
+        "skills": [
+          {
+            "name": "直撃",
+            "level": 5,
+            "effect": "ブレイズアーツでの攻撃時30%で発動し、与えるダメージ+10"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-esmeralda",
+        "url": "https://gamewith.jp/fefw/577317",
+        "skills": [
+          {
+            "name": "槍投げの達人+",
+            "level": 35,
+            "effect": "戦闘時、槍を投げて攻撃するなら、命中+20、攻撃力+4"
+          },
+          {
+            "name": "槍投げの達人",
+            "level": 20,
+            "effect": null
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-tobias",
+        "url": "https://gamewith.jp/fefw/577313",
+        "skills": [
+          {
+            "name": "本気の一発+",
+            "level": 35,
+            "effect": "戦技での攻撃時、30%で発動。与えるダメージが1.5倍になる"
+          },
+          {
+            "name": "本気の一発",
+            "level": 20,
+            "effect": "戦技での攻撃時30%で発動、与えるダメージが1.3倍になる"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-gaitz",
+        "url": "https://gamewith.jp/fefw/577373",
+        "skills": [
+          {
+            "name": "牙閃+",
+            "level": 35,
+            "effect": "攻撃時、20%で発動。攻撃力+7、命中+100"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-ninae",
+        "url": "https://gamewith.jp/fefw/577303",
+        "skills": [
+          {
+            "name": "精霊の導き+",
+            "level": 35,
+            "effect": "周囲2マスにいる味方に「精霊の声」を付与する"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-guzran",
+        "url": "https://gamewith.jp/fefw/577301",
+        "skills": [
+          {
+            "name": "気分は上々+",
+            "level": 35,
+            "effect": "「気分屋」の効果の能力上昇が+20になる"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-io",
+        "url": "https://gamewith.jp/fefw/577299",
+        "skills": [
+          {
+            "name": "騎乗突撃+",
+            "level": 35,
+            "effect": "【騎兵】先攻での戦闘時、命中+10、攻撃力+3"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-benditz",
+        "url": "https://gamewith.jp/fefw/577297",
+        "skills": [
+          {
+            "name": "戦車乗り+",
+            "level": 35,
+            "effect": "自分が「戦車兵」なら、猛撃の回数+2"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-halvin",
+        "url": "https://gamewith.jp/fefw/577341",
+        "skills": [
+          {
+            "name": "足止め+",
+            "level": 35,
+            "effect": "先攻での戦闘後、敵の速さ-3 ※1回戦闘すると元に戻る"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-mikaela",
+        "url": "https://gamewith.jp/fefw/577316",
+        "skills": [
+          {
+            "name": "鉄血+",
+            "level": 35,
+            "effect": "隣接する敵との戦闘時、攻撃力+3。さらにその攻撃時、30%で攻撃力+3"
+          },
+          {
+            "name": "鉄血",
+            "level": 20,
+            "effect": null
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-dietrich",
+        "url": "https://gamewith.jp/fefw/577324",
+        "skills": [
+          {
+            "name": "獣の衝動",
+            "level": 5,
+            "effect": "戦闘後、必殺+2(必殺の一撃が発生した戦闘後、元に戻る)"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-simon",
+        "url": "https://gamewith.jp/fefw/577304",
+        "skills": [
+          {
+            "name": "悪運+",
+            "level": 35,
+            "effect": "敵を倒した時、幸運+2(最大+10) ※マップ終了まで"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-nezha",
+        "url": "https://gamewith.jp/fefw/577302",
+        "skills": [
+          {
+            "name": "俺は止まらねぇ+",
+            "level": 35,
+            "effect": "「先手必勝」発動後の攻撃時、50%で発動、攻撃力+5"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-noctula",
+        "url": "https://gamewith.jp/fefw/577296",
+        "skills": [
+          {
+            "name": "ゾーン+",
+            "level": 35,
+            "effect": "「集中」発動時、20%で発動し、回避+10 ※次の自分のフェイズまで"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-ludia",
+        "url": "https://gamewith.jp/fefw/577289",
+        "skills": [
+          {
+            "name": "見切り+",
+            "level": 35,
+            "effect": "戦闘時、自分が追撃可能なら、回避+20"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-goliath",
+        "url": "https://gamewith.jp/fefw/577291",
+        "skills": [
+          {
+            "name": "抑えつけ+",
+            "level": 35,
+            "effect": "隣接する敵の移動力-5"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-sirocco",
+        "url": "https://gamewith.jp/fefw/577311",
+        "skills": [
+          {
+            "name": "風任せ+",
+            "level": 35,
+            "effect": "戦闘時、「回避+1」「回避+5」「回避+20」「回避+30」のどれかが発動する"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-diego",
+        "url": "https://gamewith.jp/fefw/577306",
+        "skills": [
+          {
+            "name": "容赦無し+",
+            "level": 35,
+            "effect": "追撃時、命中・必殺+10"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-nuzzuo",
+        "url": "https://gamewith.jp/fefw/577380",
+        "skills": [
+          {
+            "name": "秘奥+",
+            "level": 35,
+            "effect": "戦闘時、自分の攻撃が敵に有効・特効なら、命中+20"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-jester",
+        "url": "https://gamewith.jp/fefw/577290",
+        "skills": [
+          {
+            "name": "瞬刃+",
+            "level": 35,
+            "effect": "自分が攻撃を回避した戦闘中、攻撃力+5"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-kiroc",
+        "url": "https://gamewith.jp/fefw/577287",
+        "skills": [
+          {
+            "name": "威迫+",
+            "level": 35,
+            "effect": "戦闘時、20%で発動し、敵の必避を半減させる。"
+          },
+          {
+            "name": "威迫",
+            "level": 20,
+            "effect": null
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-peppe",
+        "url": "https://gamewith.jp/fefw/577338",
+        "skills": [
+          {
+            "name": "王の威光+",
+            "level": 35,
+            "effect": "戦闘時、敵がダメージを受けているなら攻撃力+4、必殺+10"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-talimun",
+        "url": "https://gamewith.jp/fefw/577342",
+        "skills": [
+          {
+            "name": "熟練の砲手",
+            "level": null,
+            "effect": "兵器を使う戦闘時、命中+30"
+          },
+          {
+            "name": "勝利の風",
+            "level": null,
+            "effect": "自分と敵の攻撃時、幸運％で発動自分の攻撃なら、命中+15敵の攻撃時なら、回避+15"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-peter",
+        "url": "https://gamewith.jp/fefw/577320",
+        "skills": [
+          {
+            "name": "誤差修正+",
+            "level": 35,
+            "effect": "戦闘時、自分の命中率が75%以上なら、命中+20"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-lilian",
+        "url": "https://gamewith.jp/fefw/577314",
+        "skills": [
+          {
+            "name": "なんかいい感じ+",
+            "level": 35,
+            "effect": "攻撃時、自分の命中率が100%なら、攻撃力+5"
+          },
+          {
+            "name": "なんかいい感じ",
+            "level": 20,
+            "effect": "攻撃時、自分の命中率が100%なら、攻撃力+3"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-mu",
+        "url": "https://gamewith.jp/fefw/577308",
+        "skills": [
+          {
+            "name": "強戦士の血+",
+            "level": 35,
+            "effect": "装備する武器の種類によって基本能力が大きく上がる"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-majide",
+        "url": "https://gamewith.jp/fefw/577293",
+        "skills": [
+          {
+            "name": "恐れ知らず+",
+            "level": 35,
+            "effect": "先攻での戦闘時、攻撃力+6　回避-30"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-zarcone",
+        "url": "https://gamewith.jp/fefw/577292",
+        "skills": [
+          {
+            "name": "卑劣+",
+            "level": 35,
+            "effect": "戦闘時、敵の残りHPが半分以下なら、命中+20、攻撃力+3"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-dadao",
+        "url": "https://gamewith.jp/fefw/577336",
+        "skills": [
+          {
+            "name": "全力+",
+            "level": 35,
+            "effect": "攻撃時、(力÷2)%で発動し、与えるダメージが1.5倍になる"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-jasmine",
+        "url": "https://gamewith.jp/fefw/577383",
+        "skills": [
+          {
+            "name": "怒涛の反撃+",
+            "level": 35,
+            "effect": "後攻での戦闘時、攻撃力+3、必殺+10"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-inyoni",
+        "url": "https://gamewith.jp/fefw/577379",
+        "skills": [
+          {
+            "name": "ぶち抜き+",
+            "level": 35,
+            "effect": "弓の戦技での攻撃時、攻撃力+4、必殺+10"
+          }
+        ]
+      },
+      {
+        "characterId": "fwe-orchel",
+        "url": "https://gamewith.jp/fefw/577374",
+        "skills": [
+          {
+            "name": "調魂+",
+            "level": null,
+            "effect": "魔法で味方を回復する時、自分のHPを中回復する"
+          }
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "fwe-helper-skills",
+      "name": "Fortunes-Weave-Helper / キャラクタースキル",
+      "url": "https://github.com/Rico0319/Fortunes-Weave-Helper/blob/29609cc76a0a79a86473ef1e0980771e94c97640/data/fwe.db",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": "29609cc76a0a79a86473ef1e0980771e94c97640",
+      "gameVersion": null,
+      "note": "英語スキル名・機能・習得レベルを参照。ゲーム内照合は未実施。未指定のゲーム版は不明。"
+    },
+    {
+      "id": "game8-skills-ja",
+      "name": "Game8 スキル一覧",
+      "url": "https://game8.jp/fe-banshisenko/818786",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": "2026-10-01 02:03 JST",
+      "gameVersion": null,
+      "note": "個人スキルとキャラ固有の分類・日本語名・機能を参照。掲載情報から簡潔な効果説明を作成。ゲーム内照合は未実施。"
+    },
+    {
+      "id": "gamewith-skills-ja",
+      "name": "GameWith スキル一覧",
+      "url": "https://gamewith.jp/fefw/574420",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "日本語スキル名の照合に使用。"
+    },
+    {
+      "id": "gamewith-eshmel-alias",
+      "name": "GameWith 救世主（イシュマール）",
+      "url": "https://gamewith.jp/fefw/577454",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "ページ題名の救世主（イシュマール）表記を既存キャラクターIDとの対応根拠とする。"
+    },
+    {
+      "id": "gamewith-fwe-leda-skills",
+      "name": "GameWith レダの習得スキル",
+      "url": "https://gamewith.jp/fefw/577322",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-anatolia-skills",
+      "name": "GameWith アナトリアの習得スキル",
+      "url": "https://gamewith.jp/fefw/577372",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-ursula-skills",
+      "name": "GameWith ウーシュラの習得スキル",
+      "url": "https://gamewith.jp/fefw/577307",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-ultand-skills",
+      "name": "GameWith ウルタンドの習得スキル",
+      "url": "https://gamewith.jp/fefw/577319",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-fabio-skills",
+      "name": "GameWith ファビオの習得スキル",
+      "url": "https://gamewith.jp/fefw/577318",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-bonaventure-skills",
+      "name": "GameWith ボナパルテの習得スキル",
+      "url": "https://gamewith.jp/fefw/577315",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-olympia-skills",
+      "name": "GameWith オリンピアの習得スキル",
+      "url": "https://gamewith.jp/fefw/577309",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-sha-lan-skills",
+      "name": "GameWith サランの習得スキル",
+      "url": "https://gamewith.jp/fefw/577339",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-dante-skills",
+      "name": "GameWith ダンテの習得スキル",
+      "url": "https://gamewith.jp/fefw/577305",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-yang-jie-skills",
+      "name": "GameWith ヨーカイの習得スキル",
+      "url": "https://gamewith.jp/fefw/577295",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-sofia-skills",
+      "name": "GameWith ソフィアの習得スキル",
+      "url": "https://gamewith.jp/fefw/577294",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-fianna-skills",
+      "name": "GameWith フィアナの習得スキル",
+      "url": "https://gamewith.jp/fefw/577288",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-lysander-skills",
+      "name": "GameWith ライサンダーの習得スキル",
+      "url": "https://gamewith.jp/fefw/577312",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-buccar-skills",
+      "name": "GameWith バッカニアの習得スキル",
+      "url": "https://gamewith.jp/fefw/577310",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-nydine-skills",
+      "name": "GameWith ヌディーヌの習得スキル",
+      "url": "https://gamewith.jp/fefw/577300",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-catania-skills",
+      "name": "GameWith カターニャの習得スキル",
+      "url": "https://gamewith.jp/fefw/577298",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-alexandra-skills",
+      "name": "GameWith アレキサンドラの習得スキル",
+      "url": "https://gamewith.jp/fefw/577376",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-seteth-skills",
+      "name": "GameWith セテスの習得スキル",
+      "url": "https://gamewith.jp/fefw/577340",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-loretta-skills",
+      "name": "GameWith ロレッタの習得スキル",
+      "url": "https://gamewith.jp/fefw/577378",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-theodora-skills",
+      "name": "GameWith セオドラの習得スキル",
+      "url": "https://gamewith.jp/fefw/577323",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-esmeralda-skills",
+      "name": "GameWith エスメラルダの習得スキル",
+      "url": "https://gamewith.jp/fefw/577317",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-tobias-skills",
+      "name": "GameWith トビヤスの習得スキル",
+      "url": "https://gamewith.jp/fefw/577313",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-gaitz-skills",
+      "name": "GameWith ゲイツの習得スキル",
+      "url": "https://gamewith.jp/fefw/577373",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-ninae-skills",
+      "name": "GameWith ニネの習得スキル",
+      "url": "https://gamewith.jp/fefw/577303",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-guzran-skills",
+      "name": "GameWith グザランの習得スキル",
+      "url": "https://gamewith.jp/fefw/577301",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-io-skills",
+      "name": "GameWith イオの習得スキル",
+      "url": "https://gamewith.jp/fefw/577299",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-benditz-skills",
+      "name": "GameWith ベンディッツの習得スキル",
+      "url": "https://gamewith.jp/fefw/577297",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-halvin-skills",
+      "name": "GameWith ハルヴィンの習得スキル",
+      "url": "https://gamewith.jp/fefw/577341",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-mikaela-skills",
+      "name": "GameWith ミカエラの習得スキル",
+      "url": "https://gamewith.jp/fefw/577316",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-dietrich-skills",
+      "name": "GameWith ディートリヒの習得スキル",
+      "url": "https://gamewith.jp/fefw/577324",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-simon-skills",
+      "name": "GameWith シモンの習得スキル",
+      "url": "https://gamewith.jp/fefw/577304",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-nezha-skills",
+      "name": "GameWith ナジャの習得スキル",
+      "url": "https://gamewith.jp/fefw/577302",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-noctula-skills",
+      "name": "GameWith ノクチュラの習得スキル",
+      "url": "https://gamewith.jp/fefw/577296",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-ludia-skills",
+      "name": "GameWith ルルディヤーの習得スキル",
+      "url": "https://gamewith.jp/fefw/577289",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-goliath-skills",
+      "name": "GameWith ゴライアスの習得スキル",
+      "url": "https://gamewith.jp/fefw/577291",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-sirocco-skills",
+      "name": "GameWith シロッコの習得スキル",
+      "url": "https://gamewith.jp/fefw/577311",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-diego-skills",
+      "name": "GameWith ディエゴの習得スキル",
+      "url": "https://gamewith.jp/fefw/577306",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-nuzzuo-skills",
+      "name": "GameWith ヌッツォの習得スキル",
+      "url": "https://gamewith.jp/fefw/577380",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-jester-skills",
+      "name": "GameWith ジェスターの習得スキル",
+      "url": "https://gamewith.jp/fefw/577290",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-kiroc-skills",
+      "name": "GameWith キロイカの習得スキル",
+      "url": "https://gamewith.jp/fefw/577287",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-peppe-skills",
+      "name": "GameWith ペペの習得スキル",
+      "url": "https://gamewith.jp/fefw/577338",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-talimun-skills",
+      "name": "GameWith タリムーンの習得スキル",
+      "url": "https://gamewith.jp/fefw/577342",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-peter-skills",
+      "name": "GameWith ピーテルの習得スキル",
+      "url": "https://gamewith.jp/fefw/577320",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-lilian-skills",
+      "name": "GameWith リリアンの習得スキル",
+      "url": "https://gamewith.jp/fefw/577314",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-mu-skills",
+      "name": "GameWith ムウの習得スキル",
+      "url": "https://gamewith.jp/fefw/577308",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-majide-skills",
+      "name": "GameWith マジーデの習得スキル",
+      "url": "https://gamewith.jp/fefw/577293",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-zarcone-skills",
+      "name": "GameWith ザーコネの習得スキル",
+      "url": "https://gamewith.jp/fefw/577292",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-dadao-skills",
+      "name": "GameWith ダイトウの習得スキル",
+      "url": "https://gamewith.jp/fefw/577336",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-jasmine-skills",
+      "name": "GameWith ジャスミンの習得スキル",
+      "url": "https://gamewith.jp/fefw/577383",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-inyoni-skills",
+      "name": "GameWith イニオニの習得スキル",
+      "url": "https://gamewith.jp/fefw/577379",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    },
+    {
+      "id": "gamewith-fwe-orchel-skills",
+      "name": "GameWith オルヘルの習得スキル",
+      "url": "https://gamewith.jp/fefw/577374",
+      "retrievedAt": "2026-10-01T07:49:48Z",
+      "sourceVersion": null,
+      "gameVersion": null,
+      "note": "個人別のレベル習得スキル表を参照。共通技能が混在するため、Game8のキャラ固有分類とも照合。"
+    }
+  ],
+  "skills": [
+    {
+      "id": "fwe-alexandra-personal",
+      "characterId": "fwe-alexandra",
+      "kind": "personal",
+      "name": "白銀の乙女",
+      "englishName": "Silver Maiden",
+      "description": "隣接する味方の人数×5だけ、命中と回避が上がる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-alexandra-unique-soar",
+      "characterId": "fwe-alexandra",
+      "kind": "unique",
+      "name": "飛翔",
+      "englishName": "Soar",
+      "description": "歩行できない地形にいる間、攻速に+3。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-alexandra-unique-soar-plus",
+      "characterId": "fwe-alexandra",
+      "kind": "unique",
+      "name": "飛翔+",
+      "englishName": "Soar+",
+      "description": "歩行できない地形にいる間、攻速に+5。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-alexandra-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-anatolia-personal",
+      "characterId": "fwe-anatolia",
+      "kind": "personal",
+      "name": "流気巧",
+      "englishName": "Celestial Flow",
+      "description": "回避に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-anatolia-unique-continuum",
+      "characterId": "fwe-anatolia",
+      "kind": "unique",
+      "name": "連貫円滑",
+      "englishName": "Continuum",
+      "description": "敵の攻撃を回避すると、自分のHPを5回復。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-anatolia-unique-continuum-plus",
+      "characterId": "fwe-anatolia",
+      "kind": "unique",
+      "name": "連貫円滑+",
+      "englishName": "Continuum+",
+      "description": "敵の攻撃を回避すると、自分のHPを10回復。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-anatolia-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-aswan-personal",
+      "characterId": "fwe-aswan",
+      "kind": "personal",
+      "name": "弓姫",
+      "englishName": "Princess of Arrows",
+      "description": "弓を装備している間、命中に+20。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-benditz-personal",
+      "characterId": "fwe-benditz",
+      "kind": "personal",
+      "name": "車上の戦闘術",
+      "englishName": "Wheeled Warrior",
+      "description": "騎兵で兵種が戦車兵の場合、命中に+20。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-benditz-unique-chariot-stagger",
+      "characterId": "fwe-benditz",
+      "kind": "unique",
+      "name": "戦車乗り",
+      "englishName": "Chariot Stagger",
+      "description": "兵種が戦車兵の場合、猛撃を使える回数に+1。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-benditz-unique-chariot-stagger-plus",
+      "characterId": "fwe-benditz",
+      "kind": "unique",
+      "name": "戦車乗り+",
+      "englishName": "Chariot Stagger+",
+      "description": "兵種が戦車兵の場合、猛撃を使える回数に+2。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-benditz-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-bertrand-personal",
+      "characterId": "fwe-bertrand",
+      "kind": "personal",
+      "name": "鎧葬流",
+      "englishName": "Requiem Style",
+      "description": "戦闘時に5%で発動し、攻速の条件を満たさなくても追撃できる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-bertrand-unique-093c1e1af3eb67c7",
+      "characterId": "fwe-bertrand",
+      "kind": "unique",
+      "name": "先の先",
+      "englishName": null,
+      "description": "先攻の戦闘時に25%で発動し、相手の反撃前に追撃できる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-bertrand-unique-go-no-sen",
+      "characterId": "fwe-bertrand",
+      "kind": "unique",
+      "name": "後の先",
+      "englishName": "Go No Sen",
+      "description": "敵フェイズの戦闘時に25%で発動し、自分が先攻になる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-bonaventure-personal",
+      "characterId": "fwe-bonaventure",
+      "kind": "personal",
+      "name": "入れ知恵",
+      "englishName": "Sage Advice",
+      "description": "自分に隣接する味方の技に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-bonaventure-unique-additional-intel",
+      "characterId": "fwe-bonaventure",
+      "kind": "unique",
+      "name": "補足説明",
+      "englishName": "Additional Intel",
+      "description": "隣接する味方の戦闘時、30%でその味方の命中に+10。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-bonaventure-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-bonaventure-unique-additional-intel-plus",
+      "characterId": "fwe-bonaventure",
+      "kind": "unique",
+      "name": "補足説明+",
+      "englishName": "Additional Intel+",
+      "description": "隣接する味方の戦闘時、30%でその味方の命中に+20。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-bonaventure-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-buccar-personal",
+      "characterId": "fwe-buccar",
+      "kind": "personal",
+      "name": "守護騎士の務め",
+      "englishName": "Guardian's Duty",
+      "description": "敵から攻撃を受けたときのダメージを0.9倍にする。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-buccar-unique-retaliatory-blow",
+      "characterId": "fwe-buccar",
+      "kind": "unique",
+      "name": "返礼の一撃",
+      "englishName": "Retaliatory Blow",
+      "description": "後攻で攻撃するとき、5%で与ダメージが1.3倍になる。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-buccar-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-buccar-unique-retaliatory-blow-plus",
+      "characterId": "fwe-buccar",
+      "kind": "unique",
+      "name": "返礼の一撃+",
+      "englishName": "Retaliatory Blow+",
+      "description": "後攻で攻撃するとき、10%で与ダメージが1.3倍になる。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-buccar-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-cai-personal",
+      "characterId": "fwe-cai",
+      "kind": "personal",
+      "name": "活発",
+      "englishName": "Brio",
+      "description": "移動力に+1。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-cai-unique-5d4376daf6fa4814",
+      "characterId": "fwe-cai",
+      "kind": "unique",
+      "name": "冥炎の主",
+      "englishName": null,
+      "description": "自分が出撃している間、全味方が冥炎の影響を受けなくなる。冥炎上の味方は攻撃による被ダメージも0.5倍になる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-catania-personal",
+      "characterId": "fwe-catania",
+      "kind": "personal",
+      "name": "疾風",
+      "englishName": "Punishing Squall",
+      "description": "敵との攻速差が3以上ある戦闘では、命中に+20。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-catania-unique-wind-my-friend",
+      "characterId": "fwe-catania",
+      "kind": "unique",
+      "name": "Wind My Friend",
+      "englishName": "Wind My Friend",
+      "description": "敵との攻速差が5以上ある戦闘では、攻撃力に+3。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-catania-unique-wind-my-friend-plus",
+      "characterId": "fwe-catania",
+      "kind": "unique",
+      "name": "風を味方に+",
+      "englishName": "Wind My Friend+",
+      "description": "敵との攻速差が5以上なら攻撃力に+3。差が8以上なら回避にも+20。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-catania-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-centurio-personal",
+      "characterId": "fwe-centurio",
+      "kind": "personal",
+      "name": "鋼玉の守護",
+      "englishName": "Sturdy Corundum",
+      "description": "敵フェイズの最初の戦闘に限り、攻撃による被ダメージを0.5倍にする。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-creek-personal",
+      "characterId": "fwe-creek",
+      "kind": "personal",
+      "name": "冷静沈着",
+      "englishName": "Steady Hands",
+      "description": "後攻の戦闘では、攻速に+3、回避に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-dadao-personal",
+      "characterId": "fwe-dadao",
+      "kind": "personal",
+      "name": "一発勝負",
+      "englishName": "One Chance",
+      "description": "自分も敵も追撃できない戦闘では、攻撃力に+5。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-dadao-unique-full-strength",
+      "characterId": "fwe-dadao",
+      "kind": "unique",
+      "name": "Full Strength",
+      "englishName": "Full Strength",
+      "description": "攻撃時、力÷2%で与ダメージが1.3倍になる。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-dadao-unique-full-strength-plus",
+      "characterId": "fwe-dadao",
+      "kind": "unique",
+      "name": "全力+",
+      "englishName": "Full Strength+",
+      "description": "攻撃時、力÷2%で与ダメージが1.5倍になる。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-dadao-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-dante-personal",
+      "characterId": "fwe-dante",
+      "kind": "personal",
+      "name": "戦場の作劇",
+      "englishName": "Stage Directions",
+      "description": "周囲2マスの味方の戦闘時、その味方の魅力÷2%で発動し、必避に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-dante-unique-dramatic-effect",
+      "characterId": "fwe-dante",
+      "kind": "unique",
+      "name": "Dramatic Effect",
+      "englishName": "Dramatic Effect",
+      "description": "「戦場の作劇」が発動した味方の命中に+10。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-dante-unique-dramatic-effect-plus",
+      "characterId": "fwe-dante",
+      "kind": "unique",
+      "name": "追加演出+",
+      "englishName": "Dramatic Effect+",
+      "description": "「戦場の作劇」が発動した味方の命中と必殺にそれぞれ+10。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-dante-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-diego-personal",
+      "characterId": "fwe-diego",
+      "kind": "personal",
+      "name": "用心棒",
+      "englishName": "Caretaker",
+      "description": "隣接する味方の戦闘時に5%で発動し、その味方への追撃を防ぐ。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-diego-unique-no-mercy",
+      "characterId": "fwe-diego",
+      "kind": "unique",
+      "name": "No Mercy",
+      "englishName": "No Mercy",
+      "description": "追撃による攻撃の命中と必殺に、それぞれ+5。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-diego-unique-no-mercy-plus",
+      "characterId": "fwe-diego",
+      "kind": "unique",
+      "name": "容赦無し+",
+      "englishName": "No Mercy+",
+      "description": "追撃による攻撃の命中と必殺に、それぞれ+10。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-diego-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-dietrich-personal",
+      "characterId": "fwe-dietrich",
+      "kind": "personal",
+      "name": "殺意",
+      "englishName": "Murderous Intent",
+      "description": "先攻の戦闘では、必殺に+5。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-dietrich-unique-bestial-impulse",
+      "characterId": "fwe-dietrich",
+      "kind": "unique",
+      "name": "獣の衝動",
+      "englishName": "Bestial Impulse",
+      "description": "戦闘後に必殺が2増える。必殺の一撃が出た戦闘の終了後に補正が戻る。",
+      "level": 5,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-dietrich-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-eshmel-personal",
+      "characterId": "fwe-eshmel",
+      "kind": "personal",
+      "name": "救世の光",
+      "englishName": null,
+      "description": "周囲2マスの敵が持つ「冥府の加護」を無効にする。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "game8-skills-ja",
+        "gamewith-eshmel-alias"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-eshmel-unique-863b9ff841337f9a",
+      "characterId": "fwe-eshmel",
+      "kind": "unique",
+      "name": "烈日の加護",
+      "englishName": null,
+      "description": "冥魔から攻撃を受けたとき、5%で被ダメージを0にする。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "game8-skills-ja",
+        "gamewith-eshmel-alias"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-esmeralda-personal",
+      "characterId": "fwe-esmeralda",
+      "kind": "personal",
+      "name": "怪力",
+      "englishName": "Brawn",
+      "description": "装備中の武器と装備品の重量を、それぞれ0.8倍として扱う。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-esmeralda-unique-throwing-arm",
+      "characterId": "fwe-esmeralda",
+      "kind": "unique",
+      "name": "槍投げの達人",
+      "englishName": "Throwing Arm",
+      "description": "槍を投げて攻撃する戦闘では、命中に+10、攻撃力に+2。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-esmeralda-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-esmeralda-unique-throwing-arm-plus",
+      "characterId": "fwe-esmeralda",
+      "kind": "unique",
+      "name": "槍投げの達人+",
+      "englishName": "Throwing Arm+",
+      "description": "槍を投げて攻撃する戦闘では、命中に+20、攻撃力に+4。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-esmeralda-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-fabio-personal",
+      "characterId": "fwe-fabio",
+      "kind": "personal",
+      "name": "闇呼び",
+      "englishName": "Dark Calling",
+      "description": "自分に隣接する敵の必避を5下げる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-fabio-unique-dark-secrets",
+      "characterId": "fwe-fabio",
+      "kind": "unique",
+      "name": "闇の秘術",
+      "englishName": "Dark Secrets",
+      "description": "「闇呼び」が届く範囲を広げる。拡張後の具体的な範囲は未確認。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-fabio-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-fabio-unique-dark-secrets-plus",
+      "characterId": "fwe-fabio",
+      "kind": "unique",
+      "name": "闇の秘術+",
+      "englishName": "Dark Secrets+",
+      "description": "「闇呼び」が届く範囲を周囲3マスに広げる。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-fabio-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-fianna-personal",
+      "characterId": "fwe-fianna",
+      "kind": "personal",
+      "name": "淑光",
+      "englishName": "Graceful Light",
+      "description": "味方への魔法回復時、幸運%で使用回数の消費を防ぐ。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-fianna-unique-gift-of-faith",
+      "characterId": "fwe-fianna",
+      "kind": "unique",
+      "name": "Gift of Faith",
+      "englishName": "Gift of Faith",
+      "description": "味方への魔法回復時、幸運%で回復量に+20。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-fianna-unique-gift-of-faith-plus",
+      "characterId": "fwe-fianna",
+      "kind": "unique",
+      "name": "信仰の賜物+",
+      "englishName": "Gift of Faith+",
+      "description": "味方への魔法回復時、幸運%で回復量に+30。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-fianna-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-gaitz-personal",
+      "characterId": "fwe-gaitz",
+      "kind": "personal",
+      "name": "助太刀",
+      "englishName": "Brave Assist",
+      "description": "自分に隣接する味方の守備に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-gaitz-unique-flashing-fang",
+      "characterId": "fwe-gaitz",
+      "kind": "unique",
+      "name": "Flashing Fang",
+      "englishName": "Flashing Fang",
+      "description": "攻撃時に20%で発動し、攻撃力に+4、命中に+50。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-gaitz-unique-flashing-fang-plus",
+      "characterId": "fwe-gaitz",
+      "kind": "unique",
+      "name": "牙閃+",
+      "englishName": "Flashing Fang+",
+      "description": "攻撃時に20%で発動し、攻撃力に+7、命中に+100。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-gaitz-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-goliath-personal",
+      "characterId": "fwe-goliath",
+      "kind": "personal",
+      "name": "重量級の戦士",
+      "englishName": "Heavyweight Class",
+      "description": "体格に+5。騎兵と飛行の兵種には就けない。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-goliath-unique-pin-down",
+      "characterId": "fwe-goliath",
+      "kind": "unique",
+      "name": "Pin Down",
+      "englishName": "Pin Down",
+      "description": "自分に隣接する敵の移動力を3下げる。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-goliath-unique-pin-down-plus",
+      "characterId": "fwe-goliath",
+      "kind": "unique",
+      "name": "抑えつけ+",
+      "englishName": "Pin Down+",
+      "description": "自分に隣接する敵の移動力を5下げる。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-goliath-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-guzran-personal",
+      "characterId": "fwe-guzran",
+      "kind": "personal",
+      "name": "気分屋",
+      "englishName": "Hot-Headed",
+      "description": "戦闘中、命中・回避・必殺のいずれか1つに+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-guzran-unique-top-form",
+      "characterId": "fwe-guzran",
+      "kind": "unique",
+      "name": "Top Form",
+      "englishName": "Top Form",
+      "description": "「気分屋」による能力上昇を+15に変更する。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-guzran-unique-top-form-plus",
+      "characterId": "fwe-guzran",
+      "kind": "unique",
+      "name": "気分は上々+",
+      "englishName": "Top Form+",
+      "description": "「気分屋」による能力上昇を+20に変更する。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-guzran-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-halvin-personal",
+      "characterId": "fwe-halvin",
+      "kind": "personal",
+      "name": "順応",
+      "englishName": "Adaptability",
+      "description": "戦闘後に命中が2ずつ増える。上限は+30で、マップ終了時に戻る。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-halvin-unique-halt-advance",
+      "characterId": "fwe-halvin",
+      "kind": "unique",
+      "name": "Halt Advance",
+      "englishName": "Halt Advance",
+      "description": "先攻した戦闘の後、敵の速さを2下げる。敵が次に戦闘すると元に戻る。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-halvin-unique-halt-advance-plus",
+      "characterId": "fwe-halvin",
+      "kind": "unique",
+      "name": "足止め+",
+      "englishName": "Halt Advance+",
+      "description": "先攻した戦闘の後、敵の速さを3下げる。1回の戦闘で元に戻る。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-halvin-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-hong-hua-personal",
+      "characterId": "fwe-hong-hua",
+      "kind": "personal",
+      "name": "朱明",
+      "englishName": "Zhu Ming",
+      "description": "魔法を装備している間、命中に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-inyoni-personal",
+      "characterId": "fwe-inyoni",
+      "kind": "personal",
+      "name": "強弓使い",
+      "englishName": "Heavy-Bow User",
+      "description": "弓を装備している間、力に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-inyoni-unique-pierce",
+      "characterId": "fwe-inyoni",
+      "kind": "unique",
+      "name": "ぶち抜き",
+      "englishName": "Pierce",
+      "description": "弓の戦技で攻撃するとき、攻撃力に+2、必殺に+5。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-inyoni-unique-pierce-plus",
+      "characterId": "fwe-inyoni",
+      "kind": "unique",
+      "name": "ぶち抜き+",
+      "englishName": "Pierce+",
+      "description": "弓の戦技で攻撃するとき、攻撃力に+4、必殺に+10。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-inyoni-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-io-personal",
+      "characterId": "fwe-io",
+      "kind": "personal",
+      "name": "愛馬との連携",
+      "englishName": "With My Steed",
+      "description": "騎兵として先攻する戦闘では、防御力に+3、必避に+30。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-io-unique-mounted-push",
+      "characterId": "fwe-io",
+      "kind": "unique",
+      "name": "騎乗突撃",
+      "englishName": "Mounted Push",
+      "description": "騎兵として先攻する戦闘では、命中に+10。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-io-unique-mounted-push-plus",
+      "characterId": "fwe-io",
+      "kind": "unique",
+      "name": "騎乗突撃+",
+      "englishName": "Mounted Push+",
+      "description": "騎兵として先攻する戦闘では、命中に+10、攻撃力に+3。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-io-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-jasmine-personal",
+      "characterId": "fwe-jasmine",
+      "kind": "personal",
+      "name": "熟練の反撃術",
+      "englishName": "Expert Counter",
+      "description": "後攻の戦闘では、命中に+20。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-jasmine-unique-raging-counter",
+      "characterId": "fwe-jasmine",
+      "kind": "unique",
+      "name": "Raging Counter",
+      "englishName": "Raging Counter",
+      "description": "後攻の戦闘では、攻撃力に+3。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-jasmine-unique-raging-counter-plus",
+      "characterId": "fwe-jasmine",
+      "kind": "unique",
+      "name": "怒涛の反撃+",
+      "englishName": "Raging Counter+",
+      "description": "後攻の戦闘では、攻撃力に+3、必殺に+10。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-jasmine-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-jester-personal",
+      "characterId": "fwe-jester",
+      "kind": "personal",
+      "name": "瞬転",
+      "englishName": "Blink of an Eye",
+      "description": "「入れ替え」の使用後、次の自分のフェイズまで守備に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-jester-unique-flickering-edge",
+      "characterId": "fwe-jester",
+      "kind": "unique",
+      "name": "Flickering Edge",
+      "englishName": "Flickering Edge",
+      "description": "敵の攻撃を回避した戦闘中は、攻撃力に+3。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-jester-unique-flickering-edge-plus",
+      "characterId": "fwe-jester",
+      "kind": "unique",
+      "name": "瞬刃+",
+      "englishName": "Flickering Edge+",
+      "description": "敵の攻撃を回避した戦闘中は、攻撃力に+5。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-jester-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-kiroc-personal",
+      "characterId": "fwe-kiroc",
+      "kind": "personal",
+      "name": "暴虐",
+      "englishName": "Tyranny",
+      "description": "相手が状態異常にかかっている戦闘では、攻撃力に+3、必殺に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-kiroc-unique-menace",
+      "characterId": "fwe-kiroc",
+      "kind": "unique",
+      "name": "威迫",
+      "englishName": "Menace",
+      "description": "戦闘時に10%で発動し、敵の必避を0.5倍にする。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-kiroc-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-kiroc-unique-menace-plus",
+      "characterId": "fwe-kiroc",
+      "kind": "unique",
+      "name": "威迫+",
+      "englishName": "Menace+",
+      "description": "戦闘時に20%で発動し、敵の必避を0.5倍にする。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-kiroc-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-leda-personal",
+      "characterId": "fwe-leda",
+      "kind": "personal",
+      "name": "闇討ち",
+      "englishName": "Blindside",
+      "description": "先攻の戦闘時に5%で発動し、相手の反撃を封じる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-leda-unique-82ffb063487ec76b",
+      "characterId": "fwe-leda",
+      "kind": "unique",
+      "name": "即興",
+      "englishName": null,
+      "description": "オーバーブレイズ中なら、ブレイズアーツの使用後に追加で攻撃できる。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "game8-skills-ja",
+        "gamewith-fwe-leda-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-lilian-personal",
+      "characterId": "fwe-lilian",
+      "kind": "personal",
+      "name": "安全策",
+      "englishName": "Safety First",
+      "description": "敵が反撃できない戦闘では、命中に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-lilian-unique-upper-hand",
+      "characterId": "fwe-lilian",
+      "kind": "unique",
+      "name": "なんかいい感じ",
+      "englishName": "Upper Hand",
+      "description": "攻撃時の命中率が100%であれば、攻撃力に+3。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-lilian-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-lilian-unique-upper-hand-plus",
+      "characterId": "fwe-lilian",
+      "kind": "unique",
+      "name": "なんかいい感じ+",
+      "englishName": "Upper Hand+",
+      "description": "攻撃時の命中率が100%であれば、攻撃力に+5。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-lilian-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-loretta-personal",
+      "characterId": "fwe-loretta",
+      "kind": "personal",
+      "name": "心の余裕",
+      "englishName": "Steadfast",
+      "description": "残りHPが最大HPの半分以上の戦闘では、回避に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-loretta-unique-peak-form",
+      "characterId": "fwe-loretta",
+      "kind": "unique",
+      "name": "Peak Form",
+      "englishName": "Peak Form",
+      "description": "HPが満タンの戦闘では、攻撃力に+3。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-loretta-unique-peak-form-plus",
+      "characterId": "fwe-loretta",
+      "kind": "unique",
+      "name": "絶好調+",
+      "englishName": "Peak Form+",
+      "description": "HPが満タンの戦闘では、攻撃力に+3、回避に+10。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-loretta-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ludia-personal",
+      "characterId": "fwe-ludia",
+      "kind": "personal",
+      "name": "はやぶさ",
+      "englishName": "Falcon",
+      "description": "先攻の戦闘では、攻速に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ludia-unique-perception",
+      "characterId": "fwe-ludia",
+      "kind": "unique",
+      "name": "Perception",
+      "englishName": "Perception",
+      "description": "追撃できる戦闘では、回避に+10。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ludia-unique-perception-plus",
+      "characterId": "fwe-ludia",
+      "kind": "unique",
+      "name": "見切り+",
+      "englishName": "Perception+",
+      "description": "追撃できる戦闘では、回避に+20。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-ludia-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-lysander-personal",
+      "characterId": "fwe-lysander",
+      "kind": "personal",
+      "name": "疾走攻撃",
+      "englishName": "Racing Attack",
+      "description": "先攻の戦闘では、回避に+15。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-lysander-unique-accelerate",
+      "characterId": "fwe-lysander",
+      "kind": "unique",
+      "name": "加速",
+      "englishName": "Accelerate",
+      "description": "敵の撃破ごとに速さが1増える。上限は+10で、マップ終了時に戻る。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-lysander-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-lysander-unique-accelerate-plus",
+      "characterId": "fwe-lysander",
+      "kind": "unique",
+      "name": "加速+",
+      "englishName": "Accelerate+",
+      "description": "敵の撃破ごとに速さが2増える。上限は+10で、マップ終了時に戻る。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-lysander-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-majide-personal",
+      "characterId": "fwe-majide",
+      "kind": "personal",
+      "name": "暴れ斧",
+      "englishName": "Hellbent Axe",
+      "description": "斧を装備している間、力に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-majide-unique-fear-nothing",
+      "characterId": "fwe-majide",
+      "kind": "unique",
+      "name": "Fear Nothing",
+      "englishName": "Fear Nothing",
+      "description": "先攻の戦闘では、攻撃力に+3、回避に-30。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-majide-unique-fear-nothing-plus",
+      "characterId": "fwe-majide",
+      "kind": "unique",
+      "name": "恐れ知らず+",
+      "englishName": "Fear Nothing+",
+      "description": "先攻の戦闘では、攻撃力に+6、回避に-30。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-majide-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-mikaela-personal",
+      "characterId": "fwe-mikaela",
+      "kind": "personal",
+      "name": "歴戦の強者",
+      "englishName": "Veteran's Mettle",
+      "description": "隣接する敵との戦闘では、命中に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-mikaela-unique-redblade-s-will",
+      "characterId": "fwe-mikaela",
+      "kind": "unique",
+      "name": "鉄血",
+      "englishName": "Redblade's Will",
+      "description": "隣接する敵との戦闘では、攻撃力に+3。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-mikaela-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-mikaela-unique-redblade-s-will-plus",
+      "characterId": "fwe-mikaela",
+      "kind": "unique",
+      "name": "鉄血+",
+      "englishName": "Redblade's Will+",
+      "description": "隣接する敵との戦闘では攻撃力に+3。その相手への攻撃時、30%でさらに+3。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-mikaela-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-mu-personal",
+      "characterId": "fwe-mu",
+      "kind": "personal",
+      "name": "成長の兆し",
+      "englishName": "Signs of Growth",
+      "description": "レベルアップによる基本能力の成長を促す。上昇幅の具体値は未確認。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-mu-unique-warrior-s-blood",
+      "characterId": "fwe-mu",
+      "kind": "unique",
+      "name": "Warrior's Blood",
+      "englishName": "Warrior's Blood",
+      "description": "装備している武器の種類に応じて基本能力を上げる。上昇する能力と数値は未確認。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-mu-unique-warrior-s-blood-plus",
+      "characterId": "fwe-mu",
+      "kind": "unique",
+      "name": "強戦士の血+",
+      "englishName": "Warrior's Blood+",
+      "description": "装備している武器の種類に応じて基本能力を大きく上げる。上昇する能力と数値は未確認。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-mu-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nathan-personal",
+      "characterId": "fwe-nathan",
+      "kind": "personal",
+      "name": "猪突猛進",
+      "englishName": "Headlong Rush",
+      "description": "先攻の戦闘では、攻速に+3、命中に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nezha-personal",
+      "characterId": "fwe-nezha",
+      "kind": "personal",
+      "name": "先手必勝",
+      "englishName": "Quick Draw",
+      "description": "先攻の戦闘時に50%で発動し、攻撃力に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nezha-unique-never-stop",
+      "characterId": "fwe-nezha",
+      "kind": "unique",
+      "name": "Never Stop",
+      "englishName": "Never Stop",
+      "description": "「先手必勝」の発動後に攻撃するとき、30%で攻撃力に+5。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nezha-unique-never-stop-plus",
+      "characterId": "fwe-nezha",
+      "kind": "unique",
+      "name": "俺は止まらねぇ+",
+      "englishName": "Never Stop+",
+      "description": "「先手必勝」の発動後に攻撃するとき、50%で攻撃力に+5。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-nezha-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ninae-personal",
+      "characterId": "fwe-ninae",
+      "kind": "personal",
+      "name": "精霊の声",
+      "englishName": "Spirits' Voices",
+      "description": "敵が魔法を使う戦闘では、命中と回避にそれぞれ+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ninae-unique-spirits-guidance",
+      "characterId": "fwe-ninae",
+      "kind": "unique",
+      "name": "Spirits' Guidance",
+      "englishName": "Spirits' Guidance",
+      "description": "隣接する味方にも「精霊の声」の効果を付ける。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ninae-unique-spirits-guidance-plus",
+      "characterId": "fwe-ninae",
+      "kind": "unique",
+      "name": "精霊の導き+",
+      "englishName": "Spirits' Guidance+",
+      "description": "周囲2マスの味方にも「精霊の声」の効果を付ける。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-ninae-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-noctula-personal",
+      "characterId": "fwe-noctula",
+      "kind": "personal",
+      "name": "集中",
+      "englishName": "Warrior's Clarity",
+      "description": "戦闘後、次の自分のフェイズまで回避に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-noctula-unique-attuned",
+      "characterId": "fwe-noctula",
+      "kind": "unique",
+      "name": "Attuned",
+      "englishName": "Attuned",
+      "description": "「集中」の発動時に10%で発動し、次の自分のフェイズまで回避に+10。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-noctula-unique-attuned-plus",
+      "characterId": "fwe-noctula",
+      "kind": "unique",
+      "name": "ゾーン+",
+      "englishName": "Attuned+",
+      "description": "「集中」の発動時に20%で発動し、次の自分のフェイズまで回避に+10。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-noctula-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nuzzuo-personal",
+      "characterId": "fwe-nuzzuo",
+      "kind": "personal",
+      "name": "部族の秘技",
+      "englishName": "Har Hali Wisdom",
+      "description": "自分の攻撃が相手に有効・特効となる戦闘では、攻撃力に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nuzzuo-unique-precision-strike",
+      "characterId": "fwe-nuzzuo",
+      "kind": "unique",
+      "name": "秘奥",
+      "englishName": "Precision Strike",
+      "description": "自分の攻撃が相手に有効・特効となる戦闘では、命中に+10。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nuzzuo-unique-precision-strike-plus",
+      "characterId": "fwe-nuzzuo",
+      "kind": "unique",
+      "name": "秘奥+",
+      "englishName": "Precision Strike+",
+      "description": "自分の攻撃が相手に有効・特効となる戦闘では、命中に+20。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-nuzzuo-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nydine-personal",
+      "characterId": "fwe-nydine",
+      "kind": "personal",
+      "name": "強行突破",
+      "englishName": "Barge Through",
+      "description": "騎兵であれば敵のマスを通過できる。自分が大型ユニットの場合は無効。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nydine-unique-at-a-gallop",
+      "characterId": "fwe-nydine",
+      "kind": "unique",
+      "name": "At a Gallop",
+      "englishName": "At a Gallop",
+      "description": "騎兵の移動時、地形ごとの移動コストを1減らす。コストは1未満にはならない。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-nydine-unique-at-a-gallop-plus",
+      "characterId": "fwe-nydine",
+      "kind": "unique",
+      "name": "疾駆+",
+      "englishName": "At a Gallop+",
+      "description": "騎兵の移動時、地形ごとの移動コストを2減らす。コストは1未満にはならない。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-nydine-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-olympia-personal",
+      "characterId": "fwe-olympia",
+      "kind": "personal",
+      "name": "負けず嫌い",
+      "englishName": "Competitive Zeal",
+      "description": "魔法を装備している間、必殺に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-olympia-unique-ardent-nosferatu",
+      "characterId": "fwe-olympia",
+      "kind": "unique",
+      "name": "情動のリザイア",
+      "englishName": "Ardent Nosferatu",
+      "description": "リザイアを使う戦闘では、攻撃力に+3、必殺に+5。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-olympia-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-olympia-unique-ardent-nosferatu-plus",
+      "characterId": "fwe-olympia",
+      "kind": "unique",
+      "name": "情動のリザイア+",
+      "englishName": "Ardent Nosferatu+",
+      "description": "リザイアを使う戦闘では、攻撃力に+5、必殺に+10。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-olympia-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-orchel-personal",
+      "characterId": "fwe-orchel",
+      "kind": "personal",
+      "name": "堅牢堅固",
+      "englishName": "Solid and Sturdy",
+      "description": "守備に+5、重装扱いになる。騎兵と飛行の兵種には就けない。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-orchel-unique-harmonic-soul",
+      "characterId": "fwe-orchel",
+      "kind": "unique",
+      "name": "Harmonic Soul",
+      "englishName": "Harmonic Soul",
+      "description": "味方を魔法で回復すると、自分のHPも小回復する。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-orchel-unique-harmonic-soul-plus",
+      "characterId": "fwe-orchel",
+      "kind": "unique",
+      "name": "調魂+",
+      "englishName": "Harmonic Soul+",
+      "description": "味方を魔法で回復すると、自分のHPも中回復する。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-orchel-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-peppe-personal",
+      "characterId": "fwe-peppe",
+      "kind": "personal",
+      "name": "狩人の待ち伏せ",
+      "englishName": "Hunter's Snare",
+      "description": "敵フェイズで傷を負った敵と戦うとき、30%で自分が先攻になる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-peppe-unique-king-s-majesty",
+      "characterId": "fwe-peppe",
+      "kind": "unique",
+      "name": "King's Majesty",
+      "englishName": "King's Majesty",
+      "description": "相手のHPが減っている戦闘では、攻撃力に+2、必殺に+5。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-peppe-unique-king-s-majesty-plus",
+      "characterId": "fwe-peppe",
+      "kind": "unique",
+      "name": "王の威光+",
+      "englishName": "King's Majesty+",
+      "description": "相手のHPが減っている戦闘では、攻撃力に+4、必殺に+10。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-peppe-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-peter-personal",
+      "characterId": "fwe-peter",
+      "kind": "personal",
+      "name": "狙い射ち",
+      "englishName": "Steady Aim",
+      "description": "弓の戦技の射程が1伸びる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-peter-unique-correct-for-drift",
+      "characterId": "fwe-peter",
+      "kind": "unique",
+      "name": "Correct for Drift",
+      "englishName": "Correct for Drift",
+      "description": "命中率が90%以上の戦闘では、命中に+10。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-peter-unique-correct-for-drift-plus",
+      "characterId": "fwe-peter",
+      "kind": "unique",
+      "name": "誤差修正+",
+      "englishName": "Correct for Drift+",
+      "description": "命中率が75%以上の戦闘では、命中に+20。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-peter-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-seteth-personal",
+      "characterId": "fwe-seteth",
+      "kind": "personal",
+      "name": "臨戦態勢",
+      "englishName": "Ready for Battle",
+      "description": "敵フェイズの最初の戦闘時に50%で発動し、自分が先攻になる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-seteth-unique-pass-judgment",
+      "characterId": "fwe-seteth",
+      "kind": "unique",
+      "name": "Pass Judgment",
+      "englishName": "Pass Judgment",
+      "description": "「天秤の天冠」が発動すると、攻撃力に+4。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-seteth-unique-pass-judgment-plus",
+      "characterId": "fwe-seteth",
+      "kind": "unique",
+      "name": "正義の執行+",
+      "englishName": "Pass Judgment+",
+      "description": "「天秤の天冠」が発動すると、攻撃力に+7。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-seteth-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-sha-lan-personal",
+      "characterId": "fwe-sha-lan",
+      "kind": "personal",
+      "name": "引き留め役",
+      "englishName": "Cooler Heads",
+      "description": "「引き寄せ」を使った後、補助魔法を追加で使える。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-sha-lan-unique-watchfulness",
+      "characterId": "fwe-sha-lan",
+      "kind": "unique",
+      "name": "Watchfulness",
+      "englishName": "Watchfulness",
+      "description": "自分に隣接する味方の速さに+2。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-sha-lan-unique-watchfulness-plus",
+      "characterId": "fwe-sha-lan",
+      "kind": "unique",
+      "name": "注意喚起+",
+      "englishName": "Watchfulness+",
+      "description": "自分に隣接する味方の速さに+4。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-sha-lan-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-simon-personal",
+      "characterId": "fwe-simon",
+      "kind": "personal",
+      "name": "死にそびれ",
+      "englishName": "Close Call",
+      "description": "残りHPが2以上で致死ダメージを受けるとき、幸運%の確率でHP1を残す。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-simon-unique-devil-s-luck",
+      "characterId": "fwe-simon",
+      "kind": "unique",
+      "name": "Devil's Luck",
+      "englishName": "Devil's Luck",
+      "description": "敵の撃破ごとに幸運が1増える。上限は+10で、マップ終了時に戻る。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-simon-unique-devil-s-luck-plus",
+      "characterId": "fwe-simon",
+      "kind": "unique",
+      "name": "悪運+",
+      "englishName": "Devil's Luck+",
+      "description": "敵の撃破ごとに幸運が2増える。上限は+10で、マップ終了時に戻る。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-simon-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-sirocco-personal",
+      "characterId": "fwe-sirocco",
+      "kind": "personal",
+      "name": "女神の恩寵",
+      "englishName": "Goddess's Favor",
+      "description": "戦闘が終わるたび、自分のHPを5回復。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-sirocco-unique-wind-s-caprice",
+      "characterId": "fwe-sirocco",
+      "kind": "unique",
+      "name": "Wind's Caprice",
+      "englishName": "Wind's Caprice",
+      "description": "戦闘中、回避の補正として+1・+5・+20のいずれかが発動する。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-sirocco-unique-wind-s-caprice-plus",
+      "characterId": "fwe-sirocco",
+      "kind": "unique",
+      "name": "風任せ+",
+      "englishName": "Wind's Caprice+",
+      "description": "戦闘中、回避の補正として+1・+5・+20・+30のいずれかが発動する。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-sirocco-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-sofia-personal",
+      "characterId": "fwe-sofia",
+      "kind": "personal",
+      "name": "治癒の心得",
+      "englishName": "Healing Knowledge",
+      "description": "味方を魔法で回復する際の回復量に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-sofia-unique-distant-healing",
+      "characterId": "fwe-sofia",
+      "kind": "unique",
+      "name": "遠隔治癒",
+      "englishName": "Distant Healing",
+      "description": "回復に使う魔法の射程が1伸びる。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-sofia-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-sofia-unique-distant-healing-plus",
+      "characterId": "fwe-sofia",
+      "kind": "unique",
+      "name": "遠隔治癒+",
+      "englishName": "Distant Healing+",
+      "description": "回復に使う魔法の射程が2伸びる。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-sofia-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-tahonia-personal",
+      "characterId": "fwe-tahonia",
+      "kind": "personal",
+      "name": "ピュトーンの流儀",
+      "englishName": "Python Technique",
+      "description": "籠手の戦技を使う戦闘時に15%で発動し、攻速に関係なく追撃できる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-talimun-personal",
+      "characterId": "fwe-talimun",
+      "kind": "personal",
+      "name": "冒険王の英運",
+      "englishName": "Swashbuckler's Luck",
+      "description": "幸運に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-talimun-unique-winds-of-victory",
+      "characterId": "fwe-talimun",
+      "kind": "unique",
+      "name": "勝利の風",
+      "englishName": "Winds of Victory",
+      "description": "自分の攻撃時には幸運%で命中に+15。敵の攻撃時には幸運%で回避に+15。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-talimun-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-talimun-unique-cannoning-flair",
+      "characterId": "fwe-talimun",
+      "kind": "unique",
+      "name": "熟練の砲手",
+      "englishName": "Cannoning Flair",
+      "description": "兵器を使う戦闘では、命中に+30。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-talimun-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-theodora-personal",
+      "characterId": "fwe-theodora",
+      "kind": "personal",
+      "name": "不退の覚悟",
+      "englishName": "Royal Resolve",
+      "description": "敵から攻撃を受けたとき、30%で被ダメージが0.5倍になる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-theodora-unique-direct-hit",
+      "characterId": "fwe-theodora",
+      "kind": "unique",
+      "name": "直撃",
+      "englishName": "Direct Hit",
+      "description": "ブレイズアーツで攻撃するとき、30%で与ダメージに+10。",
+      "level": 5,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-theodora-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-theodora-unique-e524bc8a9a20a0c1",
+      "characterId": "fwe-theodora",
+      "kind": "unique",
+      "name": "計略の達人",
+      "englishName": null,
+      "description": "計略を使える回数に+1。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-tialla-personal",
+      "characterId": "fwe-tialla",
+      "kind": "personal",
+      "name": "軍師の才",
+      "englishName": "Tactician's Wit",
+      "description": "味方に対して使う戦技の射程が1伸びる。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-tialla-unique-tactician-s-insight",
+      "characterId": "fwe-tialla",
+      "kind": "unique",
+      "name": "Tactician's Insight",
+      "englishName": "Tactician's Insight",
+      "description": "先攻した戦闘の後、次の自分の戦闘まで相手の回避を5下げる。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-tialla-unique-tactician-s-insight-plus",
+      "characterId": "fwe-tialla",
+      "kind": "unique",
+      "name": "軍師の炯眼+",
+      "englishName": "Tactician's Insight+",
+      "description": "先攻した戦闘の後、相手の回避を10下げる。1回の戦闘で元に戻る。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-tobias-personal",
+      "characterId": "fwe-tobias",
+      "kind": "personal",
+      "name": "大技",
+      "englishName": "Power Arts",
+      "description": "戦技による攻撃の攻撃力に+3。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-tobias-unique-all-out-attack",
+      "characterId": "fwe-tobias",
+      "kind": "unique",
+      "name": "本気の一発",
+      "englishName": "All-Out Attack",
+      "description": "戦技で攻撃するとき、30%で与ダメージが1.3倍になる。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-tobias-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-tobias-unique-all-out-attack-plus",
+      "characterId": "fwe-tobias",
+      "kind": "unique",
+      "name": "本気の一発+",
+      "englishName": "All-Out Attack+",
+      "description": "戦技で攻撃するとき、30%で与ダメージが1.5倍になる。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-tobias-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-troy-personal",
+      "characterId": "fwe-troy",
+      "kind": "personal",
+      "name": "雲手",
+      "englishName": "Yun Shou",
+      "description": "籠手を装備している間、命中に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ultand-personal",
+      "characterId": "fwe-ultand",
+      "kind": "personal",
+      "name": "応急手当",
+      "englishName": "Patch Up",
+      "description": "隣接する味方の戦闘後、その味方のHPを小回復。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ultand-unique-pray-for-safety",
+      "characterId": "fwe-ultand",
+      "kind": "unique",
+      "name": "Pray for Safety",
+      "englishName": "Pray for Safety",
+      "description": "自分に隣接する味方の必避に+10。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ultand-unique-pray-for-safety-plus",
+      "characterId": "fwe-ultand",
+      "kind": "unique",
+      "name": "無事の祈り+",
+      "englishName": "Pray for Safety+",
+      "description": "自分に隣接する味方の必避に+20。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-ultand-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ursula-personal",
+      "characterId": "fwe-ursula",
+      "kind": "personal",
+      "name": "商会の支配人",
+      "englishName": "Management Skills",
+      "description": "自分と周囲2マスの味方が道具袋を使える。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ursula-unique-seize-the-chance",
+      "characterId": "fwe-ursula",
+      "kind": "unique",
+      "name": "Seize the Chance",
+      "englishName": "Seize the Chance",
+      "description": "攻撃時、幸運÷2%で与ダメージが1.3倍になる。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-ursula-unique-seize-the-chance-plus",
+      "characterId": "fwe-ursula",
+      "kind": "unique",
+      "name": "好機+",
+      "englishName": "Seize the Chance+",
+      "description": "攻撃時、幸運÷2%で与ダメージが1.5倍になる。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-ursula-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-yang-jie-personal",
+      "characterId": "fwe-yang-jie",
+      "kind": "personal",
+      "name": "破戒僧",
+      "englishName": "Monkly Havoc",
+      "description": "敵を倒した際、幸運÷2%で最大HP相当のHPを回復する。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-yang-jie-unique-robust-health",
+      "characterId": "fwe-yang-jie",
+      "kind": "unique",
+      "name": "Robust Health",
+      "englishName": "Robust Health",
+      "description": "敵から攻撃を受けたとき、残りHPと同じ数値の確率（%）で防御力に+3。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-yang-jie-unique-robust-health-plus",
+      "characterId": "fwe-yang-jie",
+      "kind": "unique",
+      "name": "活力結界+",
+      "englishName": "Robust Health+",
+      "description": "敵から攻撃を受けたとき、残りHPと同じ数値の確率（%）で防御力に+5。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-yang-jie-skills"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-zarcone-personal",
+      "characterId": "fwe-zarcone",
+      "kind": "personal",
+      "name": "斧包丁",
+      "englishName": "Hatchet Man",
+      "description": "斧を装備している間、命中に+10。",
+      "level": null,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-zarcone-unique-vulgar-conduct",
+      "characterId": "fwe-zarcone",
+      "kind": "unique",
+      "name": "Vulgar Conduct",
+      "englishName": "Vulgar Conduct",
+      "description": "相手の残りHPが半分以下の戦闘では、命中に+20。",
+      "level": 20,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja"
+      ],
+      "status": "unverified"
+    },
+    {
+      "id": "fwe-zarcone-unique-vulgar-conduct-plus",
+      "characterId": "fwe-zarcone",
+      "kind": "unique",
+      "name": "卑劣+",
+      "englishName": "Vulgar Conduct+",
+      "description": "相手の残りHPが半分以下の戦闘では、命中に+20、攻撃力に+3。",
+      "level": 35,
+      "acquisition": null,
+      "upgradesSkillId": null,
+      "sourceIds": [
+        "fwe-helper-skills",
+        "game8-skills-ja",
+        "gamewith-fwe-zarcone-skills"
+      ],
+      "status": "unverified"
+    }
+  ]
+}

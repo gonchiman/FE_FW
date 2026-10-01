@@ -1,0 +1,24 @@
+.character-skill-coverage { margin: -4px 0 18px; color: var(--text-muted); font-size: 12px; }
+.character-skill-coverage > summary { width: fit-content; max-width: 100%; min-height: 36px; padding: 8px 0; cursor: pointer; }
+.character-skill-coverage > summary > span { margin-left: 12px; font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.character-skill-coverage-body { max-width: 680px; padding: 10px 0 12px; border-top: 1px solid var(--border); overflow-wrap: anywhere; }
+.character-skill-coverage-facts { display: grid; gap: 6px; margin: 0; }
+.character-skill-coverage-facts > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 8px; }
+.character-skill-coverage-facts dd { margin: 0; color: var(--text); font-variant-numeric: tabular-nums; }
+.character-skill-coverage-body h3 { margin: 18px 0 8px; color: var(--text); font-size: 12px; font-weight: 500; }
+.character-skill-coverage-body p { margin: 8px 0; line-height: 1.8; }
+.character-skill-coverage-missing { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+.character-skill-coverage-missing > li { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 8px; }
+.character-skill-coverage-name { color: var(--text); }
+.character-skill-coverage-missing ul { display: grid; gap: 5px; padding: 0; margin: 0; list-style: none; }
+.character-skill-coverage-missing ul li > span:first-child { margin-right: 6px; font-variant-numeric: tabular-nums; }
+.character-skill-coverage a { color: inherit; text-underline-offset: 3px; }
+.character-skill-coverage-missing a { margin-left: 10px; font-size: 11px; }
+.character-skill-coverage-note { color: var(--text-muted); font-size: 11px; }
+.character-skill-coverage-research { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 14px; font-size: 11px; }
+.character-skill-coverage-research > span { flex-basis: 100%; }
+@media (max-width: 480px) {
+  .character-skill-coverage > summary { min-height: 44px; padding: 10px 0; }
+  .character-skill-coverage-facts > div { grid-template-columns: minmax(0, 1fr) auto; }
+  .character-skill-coverage-missing > li { grid-template-columns: 1fr; gap: 5px; }
+}

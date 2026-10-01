@@ -128,12 +128,14 @@ export function filterAndSortGrowthCharacters(
   query = '',
   sort: GrowthSort = { key: 'name', direction: 'asc' },
   displayNames?: ReadonlyMap<string, string>,
+  searchTexts?: ReadonlyMap<string, string>,
 ): CharacterGrowth[] {
   const normalizedQuery = normalizeGrowthSearch(query)
   const direction = sort.direction === 'asc' ? 1 : -1
   return characters
     .filter((character) => normalizeGrowthSearch(character.name).includes(normalizedQuery)
-      || normalizeGrowthSearch(getGrowthCharacterName(character, displayNames)).includes(normalizedQuery))
+      || normalizeGrowthSearch(getGrowthCharacterName(character, displayNames)).includes(normalizedQuery)
+      || normalizeGrowthSearch(searchTexts?.get(character.id) ?? '').includes(normalizedQuery))
     .sort((first, second) => {
       if (sort.key === 'name') {
         return direction * nameCollator.compare(getGrowthCharacterName(first, displayNames), getGrowthCharacterName(second, displayNames))
